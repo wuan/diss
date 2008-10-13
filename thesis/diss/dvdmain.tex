@@ -1,0 +1,60 @@
+\documentclass[pointlessnumbers,headsepline,twoside,11pt,DIV14,BCOR15mm,halfparskip,a4paper,noappendixprefix,bibtotoc]{scrreprt}
+
+\input{dvddissdefs.tex}
+\ifpdf 
+	\renewcommand{\datalink}[2]{\href{run:diss/microwave/#1}{#2}}
+	\renewcommand{\plotlink}[2]{\href{run:diss/gp/#1.html}{#2}}
+\fi
+
+\hyphenation{flüs-si-gem An-re-gungs-stär-ke Hys-te-re-se PMMA Elek-tro-nen-dich-te Sub-s-t-rat-o-ber-flä-che Mess-e-lek-tro-de Mess-er-geb-nis-se}
+
+\begin{document}
+
+\ifpdf
+% Hängende Interpunktion einschalten
+\input protcode.tex
+\setprotcode\font
+{\it \setprotcode\font}
+{\bf \setprotcode\font}
+{\bf \it \setprotcode\font}
+\pdfprotrudechars=1
+\fi
+
+\nocite{Alb93,And84,Ashcroft,Bon77,Bri77,Bro72,Che94,Chi98,Cie87a,Cie87b,Col70,Cra72,Cra75,Dre55,Gerthsen,Gri76,Hak93a,Hak93b,Hal78,Jac82,Kon91a,Kon91b,Meh84,Meh85,Mon75,Mon97,Mon98,Mon00,Mon01,Mon02,Mon04,Mug92,Mug93,Paa85,Pla74,Pob92,San75,Shi75,Tes99,Wil88,Wue01,Wue03,Kli04}
+
+\input{titel}
+
+\pagenumbering{roman}
+\tableofcontents
+
+%\pagestyle{empty}
+\cleardoublepage
+\pagestyle{headings}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{einleitung}
+\input{theo_electrons_on_helium}
+\input{theo_phasendiagramm}
+\input{theo_helium_filme}
+\input{stand_der_forschung}
+\input{exp_aufbau}
+\input{exp_bulk}
+\input{exp_substrate}
+\input{exp_kelvin}
+\input{exp_film}
+\input{theo_zweikomponenten}
+\input{theo_magnetfeld}
+\input{exp_film-cr}
+\input{ausblick}
+\input{zusammenfassung}
+
+\bibliography{bib/Literatur,bib/Paper,bib/Personal}
+\selectlanguage{\ngerman}
+
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\addcontentsline{toc}{chapter}{Danksagung}
+\include{danksagung}
+
+\end{document}

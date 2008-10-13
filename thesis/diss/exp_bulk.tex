@@ -1,0 +1,109 @@
+\chapter{Vorbereitende Experimente, Substratpräparation und -charakterisierung}
+
+\section{Messungen an Elektronen auf Bulk"=Helium}
+
+Die Messungen an Elektronen auf Bulk"=Helium dienen vor allem als Test- und Referenzmessungen für alle später folgenden Messungen an Elektronen auf dünnen Heliumfilmen. Es ist auf Bulk"=Helium möglich bei immer gleichen und einfach zu erreichenden Bedingungen verschiedenste Komponenten des Mess\-aufbaus und auch den Ablauf der Messung selbst zu testen. Der Grund hierfür ist, dass durch den großen Abstand der Elektronen zur Substratoberfläche der Einfluss der Substratrauigkeit auf das gemessene Beweglichkeitssignal verschwindet. Man erhält auf Bulk"=Helium immer unabhängig vom verwendeten Substrat konstante Bedingungen für die Beweglichkeit der Elektronen, die verglichen mit der auf dünnen Heliumfilmen sehr hoch ist und hauptsächlich von der Dichte der Helium-Gasatome oberhalb der Flüssigkeit beeinflusst wird (siehe Abschnitt~\ref{ssec:mobility}). Die Dichte der Gasatome wiederum hängt alleine von der Temperatur ab.
+
+Die um Größenordnungen höhere Beweglichkeit der Elektronen auf Bulk"=Helium ist auch der Grund, dass man trotz der im Vergleich zu Elektronen auf Heliumfilmen sehr geringen Elektronendichte mit der vorliegenden Messmethode ein gutes Signal"=Rausch"=Verhältnis in den Messungen erhalten kann. Weiterhin sind auf Bulk"=Helium bis auf die EHD"=Instabilität alle Verlustkanäle verschlossen, die für Elektronen auf dünnen Heliumfilmen bestehen.
+
+\subsection{Beladung der Oberfläche von Bulk"=Helium}
+\begin{figure}[h!tbp]
+    \plotlink{bulk_charge}{\includegraphics[width=\smidwidth]{exp_bulk/bulkcharge}}%
+    \begin{minipage}[b]{\textwidth-\smidwidth-\tabcolsep}
+        \caption[Beladung von Bulk"=Helium]{Beladung von Bulk"=Helium bis zu verschiedenen Elektronendichten. Eine Haltespannung von \unit[38]{V} entspricht bei dieser Filmdicke von ca.\ \unit[0.2]{mm} einer EHD"=Instabilität bei $\approx\unit[1.1\times10^{13}]{\Em}$ (unter der Voraussetzung, dass die Verkippung des Substrates zur Horizontalen vernachlässigbar ist). Die Beladekurve ($\bullet$) wurde mit kontinuierlicher Erhöhung der Haltespannung aufgenommen. Bei einer Haltespannung von \unit[38]{V} sieht man ein verstärktes Rauschen des Transmissionsignals, das auf den Elektronenverlust infolge der EHD"=Instabilität hindeutet. Die nachfolgenden Beladungen bis zu den verschiedenen Elektronendichten (offene Symbole) wurden alle bei konstanter Haltespannung durchgeführt. (Messung \datalink{2002/mw0202d3/mw0202d3.html}{02/2002 \#3}, Abschnitte 13,21,16,27,24,30)}
+        \label{fig:bulk_charge}
+    \end{minipage}
+\end{figure}
+
+In Abbildung~\ref{fig:bulk_charge} sieht man eine typische Beladekurve für Elektronen auf Bulk"=Helium. Die Elektronendichte im 2DES ist durch die EHD"=Instabilität auf maximal $\unit[2.2\times10^{13}]{\Em}$ beschränkt und die Elektronenproduktion pro Filamentpuls kann, wie schon in Abschnitt~\ref{ssec:electron_production} gezeigt, durchaus im Bereich von $5\times10^{8}$ Elektronen pro Puls liegen. Daher ist es hier leicht möglich, nach wenigen Filamentpulsen, eine gesättigte Elektronendichte zu erreichen. Bei einer Haltespannung von \unit[38]{V} sieht man eine starke Streuung der Messwerte der Transmission, die den sprunghaften Elektronenverlust infolge des Einsetzens der EHD"=Instabilität anzeigt.
+
+Diese deutliche Signatur der Instabilität und die bei Schichtdicken des Bulk"=Helium größer als \unit[1]{mm} gut definierte kritische Dichte schaffen eine Möglichkeit quantitativ die Zunahme der Elektronendichte im 2DES zu bestimmen -- alles unter der Annahme, dass die Absorption des 2DES linear mit der Elektronendichte skaliert. In Abbildung~\ref{fig:fil_eichung} (Seite~\pageref{fig:fil_eichung}) wurde mit dieser Methode versucht, die Elektronenproduktion pro Filamentpuls in Abhängigkeit der Pulsparameter abzuschätzen. 
+
+\subsubsection{Bestimmung der Elektronendichte}
+\label{ssec:e_density_bulk}
+
+Für Elektronen auf Bulk"=Helium ist die Gleichung zur Bestimmung der Elektronendichte weitaus einfacher als auf dünnen Heliumfilmen. Für die Elektronendichte gilt nach Vereinfachung von \eqref{eqn:elektronendichte} mit $d_\text{Isolator}=0$ und $d_\text{Vakuum}\approx0$
+\begin{equation}
+	n_{s,\text{Bulk}}=\frac{U_\text{clamp}\,\varepsilon_0\,\varepsilon_{r,\text{He}}}
+		{e\,d_\text{He}}\quad.
+		\label{eqn:bulk_density}
+\end{equation}
+Die Dicke der Schicht flüssigen Heliums oberhalb der Substratelektrode $d_\text{He}$ ist quadratisch von der Elektronendichte und auch von der angelegten Haltespannung abhängig. Die Schichtdicke ergibt sich aus folgendem Kräftegleichgewicht:
+\begin{equation}
+	\frac{e^2 n_{s,\text{sat}}^2}{2\varepsilon_0}=\rho g \left(d_{0,\text{He}}-d_\text{He}\right)\quad.
+	\label{eqn:bulk_e_pressure}
+\end{equation}
+Hierbei ist $d_{0,\text{He}}$ die Dicke der unbeladenen Heliumschicht.
+Man kann auch hier, wie schon im Abschnitt~\ref{ssec:e_density} für dünne Heliumfilme, eine selbstkonsistente Rechnung unter fortlaufender Iteration der Gleichungen \eqref{eqn:bulk_density} und \eqref{eqn:bulk_e_pressure} durchführen. Für diesen Fall ergibt sich folgende Iterationsgleichung für die Filmdicke:
+\begin{equation}
+	d_i(d_{i-1})=d_0-\frac{e^2}{2\varepsilon_0\,g\,\rho}
+		\left(\frac{U_\text{clamp}\,\varepsilon_0\,\varepsilon_{r,\text{He}}}
+		{e\,d_{i-1}}\right)^2\quad.
+\end{equation}
+Das Stabilitätskriterium für die Iterationsmethode ist die Existenz von Nullstellen der Funktion $d_i(d_{i-1})-d_{i-1}$. Diese verschwinden, wenn der Elektronendruck die gravitativen Rückstellkräfte übersteigt. Leider konvergiert die Iterationsmethode vor allem in der Nähe der EHD"=Instabilität nur sehr langsam und kann so bei nicht ausreichender Iteration falsche Ergebnisse liefern.
+
+Die Veränderung der Schichtdicke des Bulk"=Heliums lässt sich im Experiment nur indirekt durch die daraus resultierende Verschiebung der Resonanzfrequenz messen. Diese Verschiebung entsteht auf Grund der Volumenänderung des Dielektrikums flüssiges Helium im Resonatorzentrum. Da das 2DES normalerweise über seine Suszeptibilität einen direkten Beitrag zur Resonanzfrequenz liefert, kann man den Einfluss des Elektronendrucks auf die Resonanzfrequenz nicht ohne weiteres davon trennen. Da man jedoch aus einer Messung der Zyklotronresonanz die Resonanzfrequenz des Resonators bei unendlichem Magnetfeld bestimmen kann, entfällt dort der direkte Beitrag. Ein Beispiel für eine Auswertung der Daten ist in Abbildung~\ref{fig:bulk_cr_shift} gezeigt.
+
+\subsection{Messungen der Zyklotronresonanz des 2DES}
+
+\begin{figure}[h!tbp]
+	\includegraphics[width=\midwidth]{exp_bulk/cyclotron_resonance}\hfill%
+	\begin{minipage}[b]{\textwidth-\midwidth-\tabcolsep}
+	\caption[Verlauf einer Messung der Zyklotronresonanz]{Verlauf einer Messung der Zyklotronresonanz an Elektronen auf Bulk"=Helium: Während das Magnetfeld und somit $\omega_c$ variiert wird, werden die Parameter der Resonanzkurve Transmission \framebox{3} und Frequenz \framebox{2} bestimmt. (Messung \datalink{2000/mw0008d2/mw0008d2.html}{08/2000 \#2}, Abschnitt 3)}
+		\label{fig:cyclotron_resonance}
+	\end{minipage}
+\end{figure}
+Im Folgenden werden eine Reihe von Messungen der Zyklotronresonanz auf Bulk"=Helium vorgestellt. Diese wurden als Vorbereitung und Vergleichsmöglichkeit für die in Abschnitt~\ref{ssec:cyclotron_film} gezeigten Messungen der Zyklotronresonanz an einem 2DES auf dünnen Heliumfilmen  durchgeführt. Zur grundlegenden Theorie der Zyklotronresonanz sei auch auf diesen Abschnitt verwiesen.
+
+Messungen der Zyklotronresonanz des 2DES auf Bulk"=Helium sollen zur Überprüfung der bisher entwickelten Modelle unter den reinen Bedingungen dienen, wie sie auf Bulk"=Helium herrschen. Auf Bulk"=Helium liegt wegen des verschwindenden Anteils von lokalisierten Elektronen ein System vor, das durch die Drude"=Formel~\eqref{eqn:of_motion_real} beschrieben werden kann. Mit Hilfe der bekannten Elektronenbeweglichkeit kann man mit den aus der Linienanpassung an die Zyklotronresonanz bestimmten Parametern, wie der Streuzeit $\tau$ und der Resonanzfrequenz der Zyklotronresonanz, im Prinzip die direkte Beziehung der gemessenen Absorption von der im Experiment vorliegenden Elektronendichte und Magnetfeldstärke ermitteln. 
+
+\begin{figure}[h!tbp]
+	\begin{center}
+	\subfigure[{\unit[1.1]{mm}} Bulk Helium]{\plotlink{bulk_cr_abs1}{\includegraphics[width=\smallwidth]{exp_bulk/bulk_cr_abs1}}}%
+	\subfigure[{\unit[0.24]{mm}} Bulk Helium]{\plotlink{bulk_cr_abs2}{\includegraphics[width=\smallwidth]{exp_bulk/bulk_cr_abs2}}}
+	\end{center}
+	\caption[Absorption des 2DES bei Zyklotronresonanz]{Absorptionssignal der Zyklotronresonanz gemessen an Elektronen auf verschieden dicken Schichten von Bulk"=Helium. {\bfseries (a)} Deutlich erkennt man die erhöhte Linienbreite bei hohen Elektronendichten. Hier war die Anfangschichtdicke ca.\ \unit[1.5]{mm}. Im Vergleich dazu ist die Anfangsschichtdicke des Bulk"=Helium in {\bfseries (b)} nur \unit[0.54]{mm}. (Messung \datalink{2002/mw0210d1/mw0210d1.html}{10/2002 \#1})}
+	\label{fig:bulk_cr_abs}
+\end{figure}
+
+Es wurden Messungen der Zyklotronresonanz am 2DES auf Bulk"=Helium"=Schichten verschiedener Dicke und unter Variation der Elektronendichte durchgeführt. In Abbildung~\ref{fig:bulk_cr_abs} sieht man die Absorption des 2DES, die im Prinzip dem Reziproken der gemessenen Transmission entspricht, abzüglich des Offsets der der Transmission des Resonators ohne 2DES entspricht. Zur besseren Vergleichbarkeit sind alle Kurven auf den Schnittpunkt mit der $y$-Achse bei $y=1$ normiert. Es fällt auf, dass die Resonanzen auf \unit[1]{mm} Bulk"=Helium deutlich stärker in der Linienbreite variieren als auf \unit[0.2]{mm} Bulk"=Helium. Allerdings ist die maximal erreichbare Elektronendichte auf der dünneren Bulk"=Helium"=Schicht nach \cite{Pee84} (Abbildung~\ref{fig:bulk_instability_dep}) geringer.
+
+\begin{figure}[h!tbp]
+	\begin{center}
+	\subfigure[Messdaten Frequenzverlauf\label{fig:bulk_cr_frq_raw}]{\plotlink{bulk_cr_frq1}{\includegraphics[width=\smallwidth]{exp_bulk/bulk_cr_frq1}}}%
+	\subfigure[relative Frequenz nach dem Drude"=Fit\label{fig:bulk_cr_frq_fit}]{\plotlink{bulk_cr_frq2}{\includegraphics[width=\smallwidth]{exp_bulk/bulk_cr_frq2}}}
+	\end{center}
+	\caption[Verhalten der Resonanzfrequenz bei Zyklotronresonanz]{Resonanzfrequenz bei Zyklotronresonanz auf verschieden dicken Bulk"=Schichten. In  {\bfseries (a)} sieht man die ursprünglich gemessenen Resonanzfrequenzen, in  {\bfseries (b)} wurde bereits eine Linienanpassung an das Drude"=Modell durchgeführt und der konstante Offset, der aus dem Druck der Elektronen auf die Heliumoberfläche resultiert, abgezogen.}
+	\label{fig:bulk_cr_frq}
+\end{figure}
+
+In Abbildung~\ref{fig:bulk_cr_frq} sieht man den Verlauf der Resonanzfrequenz des Resonators bei einer Messung der Zyklotronresonanz, also bei Variation des Magnetfeldes an der Probe am Beispiel der Daten vom 2DES auf \unit[1]{mm} Bulk"=Helium. Abbildung~\ref{fig:bulk_cr_frq_raw} zeigt die Rohdaten und Abbildung~\ref{fig:bulk_cr_frq_fit} die Daten nach der Linienanpassung nach dem Drude"=Modell~\eqref{eqn:of_motion_imag}, reduziert auf die Frequenzänderung durch die Wechselwirkung des 2DES mit der Resonatormode. Das heißt, die Frequenz des Resonators ohne das 2DES wurde von den Rohdaten abgezogen; übrig bleibt allein der Frequenzverlauf nach dem Drude"=Modell.
+
+\begin{figure}[h!tbp]
+	\plotlink{bulk_cr_res3}{\includegraphics[width=\smallwidth]{exp_bulk/bulk_cr_res3}}\hfill%
+	\begin{minipage}[b]{\textwidth-\smallwidth-\tabcolsep}
+		\caption[Frequenzverschiebung durch den Elektronendruck]{Die Auswirkung des Elektronendrucks auf die Oberfläche des Bulk"=Heliums. Gezeigt ist die Verschiebung der Mittenfrequenz aus der Linienanpassung des Frequenzsignals bei der Zyklotronresonanz. Die Frequenzverschiebung entspricht in erster Ordnung der Änderung der Helium"=Schichtdicke. Die kritische Helium"=Schichtdicke wurde mit der in Abschnitt~\ref{ssec:e_density_bulk} vorgestellten selbstkonsistenten Methode bestimmt. Für $U_\text{crit}=\unit[384]{V}$ ergibt sich $d_\text{crit}\approx\unit[1]{mm}$, bei $U_\text{crit}=\unit[81]{V}$ erhält man $d_\text{crit}\approx\unit[0.4]{mm}$.}
+		\label{fig:bulk_cr_shift}
+	\end{minipage}
+\end{figure}
+
+Die Verschiebung der Resonanzlinien bei hohen Elektronendichten -- anhand der Rohdaten in Abbildung~\ref{fig:bulk_cr_frq} deutlich zu sehen -- resultiert aus der Änderung der Schichtdicke des Bulk"=Heliums infolge des Elektronendrucks nach Gleichung~\ref{eqn:bulk_e_pressure}. Die Resonanzfrequenz des Resonators reagiert sehr empfindlich auf eine Änderung der Dielektrizitätskonstante im Hohlraum. Im Bereich des maximalen elektrischen Feldes der Resonatormode wird flüssiges Helium verdrängt, was sich in einer Frequenzverschiebung zu höheren Frequenzen hin äußert. Die relative Position der Nullinie von Abbildung~\ref{fig:bulk_cr_frq_fit} ist in Abbildung~\ref{fig:bulk_cr_shift} über der Elektronendichte aufgetragen und kann sehr gut durch die quadratische Abhängigkeit der Filmdicke von der Elektronendichte mit Gleichung~\eqref{eqn:bulk_e_pressure} erklärt werden. Da die kritische Elektronendichte bei $U_\text{crit}=\unit[81]{V}$ geringer ist als bei $U_\text{crit}=\unit[384]{V}$, muss man die Werte nach Abbildung~\ref{fig:bulk_instability_dep} korrigieren. In Abhängigkeit von der Elektronendichte durchläuft die Linienbreite dann ein Minimum. 
+
+\begin{figure}[h!tbp]
+	\begin{center}
+	\subfigure[Resonanzfrequenz $\omega$, Verschiebung auf Grund des unterschiedlichen Helium"=Füllstands\label{fig:bulk_cr_w}]{\plotlink{bulk_cr_res1}{\includegraphics[width=\smallwidth]{exp_bulk/bulk_cr_res1}}}%
+	\subfigure[Verlauf der Linienbreite $\tau^{-1}$ in Übereinstimmung mit den Ergebnissen von \cite{ekkehard}\label{fig:bulk_cr_wt}]{\plotlink{bulk_cr_res2}{\includegraphics[width=\smallwidth]{exp_bulk/bulk_cr_res2}}}
+	\end{center}
+	\caption[Frequenz und Linienbreite der Zyklotronresonanz]{Resonanzfrequenz $\omega$ und Linienbreite $\tau^{-1}$ aus der Kurvenanpassung des Absorptionssignals bei der Zyklotronresonanz -- jeweils für Elektronen auf zwei verschiedenen Bulk"=Schichtdicken.}
+	\label{fig:bulk_cr_wwt}
+\end{figure}
+
+In Abbildung~\ref{fig:bulk_cr_w} sieht man, dass die Resonanzfrequenz der Zyklotronresonanz mit steigender Elektronendichte leicht abnimmt. In \ref{fig:bulk_cr_wt} ist die Größe $\tau^{-1}$ gezeigt, die die Linienbreite der Zyklotronresonanz darstellt.
+Die Abhängigkeit der Linienbreite der Zyklotronresonanz von der Elektronendichte wurde von \name{E. Teske} in \cite{ekkehard} genauer untersucht. Dort werden Coulombeffekte in Oberflächenelektronen als Ursache für dieses Phänomen aufgeführt. Eine Veränderung der Elektronendichte $n_s$ variiert direkt die Stärke der Coulombwechselwirkung. Die nicht"=monotone Abhängigkeit der Linienbreite von $n_s$ und das allgemeine Verhalten der Zyklotronresonanz wird durch die Theorie von \name{Monarkha} \ea\ \cite{Mon02} beschrieben. Die Auswirkungen dieser Coulombeffekte sieht man sehr deutlich in der normierten Auftragung der Frequenzverschiebung in Abbildung~\ref{fig:bulk_cr_nonlinear}.
+
+\begin{figure}[h!tbp]    \plotlink{bulk_cr_nonlinear}{\includegraphics[width=\smallwidth]{exp_bulk/bulk_cr_nonlinear}}\hfill%
+    \begin{minipage}[b]{\textwidth-\smallwidth-\tabcolsep}
+        \caption[Nichtlinearität der Frequenzverschiebung]{Nichtlinearität der Frequenzverschiebung bei der Zyklotronresonanz relativ zur Frequenzverschiebung der kleinsten Elektronendichte in der Messung mit $U_\text{crit}=\unit[384]{V}$.}
+        \label{fig:bulk_cr_nonlinear}
+    \end{minipage}
+\end{figure}

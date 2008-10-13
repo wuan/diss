@@ -1,0 +1,28 @@
+\section{Verschiedene Theoretische Überlegungen}
+\subsection{Das Phasendiagramm des 2DES}
+\subsection{Selbstkonsistente Berechnung der Elektronendichte auf dünnen Heliumfilmen.}
+
+\begin{quote}
+<< Miscellaneous`Units`\\
+<< Miscellaneous`PhysicalConstants`
+\end{quote}
+
+\begin{quote}
+$\text{HeDensity} = \text{SI}[0.145  \frac{\text{Gram}}{\text{Centimeter}^3}];$
+\end{quote}
+
+\begin{quote}
+$d_\text{He}[h\_] := \text{Abs}[\text{First}[d_\text{a} /. \text{Solve}[\Delta C3 \,\text{BoltzmannConstant}[[1]]/d_\text{a}^3 == \\\phantom{d_\text{He}[h\_] :=~ }\text{HeDensity}[[1]]\,
+          \text{AccelerationDueToGravity}[[1]]\,h, d_\text{a}]]]$
+\end{quote}
+\subsubsection{Definition der Iterationsformel}
+\begin{quote}
+$d_\text{rec}[0] = d_\text{charged}[h, 0]$\\
+  $n_\text{rec}[0] = n_\text{s}[U_\text{clamp}, d_\text{charged}[h, 0], d_\text{substrate}]$
+\end{quote}
+
+\begin{quote}
+$d_\text{rec}[i] := d_\text{charged}[
+    h, n_\text{s}[U_\text{clamp}, d_\text{rec}[i - 1], d_\text{substrate}]]$\\
+	$n_\text{rec}[i] := n_\text{s}[U_\text{clamp}, d_\text{charged}[h, n_\text{rec}[i - 1]], d_\text{substrate}]$
+\end{quote}

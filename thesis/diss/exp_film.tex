@@ -1,0 +1,330 @@
+\chapter{2DES auf dünnen Heliumfilmen}
+
+\section{Bestimmung der Messparameter}
+\label{sec:film_messpar}
+
+\subsection{Inbetriebnahme der Filamente}
+\label{ssec:chargespeed}
+Eine wichtige Voraussetzung für die Messungen von 2DES auf Heliumfilmen ist, dass die Erzeugung der Elektronen in Verbindung mit der kontrollierten Erhöhung der Elektronendichte im 2DES optimal funktioniert. Bei vielen Experimenten hat sich gezeigt, dass das Filament vor Beginn des ersten Beladevorganges nach dem Heliumtransfer ein paar mal sehr stark gepulst werden muss, um sicherzustellen, dass in den folgenden Beladepulsen auch Elektronen emittiert werden. Hierfür werden mehrere Pulse in der Größenordnung von \unit[400]{ms} Dauer bei \unit[1.4]{V} Amplitude verwendet und das Substrat wird -- um die negativ geladenen Elektronen fernzuhalten -- währenddessen auf ein Potential von $\unit[-100]{V}$ gelegt. Nach einer solchen Behandlung sollte ein um das Filament vorhandener Heliumtropfen verdampft sein. Dieser Prozess kann auch im Verlauf der Messung nötig werden, z.~B. nach weiterem Einkondensieren von Heliumgas in die Zelle oder falls eine starke Verminderung der Elektronenproduktion pro Puls nach einer längeren Pause der Filamentbenutzung festgestellt wird.
+
+\subsubsection{Die Wahl der Pulsstärke}
+Die Stärke des Filamentpulses, gegeben durch die Parameter Pulshöhe und Pulsdauer, beeinflusst den Verlauf des Beladevorganges sehr deutlich und ist der entscheidende Parameter für die Elektronenproduktion des Filaments. Es hat sich gezeigt, dass es einen optimalen Wert dieser Pulsparameter gibt, für den die Beladung mit maximaler Geschwindigkeit erfolgen kann. Bei zu schwachen Filamentpulsen ist die Anzahl der pro Puls erzeugten Elektronen einfach zu gering; zu starke Pulse stören das Messsystem und führen unter Umständen sogar zu einem Verlust von Elektronen aus dem 2DES oder zum Verdampfen des dünnen Helium"=Films auf dem Substrat.
+
+Wie schon bei dem Experiment zur Bestimmung der Elektronenproduktion für Bulk"=Helium in Abbildung~\ref{fig:fil_eichung} sichtbar wird, ist diese nichtlinear von den Pulsparametern abhängig. Wenn das Filament wirklich gezündet hat, führt eine kleine Änderung der Temperatur des Glühwendels zu einer deutlich stärkeren Änderung der Anzahl der pro Puls erzeugten Elektronen. Weiterhin ist hier zu beachten, dass selbst bei konstanten Pulsparametern im Laufe einer Messung durchaus auch die Menge der erzeugten Elektronen pro Puls variiert. Zum einen ist die maximal erreichte Filamenttemperatur abhängig vom Gasdruck und damit von der Temperatur in der Zelle und zum anderen wirkt sich auch die Intensität der Filamentbenutzung mit den Parametern Pulsfrequenz und Pulsstärke positiv auf die Elektronenproduktion pro Puls aus. 
+
+Da bei den Messungen auf dünnen Helium"=Filmen im Vergleich zu Bulk"=Helium üblicherweise um Größenordnungen höhere Elektronendichten erreicht werden können, muss das Filament in diesem Fall auch mit höherer Intensität betrieben werden.
+
+\subsubsection{Die richtige Wahl der Beladegeschwindigkeit}
+Die Geschwindigkeit, mit der die Beladung stattfindet, ist durch die Rate der Erhöhung des Haltefeldes gegeben. Diese muss klein genug sein, so dass das Filament immer genügend Elektronen erzeugt, um bei gegebenem Haltefeld mit dem 2DES in der Nähe der Sättigungsdichte zu bleiben. Nur wenn dieses sichergestellt ist, kann man davon ausgehen, dass die erhaltene Elektronendichte näherungsweise dem erwarteten Sättigungswert nach der selbstkonsistenten Berechnung aus Abbildung~\ref{fig:film_selbstkonsistent} entspricht.
+
+Um einen Wert für die Elektronenproduktion des Filaments zu erhalten, wurde in Abschnitt~\ref{ssec:electron_production} versucht die durchschnittliche Elektronenproduktion pro Puls auf Bulk"=Helium zu bestimmen. Bei den Messungen auf dünnen Helium"=Filmen muss man beachten, dass die erreichbaren Elektronendichten um Größenordnungen über der kritischen Dichte der EHD-Instabilität liegt. Deshalb muss das Filament hier mit deutlich höherer Pulsdauer und Pulsamplitude betrieben werden. Typische Werte auf Bulk"=Helium für einen Puls sind \unit[1]{V} Amplitude bei \unit[40]{ms} Pulsdauer, auf dünnen Heliumfilmen wurden für die Pulsparameter eher Werte im Bereich \unit[1.4]{V} Amplitude bei \unit[100]{ms} Pulsdauer verwendet.
+
+\begin{figure}[h!tb]
+    \begin{center}
+    $\subfigure[Geschwindigkeit der Haltespannungsänderung]{%
+            \plotlink{saturate_1}{\includegraphics[width=\smallwidth]{exp_film/saturate_1}}}%
+        \atop%
+            \subfigure[Zeitverlauf der Transmission]{%
+            \plotlink{saturate_2}{\includegraphics[width=\smallwidth]{exp_film/saturate_2}}}%
+    $\subfigure[Transmission über der Haltespannung]{\plotlink{saturate_3}{\includegraphics[width=\smallwidth]{exp_film/saturate_3}}}
+    \end{center}
+    \caption[Beladung von \SiO/Si"=Substrat]{{\bfseries (a)} Gezeigt sind Beladeversuche auf dünnen Helium"=Filmen mit unterschiedlicher Geschwindigkeit der Zunahme der Haltespannung. In {\bfseries (c)} sieht man, dass es eine Geschwindigkeit gibt, für die die Abnahme der Transmission mit der Haltespannung eine maximale Steigung erreicht; dies trifft für die Kurven {\tiny$\square$} und {\footnotesize$\triangle$} zu. Aus der Auftragung der Transmission über der Zeit {\bfseries (b)} sieht man deutlich, dass die Abnahme der Transmission bei {\large$\circ$}, {\tiny$\square$} und {\footnotesize$\diamondsuit$} nicht von der Geschwindigkeit der Steigerung der  Haltespannung, sondern von der bei allen Kurven konstanten Produktion von Elektronen pro Puls abhängt. (Messung \datalink{2002/mw0202d4/mw0202d4.html}{02/2002 \#4}, Substrat: Silchem \unit[200]{nm} \SiO)}
+    \label{fig:saturation}
+\end{figure}
+Ein Beladevorgang für mit \SiO\ bedeckten Substrate mit verschieden schnell durchfahrenen Rampen der Haltespannung ist in Abb.~\ref{fig:saturation} zu sehen. Für Substrate mit PMMA-Isolierschicht ergibt sich ein ähnliches Verhalten.
+
+\subsection{Abhängigkeit der Elektronendichte von der Haltespannung}
+
+Bei den Messungen auf dünnen Heliumfilmen hat sich gezeigt, dass der Gewinn an Elektronen pro Puls sehr empfindlich von der Größe des elektrischen Feldes über dem Substrat abhängt. Dies auf den ersten Blick paradox erscheint, da die Elektronen im Gasraum aufgrund ihrer geringen Masse selbst durch kleinste elektrische Felder beschleunigt werden können. Vermutlich spielen Raumladungseffekte hier eine Rolle, die von den im Gasraum vorhandenen Elektronen verursacht werden. Bei quasistetiger Beladung mit kleinen Spannungsschritten und ständigen Filamentpulsen werden die kleinen elektrischen Felder oberhalb des Substrats gut abgeschirmt.
+
+Dieser Effekt äußert sich im Experiment dadurch, dass man eine bestimmte Elektronendichte schnellstmöglich erreicht, wenn man die Haltespannung sehr schnell zu den gewünschten Wert hin ändert. Dies bedeutet, dass bei hohen elektrischen Feldern über dem Substrat Elektronen sehr viel effektiver in das 2DES eingehen. Bei einer quasistetigen Beladung mit langsamer Änderung der Haltespannung -- hier befindet sich das System immer sehr nahe an der Sättigungsdichte -- muss man erheblich länger warten, bis man den einen vergleichbaren Endwert der Elektronendichte erreicht.
+
+\subsubsection{Probleme der Einstellung einer gesättigten Elektronendichte}
+\label{ssec:saturation_film}
+\begin{figure}[h!tb]
+    \centerline{%
+        \subfigure[Zeitlicher Verlauf der in {\bfseries (b)} gezeigten Hysterese]{\plotlink{film_hysteresis2}{\includegraphics[width=\smallwidth]{exp_film/film_hysteresis2}}}%
+        \subfigure[Hysterese bei Beladung von dünnen Heliumfilmen]{\plotlink{film_hysteresis}{\includegraphics[width=\smallwidth]{exp_film/film_hysteresis}}}}%
+    \caption[Die Hysterese der Beladung auf einem \SiO /Si-Substrat]{Die Hysterese der Beladung auf einem \SiO /Si-Substrat. Messung \datalink{2002/mw0202d2/mw0202d2.html}{02/2002 \#2} Abschnitt 18--20}
+    \label{fig:film_hysteresis}
+\end{figure}
+Im Gegensatz zu Elektronen auf Bulk"=Helium ist die Elektronendichte auf dünnen Heliumfilmen durch das angelegte Haltefeld nicht eindeutig definiert. Dies äußert sich in der bekannten Hysterese der Beladekurve. Ein Beispiel dafür ist in Abbildung~\ref{fig:film_hysteresis} zu sehen. Hier ist die Transmission über der Haltespannung aufgetragen und nach der Beladung wurde unter weiterem Pulsen des Filaments die Haltespannung wieder langsam bis zu $\unit[-100]{V}$ zurückgefahren. Zuerst gibt es keine Veränderung des Transmissionssignals, dass das Vorhandensein von Elektronen anzeigt, obwohl die Haltespannung schon deutlich unter ihrem maximalen Wert beim Beladevorgang zurückgeht. Erst bei deutlich geringerer Haltespannung -- schon weit im negativen Bereich -- wird die Elektronendichte merkbar geringer. Eine Schlussfolgerung hieraus ist, dass auf dünnen Heliumfilmen sehr wohl eine übersättigte Elektronendichte vorliegen kann. Die Elektronen müssen dann zwar eine Energie\-barriere überwinden, um zur Heliumoberfläche zu gelangen, werden dort dann allerdings problemlos gebunden. Deshalb ist es mit dem System nicht einfach möglich, bestimmte interessante Punkte einer Beladekurve, wie z.~B. einen Phasenübergang, reproduzierbar und mit einer genau definierten Elektronendichte mehrfach zu durchfahren.
+
+Nur bei monotoner und angepasster Erhöhung der Haltespannung kann man im Rahmen der oben angesprochenen Einschränkungen von einer gut definierten Elektronendichte ausgehen.
+
+\begin{figure}[h!tb]
+    \plotlink{longcharge}{\includegraphics[width=\midwidth]{exp_film/longcharge}}\hfill%
+    \begin{minipage}[b]{\textwidth-\midwidth-\tabcolsep}
+        \caption[Übersättigte Beladung eines dünnen Heliumfilms]{Beladung eines dünnen Heliumfilms über einen längeren Zeitraum. Wenn man die Beladepulse über mehrere Stunden hinweg fortsetzt, führt dies nicht zum Auftreten einer Sättigungsbeladung. Stattdessen kann man die Elektronendichte so immer weiter erhöhen, obwohl die Haltespannung konstant gehalten wird. Mit der Linie \glqq Relaxation der Transmission\grqq\ soll die übliche Drift der Nulllinie der Transmission zu Beginn einer Messung veranschaulicht werden. (Messung \datalink{2002/mw0205d6/mw0205d6.html}{05/2002 \#6} Abschnitt 2)}
+        \label{fig:longcharge}
+    \end{minipage}
+\end{figure}
+
+Der Grund für dieses, im Vergleich zu Elektronen auf Bulk"=Helium andere Verhalten ist, dass die starke Bildladung im dielektrischen Substrat die Elektronen sehr viel stärker bindet. Dies zeigt sich auch darin, dass die typischen Haltespannungen, um eine Elektronendichte von $\unit{10^{15}}{\Em}$ zu erhalten, für Elektronen auf Heliumfilmen im Bereich von einigen Volt liegt.
+
+Falls es nun dazu kommt, dass die erzeugten Elektronen eine gewisse Energieverteilung besitzen und diese nicht durch Stoß mit Atomen aus dem Helium"=Gas modifiziert wird, ist es sehr nahe liegend, dass während des Beladeprozesses ein übersättigter Zustand erreicht werden kann. 
+
+Eine weitere Möglichkeit, die von \name{V. Shikin} \cite{Shi99} vorgeschlagen wurde, ist eine parallel zur Beladung des Substrats stattfindende Beladung des Heliumfilms an der Außenwand des Resonators. Diese führt zu einer Verschiebung des Potentials am Substrat und erschwert somit die Bestimmung der Elektronendichte aus dem Haltefeld. Durch die Beladung des Heliumfilms auf der Zellenoberfläche mit Elektronen wird das Substrat höher beladen, als die daran angelegte Haltespannung es vermuten lässt. Dieser Effekt ist auf Bulk"=Helium nicht ausgeprägt, da die Haltespannung in diesem Fall üblicherweise um einige Größenordnungen über der verursachten Verschiebung des Potentials liegt.
+
+Zusätzlich sorgen immer vorhandene Kontaktpotentiale, die üblicherweise im Bereich einiger Volt liegen, für eine von Anfang an nicht genau definierte Verschiebung des Potentialnullpunktes.
+
+In Abbildung~\ref{fig:longcharge} sieht man einen Beladevorgang, bei dem die Haltespannung nach kurzer Zeit konstant gehalten wurde. Dann wurde über mehrere Stunden hinweg weiter beladen; die Transmission erreichte in dieser Zeit keinen konstanten Wert. Hierbei kann man ausschließen, dass eine Drift der Transmission das Signal erzeugte, da nach dem Entfernen der Elektronen nahezu die Transmission vor dem Beladevorgang erreicht wurde. 
+     
+\subsection{Verlustmechanismen der Elektronen und deren Vermeidung}
+\label{ssec:elektronenverlust}
+Die Verlustmechanismen der Elektronen kann man zur genaueren Untersuchung in zwei Klassen unterteilen:
+
+\begin{enumerate}
+    \item den Verlust durch Tunneln von Elektronen an Substratrauigkeiten direkt in das Substrat, bei sehr dünnen Heliumfilmen an jeglicher Position und
+    \item den Verlust von Elektronen an den lateralen Rändern des Substrats.
+\end{enumerate}
+
+\begin{figure}[h!tb]
+    \includegraphics{exp_film/verlustkanaele}%
+    \hfill%
+    \begin{minipage}[b]{\textwidth-\midwidth-\tabcolsep}
+        \caption[Verhinderung von Elektronenverlust]{In nebenstehender Abbildung soll veranschaulicht werden, welche Arten von Elektronenverlust eine Rolle spielen und wie diese verhindert werden können. In {\bfseries a)} sieht man ein einfaches Si"=Substrat; hier überwiegt der direkte Verlust von Elektronen in die Substratfläche. {\bfseries b)} zeigt ein Substrat mit oxidierter Oberfläche, {\bfseries c)} stellt ein mit PMMA beschichtetes Substrat dar und {\bfseries d)} zeigt ein \SiO"=Substrat mit isolierter Kante.}
+		\label{fig:e_verlust}
+    \end{minipage}
+\end{figure}
+
+Da es sich als schwierig erwiesen hat, ein leitfähiges Substrat wie z.\ B. Silizium mit seiner natürlichen Oxidschicht mit höheren Elektronendichten zu beladen, spielt das Tunneln von Elektronen an Substratrauigkeiten eine wichtige Rolle. Allerdings kann man diesen Elektronenverlust an den Spitzen der Substratrauigkeit und bei sehr dünnen Heliumfilmen durch Tunneln von Elektronen einfach durch das Aufbringen einer isolierender Deckschicht (z.\,B. PMMA, \SiO, usw.) auf das Substrat verhindern. Eine solche Schicht hat aber den Nachteil, dass das Substrat damit sehr empfindlich gegenüber dem Durchbrechen von Elektronen wird und nachfolgende Beladeversuche davon beeinflusst werden. Von Vorteil ist, dass existierende Verlustkanäle durch den Aufbau eines Gegenfeldes aufgrund der dort durchgebrochenen und lokalisierten Ladung versiegen.
+
+\begin{figure}[h!tb]
+    \plotlink{film_high_n}{\includegraphics[width=\midwidth]{exp_film/film_high_n}}%
+    \hfill%
+    \begin{minipage}[b]{\textwidth-\midwidth-\tabcolsep}
+        \caption[hohe Elektronendichten auf \SiO\ mit sichtbarem Elektronenverlust]{Beladung von \unit[200]{nm} \SiO /Silizium bis zu hohen Elektronendichten. Deutlich sichtbar die ab Haltespannungen größer als \unit[2.5]{V} auftretenden sägezahnförmigen Hinweise auf einen wiederkehrenden Elektronenverlust. Viele andere Effekte, die die Vergleichbarkeit von Messdaten beeinträchtigen, haben leider keine so deutliche Signatur. (Messung \datalink{2002/mw0202d4/mw0202d4.html}{02/2002 \#4})}
+        \label{fig:e_sawtooth}
+    \end{minipage}
+\end{figure}
+
+Ein bisher wenig beachteter Verlustkanal ist der Elektronenverlust, der bevorzugt an den seitlichen Bruchkanten des hier leitfähigen Substrats stattfindet. An der Kante des Substrats ist das elektrische Feld und somit auch die Kräfte auf Elektronen deutlich höher als in der Fläche des Substrats, was den Verlust von Elektronen noch begünstigt. Da sich die Elektronen oberhalb des Heliumfilms auf dem Substrat im Normalfall auch uneingeschränkt zum Substratrand bewegen können, wirkt dieser Verlustkanal entscheidend auf die Menge von Elektronen, die sich auf der Substratfläche befinden. Um dies einzuschränken oder sogar zu verhindern, wurde der Einsatz folgender Möglichkeiten im Experiment überprüft:
+\begin{itemize}
+    \item Die Verwendung zweier Guard"=Elektroden aus Silizium, die direkt außerhalb längs an das Substrat anschließen, dies wurde jedoch aufgrund des erhöhten Aufwandes bei der Präparierung der Zelle wieder eingestellt.
+    \item Die Verwendung einer Isolierung der Substratkanten selbst (passive Guard"=Elektrode). Hierbei wurden folgende Materialien getestet:
+    \begin{itemize}
+        \item GE Varnish Isolierlack
+        \item UV härtender Klebstoff
+        \item PMMA-Film, aufgebracht durch Eintauchen der Substratkanten in PMMA-Lösung
+    \end{itemize}
+    \item Bei den mit PMMA beschichteten Proben ergibt sich beim Aufspinnen des PMMA"=Films auf die bereits in der länglichen Form befindliche Probe eine Verdickung der isolierenden Deckschicht an den Substraträndern, die dann als Potentialbarriere für die Elektronen wirkt. 
+\end{itemize}
+
+In Abbildung~\ref{fig:e_verlust} sind die beschriebenen Verlustmechanismen und auch eine Darstellung der verschiedenen Möglichkeiten ihrer Unterdrückung dargestellt.
+
+Die Verwendung von zwei zusätzlichen Guard"=Elektroden hat sich bei häufigem Probenwechsel als sehr umständlich erwiesen. Außerdem ist eine zusätzliche Spannungsversorgung für die Elektroden im Experiment notwendig.
+
+Die Isolation der Substratkanten mittels verschiedener Klebstoffe konnte erfolgreich durchgeführt werden und hatte eine deutlich schwächere Relaxation der Messsignale nach dem Ende der Filamentpulse zur Folge. Allerdings sind hier folgende Nachteile der Methode aufgetreten:
+\begin{itemize}
+    \item Durch die großen Temperaturänderungen beim Abkühlen bzw.\ Aufwärmen des Experiments, war es sehr schwierig eine stabile Isolierschicht aufzubringen.
+    \item Bei Messungen an kantenisolierten Silizium"=Substraten mit nur der natürlichen Oxidschicht ist es schwer zu unterscheiden, ob man im Messsignal die Elektronen auf dem Heliumfilm über dem leitfähigen Silizium oder dem Isolator sieht.
+    \item Die bei der Verwendung von Klebstoffen austretenden Lösungsmittel verschlechtern unter Umständen die vorhandene Oberflächenqualität des Substrats, da nach der Isolierung keine weiteren Schritte zur Reinigung der Substratoberfläche durchgeführt werden können.
+\end{itemize}
+
+Die Methode des Aufspinnens von PMMA auf die bereits zugeschnittenen Si"=Proben führt zur Ausbildung eines dickeren PMMA"=Films im Randbereich des Substrats. Dieser dient als Potentialbarriere für die Elektronen im 2DES. Im Gegensatz zur bisherigen Vorgehensweise, den PMMA"=Film auf einen ganzen Wafer aufzubringen, erhält man hierbei noch den Vorteil, dass die beim Schneideprozess entstehenden kleinen Silizium"=Bruchstücke, die die PMMA"=Oberfläche kontaminieren, vor der Beschichtung mit PMMA bereits entfernt werden können.
+ 
+\subsection{Der Ablauf eines Beladeprozesses}
+\label{ssec:process}
+Im Verlauf der Messungen hat sich gezeigt, dass ein bestimmter Prozessablauf für eine gut reproduzierbare Beladung des Heliumfilms mit Elektronen von Vorteil ist. Die in den Messungen durchgeführten Schritte sollen hier kurz aufgeführt werden. Vor Beginn einer Beladung ist das Substrat auf ein Potential von $\unit[-100]{V}$ gelegt.
+\begin{figure}[h!tb]
+    \hfill\includegraphics{exp_film/charge_process}%
+    \hfill%
+    \begin{minipage}[b]{\textwidth-\smidwidth-\tabcolsep}
+        \caption[Schema des Beladeprozesses]{Schema des Beladeprozesses}
+        \label{fig:charge_process}
+    \end{minipage}
+\end{figure}
+\begin{itemize}
+	\item Um das Filament wie in Abschnitt~\ref{ssec:chargespeed} beschrieben vorzubereiten, wird es stark gepulst. Das Substrat liegt hierbei auf einem Potential von $\unit[-5]{V}$.
+	\item Danach wird das Filament mit seiner für den Beladevorgang bestimmten Stärke weiter gepulst und das Potential am Substrat innerhalb von 10 Minuten auf eine leicht negative Spannung von üblicherweise $\unit[-1]{V}$ eingestellt.
+	\item Jetzt beginnt der eigentliche Beladevorgang. Es erfolgt eine langsame Erhöhung des Substratpotentials von ungefähr \unitfrac[5]{V}{h} bis \unitfrac[0.5]{V}{h}.
+	\item Nach dem Erreichen des Zielpotentials wird für einige Minuten weiterhin gepulst.
+	\item Danach erfolgt das Abschalten der Filamentpulse und es wird auf die Relaxation der gemessenen Signale gewartet.
+	\item Zur Entfernung der Elektronen aus dem 2DES wird an das Substrat ein Potential von $\unit[-100]{V}$ angelegt.
+\end{itemize}
+
+
+\subsection{Die Reproduzierbarkeit der Beladevorgänge}
+\enlargethispage{\baselineskip}
+
+\label{ssec:pmma_reproduce}
+Die Bestimmung der Elektronendichte über die angelegte Haltespannung funktioniert nur so lange das einfache Bild des Systems nicht gestört wird. Da leider nicht alle Ereignisse im System so deutlich wie in Abbildung~\ref{fig:e_sawtooth} auf einen Elektronenverlust während der Messung hinweisen, soll hier zusammengefasst werden, welche Probleme auftreten und erkannt werden müssen.
+
+Ein gut zu überprüfender Indikator der Reproduzierbarkeit einer Messung lässt sich durch das Übereinanderlegen nacheinander aufgenommener Beladekurven herstellen. Hierbei sieht man sehr deutlich Abweichungen des Einsetzens der Beladung entlang der Achse der Haltespannung, aber auch Änderungen in der Transmission des Signals. Beide Effekte weisen auf eine unvollständige Entladung der Heliumfilmoberfläche bzw.\ auf eine Kontamination der Substratoberfläche mit Ladungen hin.
+\begin{figure}[h!tb]
+    \plotlink{film_series}{\includegraphics[width=\smidwidth]{exp_film/film_series}}%
+    \hfill%
+    \begin{minipage}[b]{\textwidth-\smidwidth-\tabcolsep}
+        \caption[Beladung eines PMMA/Si"=Substrats]{Beladeserien auf PMMA/Si"=Substrat. Bei den geringen Elektonendichten erreicht man eine nahezu perfekte Reproduzierbarkeit der aufeinanderfolgenden Messungen. Deshalb kann man davon ausgehen, dass der Anteil der durchgebrochenen Elektronen sehr gering ist. (Messung \datalink{2002/mw0204d4/mw0204d4.html}{04/2002 \#4}, Abschnitte: 30,34,38,41,44,47,52,55)}
+        \label{fig:charge_series}
+    \end{minipage}
+\end{figure}
+In Abbildung~\ref{fig:charge_series} kann man bei der Beladeserie auf PMMA deutlich erkennen, dass die einzelnen hintereinander aufgenommenen Beladekurven, die zu immer höheren Elektronendichten vordringen, noch sehr gut übereinanderliegen. Nur bei der letzten Kurve (Symbol: $\circ$), die bis zu \unit[0.4]{V} vordringt, sieht man deutlich, dass zu Beginn des Beladevorganges das Transmissionssignal im Vergleich zu den anderen Kurven bereits deutlich abweicht. Dieser Effekt taucht immer dann auf, wenn die Belade"=/Entladezyklen relativ zur erreichten Elektronendichte zu schnell durchfahren werden und kann durch eine verlängerte Entladezeit unter Pulsen des Filaments verringert werden.
+\begin{figure}[h!tbp]
+    \begin{center}
+        \subfigure[Beladung]{%
+        \plotlink{pmma_reproduce}{\includegraphics[width=\smallwidth]{exp_film/pmma_reproduce}}}%
+        \subfigure[Verhältnis von TM010"= und TM011"=Mode]{
+        \plotlink{pmma_reproduce2}{\includegraphics[width=\smallwidth]{exp_film/pmma_reproduce2}}}%
+    \end{center}
+    \caption[Einfluss wiederholter Beladevorgänge auf das Aussehen der Messkurven]{Nach einigen Beladevorgängen ändert sich die Form der Beladekurven wie im Bild zu sehen. Vor dem Einsetzen der Beladung sieht man bei der zweiten Kurve schon eine deutliche Änderung der Transmission des Resonators. (Messung \datalink{2002/mw0204d4/mw0204d4.html}{04/2002 \# 4}, Abschnitt 34 und 55, laufender Mittelwert über 20 Messpunkte)}
+    \label{fig:pmma_reproduce}
+\end{figure}
+
+Wenn man zu höheren Elektronendichten im Bereich einer Haltespanung von mehr als \unit[1]{V} vordringt, dauert die Entladung des Filmes bisweilen sehr lange, um wieder zu einer vergleichbaren Ausgangssituation zu kommen. Dadurch verändert sich auch die charakteristische Form der darauffolgenden Beladekurven, wie in Abbildung~\ref{fig:pmma_reproduce} dargestellt. Wie man an der später aufgenommenen Beladekurve sieht, ist der Verlauf der Transmission (und auch komplementär dazu der Verlauf der Resonanzfrequenz) vor Beginn der eigentlichen Beladung des Substrats nicht wie erwartet konstant.
+
+Offensichtlich sind einige Elektronen sehr stark an das Substrat gebunden und auch die Verteilung der Elektronen im Innern des \HR{}s spielt hier eine Rolle. Teilweise kann man die Entladung der Oberfläche beschleunigen und ganz zu Ende bringen, wenn man das Filament pulst, während das stark negative Potential an das Substrat angelegt ist.
+
+Vor dem entscheidenden Beladevorgang sollte (wie schon in Abschnitt~\ref{ssec:chargespeed} beschrieben) überprüft werden, ob die Geschwindigkeit der Spannungsrampe gering genug ist, um im quasi-gesättigten Bereich zu bleiben. Die beim Beladevorgang erreichte Elektronendichte, die über den Endwert der Haltespannung bestimmt wird, kann erst als gültig angesehen werden, falls folgende Bedingungen erfüllt sind:
+\begin{itemize}
+    \item Es ist sicherzustellen, dass die Elektronen nach dem Beladevorgang wieder vollständig von der Oberfläche des Heliumfilms entfernt wurden. Die Werte der Transmission und der Resonanzfrequenz sollten wieder weitgehend auf ihren Wert vor der Beladung zurückgehen.
+    \item Bei erneuter Beladung mit gleichen Parametern sollte die aufgenommene Transmission und Resonanzfrequenz bei Auftragung über der Haltespannung deckungsgleich über der ersten aufgenommenen Beladekurve liegen. Eine Verschiebung der Beladekurve zu höheren Haltespannungen bedeutet, dass die Substratoberfläche mit Elektronen beladen ist. Dies ist ein Hinweis darauf, dass die im ersten Beladeversuch erhaltenen Werte der Elektronendichte sehr wahrscheinlich bei hohen Dichten eine ähnliche Verschiebung aufweisen. Die Beladung der Substratoberfläche mit Elektronen aus dem 2DES geschieht meist erst bei höheren Elektronendichten im 2DES, da die durch den Elektronendruck reduzierte Filmdicke ein Tunneln von Elektronen an Substratrauigkeiten begünstigt.
+    \item Falls Elektronen während des Beladevorganges sehr schnell wieder vom Substrat abfließen, bildet sich keine Sättigungsdichte sondern eine Gleichgewichtsdichte von Elektronen aus. Der Verlust und Zuwachs von Elektronen treten in den direkten Wettbewerb. Einen Hinweis auf diesen Effekt erhält man, wenn das Transmissions- und Frequenzsignal nach Beenden des Beladevorganges, also nach dem Beenden der Filamentpulse, sehr schnell auf einen anderen Wert relaxieren. Dies ist in der in Abbildung~\ref{fig:quantum_time} zu sehenden Beladekurve nach dem Abschalten der periodischen Filamentpulse ab Punkt~4 deutlich zu erkennen.
+\end{itemize}
+
+\begin{figure}[h!tbp]
+    \begin{center}
+    \begin{minipage}[b]{5cm}{\bfseries (a)}\par Beladekurve des Systems mit den markierten Positionen, für die eine Variation der Anregungsstärke durchgeführt wurde.
+    \end{minipage}\plotlink{power_1}{\includegraphics[width=0.9\midwidth]{exp_film/power_1}}\\
+    \begin{minipage}[b]{5cm}{\bfseries (b)}\par Variation der Anregungsstärke im Bereich des klassischen Elektronengases an {\bfseries Position 1}. Sichtbare Hysterese aufgrund des Elektronenverlustes bei hohen Ausgangsleistungen.
+    \end{minipage}\plotlink{power_2}{\includegraphics[width=0.9\midwidth]{exp_film/power_2}}\\
+    \begin{minipage}[b]{5cm}{\bfseries (c)}\par Variation der Anregungsstärke im Bereich des Wigner"=Festkörpers an {\bfseries Position 2}. Kaum sichtbare Hysterese.
+    \end{minipage}\plotlink{power_3}{\includegraphics[width=0.9\midwidth]{exp_film/power_3}}
+    \end{center}
+    \caption[Variation der Mikrowellenamplitude]{Abhängigkeit der Messsignale von der Stärke der Mikrowellenanregung. Bei der Beladekurve {\bfseries (a)} wurde an den zwei markierten Positionen die Mikrowellenanregung im Bereich von $-45$ bis \unit[$-5$]{dBm} durchfahren. {\bfseries (b)} Position 1 im Bereich des klassischen Elektronengases. {\bfseries (c)} Position 2 im Bereich des Wigner-Festkörpers. (Messung \datalink{2002/mw0204d1/mw0204d1.html}{04/2002 \#1})}
+    \label{fig:powerdep}
+\end{figure}
+
+\subsection{Abhängigkeit der gemessenen Signale von der Amplitude der eingestrahlten Mikrowellen}
+Die Amplitude der eingestrahlten Mikrowellen ist ein wichtiger Parameter, der das Verhalten der experimentellen Ergebnisse stark beeinflusst. Um die Vergleichbarkeit und Reproduzierbarkeit der Mikrowellenexperimente zu gewährleisten und die Eigenschaften des Elektronensystems bei hohen Anregungsstärken untersuchen zu können, ist es wichtig, diesen Parameter vor Beginn weiterer Messungen genauer zu untersuchen.
+
+Man erwartet in Anlehnung an die Arbeit von \name{Jiang} \ea{} \cite{Jia89} einen Hinweis auf das mit steigender Anregungsamplitude kontinuierliche Verschwinden des Phasenüberganges zum Wigner"=Festkörper. Man kann unterschiedliche physikalischen  Eigenschaften der beiden Phasen durch experimentelle Hinweise aus der Variation der Anregungsamplitude belegen. Dies geschieht unter der Annahme, dass der in den Abbildungen~\ref{fig:wc_film1} und \ref{fig:wc_film2} sichtbare Knick im Verlauf der Messergebnisse mit dem Phasenübergang des 2DES vom klassischen Elektronengas in einen Wigner"=Festkörper erklärt wird. Diese Beobachtung kann man über den Vergleich der über die Haltespannung bestimmten Werte der Elektronendichte mit den theoretischen Vorhersagen für diesen Phasenübergang untermauern. Diese Abhängigkeit wurde in der Doktorarbeit von \name{T. Günzler} \cite{guenzler} nicht genauer untersucht; dort waren allerdings die in den Messungen verwendeten Anregungsstärken unter $\unit[1]{\grmu W}$, also in einem Bereich in dem das Elektronensignal unabhängig von der Stärke der Anregung ist. Die hier gezeigten Werte entsprechen der Leistung der Mikrowellen vor ihrem Eintritt in den Messaufbau am Kryostaten und sind deshalb nicht identisch mit der Leistung, die im \HR\ ankommt. Nach den Überlegungen von \name{T. Günzler} \cite{guenzler} erreichen noch ungefähr 5\%\footnote{Dieser Wert ist noch abhängig von der Elektronendichte und der Güte und Kopplung des Resonators.} der Ausgangsleistung das Elektronensystem.
+
+\begin{figure}[h!tb]
+    \centerline{%
+    \subfigure[Transmission\label{fig:power_trans}]{\plotlink{2powercharge_trans}{\includegraphics[width=\smallwidth]{exp_film/2powercharge_trans}}}\hfill%
+    \subfigure[Resonanzfrequenz\label{fig:power_freq}]{\plotlink{2powercharge_freq}{\includegraphics[width=\smallwidth]{exp_film/2powercharge_freq}}}}
+    
+    \caption[Transmission und Resonanzfrequenz bei zwei verschiedenen Mikrowellenamplituden]{Beladung: Transmission und Resonanzfrequenz gemessen mit zwei verschiedenen Mikrowellenanregungen von $\unit[-30]{dBm}$ ($\unit[1]{\grmu W}$) und $\unit[-10]{dBm}$ ($\unit[100]{\grmu W}$). (Messung \datalink{2002/mw0211d3/mw0211d3.html}{11/2002 \#3}, Abschnitt 26, über 5 Datenpunkte gemittelt)}
+    
+\end{figure}
+
+Um einen Eindruck der zu erwartenden Größenordnung zu erhalten, ab der sichtbare Effekte auftreten, wurde als erster Schritt die Stärke der eingestrahlten Mikrowellen bei verschiedenen konstanten Elektronendichten in einem weiten Bereich variiert. In Abbildung~\ref{fig:powerdep} sieht man als Ergebnisse dieser ersten Messung die Abhängigkeit von der Anregungsstärke in den verschiedenen Bereichen des Phasendiagramms. Hier wurde an zwei Positionen der Haltespannung in je einer Messung -- eine in der Phase der klassischen Elektronenflüssigkeit, die andere in der Phase des Wigner"=Festkörpers -- die Stärke der Mikrowellenanregung über einen weiten Bereich durchgefahren. In Abbildung~\ref{fig:powerdep}(a) kann man die Beladekurve und in (b) und (c) die Transmission und Resonanzfrequenz bei Variation der Leistung der eingestrahlten Mikrowellen im gleichen Maßstab sehen. Beim Vergleich der Kurven (b) und (c) fällt auf, dass die Änderung der Signale im Bereich des Wigner"=Festkörpers deutlich stärker ausfällt als im Bereich des klassischen Elektronengases, bei dem die sichtbare Hysterese in der Kurve einen Elektronenverlust anzeigt, der durch die hohen Anregungsamplituden verursacht wird. 
+
+Durch die Ergebnisse von Abbildung~\ref{fig:powerdep} kann man sicherstellen, dass man eine Beladekurve aufnimmt und die dabei erhaltenen Messdaten unabhängig und vor allem ohne den Einfluss der Anregungsamplitude sind. Dies ist hier für Anregungsamplituden, die kleiner als $\unit[-25]{dBm}\cong\unit[3]{\grmu W}$ sind, der Fall. Weiterhin kann man auch durch gezieltes Beladen mit höheren Anregungsamplituden und den Vergleich mit Daten aus ungestörten Messungen Hinweise auf die Eigenschaften und das Verhalten des Wigner"=Festkörpers bekommen. Eine solche Messung, in der für jeden Punkt der Beladekurve zuerst mit schwacher und dann mit starker Mikrowellenanregung gemessen wurde, sieht man in den Abbildungen~\ref{fig:power_trans} und \ref{fig:power_freq}.
+
+     
+\section{Experimente zum Phasenübergang in den Wigner"=Kristall} 
+\begin{figure}[h!tbp]
+    \centerline{%
+        \subfigure[Transmission bei Beladung mit Elektronen]{\plotlink{film_transmission}{\includegraphics[width=\smallwidth]{exp_film/film_transmission}}}%
+        \subfigure[Frequenz bei Beladung mit Elektronen]{\plotlink{film_frequency}{\includegraphics[width=\smallwidth]{exp_film/film_frequency}}}}
+    \caption[Wigner-Übergang auf \SiO]{Langsame Steigerung der Elektronendichte mit Übergang zum Wignerkristall. Substrat: \unit[200]{nm} \SiO\ auf Si, T=\unit[1.3]{K}, h=\unit[0.97]{cm}. Pulsparameter: $\tau_\text{Puls}=\unit[250]{ms}$ und $A_\text{Puls}=\unit[1.4]{V}$. (Messung \datalink{2001/mw0109d5/mw0109d5.html}{09/2001 \#5}, Abschnitt~6)}
+        \label{fig:wc_film1}
+\end{figure}
+Auf dünnen Heliumfilmen ist durch den stärkeren Einfluss der Bildladung im Substrat die Elektron-Elektron-Wechselwirkung modifiziert (siehe Abschnitt~\ref{ssec:hefilm_allgemein}). Die erreichbaren Elektronendichten sind nicht mehr wie im Fall von Bulk"=Helium durch die elektrohydrodynamische Instabilität (siehe Abschnitt~\ref{ssec:bulk_stabilitaet}) nach oben hin begrenzt. Als Folge davon kann man auf dünnen Heliumfilmen zu deutlich höheren Elektronendichten vorstoßen.  Allerdings dauern die Beladevorgänge auf Helium"=Filmen wegen der um mehrere Größenordnungen höheren Elektronendichte deutlich länger. Es hat sich gezeigt, dass die Erhöhung der Haltespannung in der Größenordnung von \unitfrac[1]{V}{h} erfolgen muss, um eine Elektronendichte zu erhalten, die in der Nähe des erwarteten Sättigungswertes liegt.
+Um eine angemessene Geschwindigkeit der Beladung sicherzustellen, muss man für eine bestimmte Pulsstärke zuerst verschiedene Geschwindigkeiten testen und kann dann die kritische Geschwindigkeit bestimmen, wie in Abschnitt~\ref{ssec:chargespeed} gezeigt. In Abbildung~\ref{fig:wc_film1} sieht man eine Beladung von einem Silizium-Substrat mit \unit[200]{nm} \SiO-Isolierschicht. Wie später gezeigt wird, ist hierbei die Wahl der Parameter Amplitude und Dauer der Filamentpulse entscheidend. Zu schwache Pulse erzeugen zu wenig Elektronen und durch zu starke Filamentpulse, wird das System so gestört, dass bereits im 2DES vorhandene Elektronen wieder entfernt werden.
+\begin{figure}[h!tbp]
+    \centerline{%
+        \subfigure[Transmission bei Beladung mit Elektronen]{\plotlink{film2_transmission}{\includegraphics[width=\smallwidth]{exp_film/film2_transmission}}}%
+        \subfigure[Frequenz bei Beladung mit Elektronen]{\plotlink{film2_frequency}{\includegraphics[width=\smallwidth]{exp_film/film2_frequency}}}}
+    \caption[Wigner-Übergang auf PMMA]{Langsame Steigerung der Elektronendichte mit Übergang zum Wignerkristall. Substrat: \unit[200]{nm} PMMA auf Si (Wacker), T=\unit[1.2]{K}, h=\unit[0.5]{cm}. (Messung \datalink{2002/mw0205d4/mw0205d4.html}{05/2002 \#4}, Abschnitt 41)}
+    \label{fig:wc_film2}
+\end{figure}
+
+\subsection{Auswertung der Messungen}
+\label{ssec:wigner_auswertung}
+\begin{figure}[h!tbp]
+    \plotlink{film_density}{\includegraphics[width=\midwidth,clip=false]{exp_film/film_density}}\hfill%
+    \begin{minipage}[b]{\textwidth-\midwidth-\tabcolsep}
+        \caption[Auswertung Wigner-Übergang auf \SiO]{Auswertung der Beladung von $\unit[200]{nm}$ \SiO/Silizium. Rohdaten und Bestimmung des Phasenübergangs von Abb.~\ref{fig:wc_film1} (senkrechte Linie). Für den Übergang in den Wigner-Kristall ergibt sich eine Elektronendichte von $\unit[1.1\times10^{14}]{\Em}$. Für die Temperatur von $\unit[1.30]{K}$ ergibt sich dann ein Wert von $\Gamma=240, 123, 163$, die Fermi"=Temperatur ist bei dieser Dichte ungefähr $\unit[300]{mK}$ und spielt somit keine Rolle für das Verhalten des Systems. $d_0=\unit[30]{nm}$, $d=\unit[23]{nm}$ (Messung \datalink{2001/mw0109d5/mw0109d5.html}{09/2001 \#5}, Abschnitt 6, über 5 Punkte gemittelt)}
+        \label{fig:wcres_film1}
+    \end{minipage}
+\end{figure}
+
+Wie durch die in den Abbildungen~\ref{fig:wc_film1} und \ref{fig:wc_film2} eingezeichneten Fitgeraden angedeutet, ergeben sich die wichtigen Fixpunkte der Haltespannung aus den Schnittpunkten dieser Geraden. Der Startpunkt der Beladung $V_0$, also der spätere Nullpunkt der Skala der Elektronendichte, ist der Schnittpunkt der nahezu waagrechten Gerade des Systems ohne Elektronen im 2DES mit der Gerade, die dem Drude"=Verhalten des 2DES entspricht. Der Übergang in den Wigner"=Festkörper ist gegeben durch den Schnittpunkt $V_1$ der Drude"=Gerade mit der -- aufgrund der hier reduzierten Beweglichkeit der Elektronen -- flacher verlaufenden Geradenanpassung rechts vom Wigner"=Knick. Wenn man diese Fixpunkte bestimmt hat, kann man die Messparameter über der Elektronendichte auftragen, die sich aus der selbstkonsistenten Rechnung mit $U=U_\text{clamp}-V_0$ ergibt. Ein Wert der Haltespannung von $U=V_1-V_0$ bestimmt dann die Elektronendichte beim Phasenübergang in den Wigner"=Festkörper. In den
+\begin{figure}[h!tbp]
+    \plotlink{film2_density}{\includegraphics[width=\midwidth]{exp_film/film2_density}}\hfill%
+    \begin{minipage}[b]{\textwidth-\midwidth-\tabcolsep}
+        \caption[Auswertung Wigner-Übergang auf PMMA]{Auswertung der Beladung von $\unit[200]{nm}$ PMMA/Silizium. Rohdaten und Bestimmung des Phasenübergangs von Abb.~\ref{fig:wc_film2} (senkrechte Linie). Für den Übergang in den Wigner-Kristall ergibt sich eine Elektronendichte von $\unit[4.2\times10^{13}]{\Em}$. Für die Temperatur von $\unit[1.29]{K}$ ergibt sich dann ein Wert von $\Gamma=148, 117, 125$. $d_0=\unit[32]{nm}$, $d=\unit[30]{nm}$ (Messung \datalink{2002/mw0205d4/mw0205d4.html}{05/2002 \#4}, Abschnitt 41, über 5 Punkte gemittelt)}
+        \label{fig:wcres_film2}
+    \end{minipage}
+\end{figure}
+Abbildungen~\ref{fig:wcres_film1} und \ref{fig:wcres_film2} sind die derart ausgewerteten Daten der vorigen Abbildungen mit gekennzeichnetem Wigner"=Übergang zu sehen. Für die so erhaltenen Elektronendichten am Phasenübergang und der Temperatur des Experiments kann man dann nach Gleichung~\eqref{eqn:wc_melting_temp} den $\Gamma$"=Wert für den Übergang bestimmen.
+ 
+Wie in der Verteilung der Messparameter Anfangsfilmdicke und Temperatur, die in Abbildung~\ref{fig:film_overview_dT} dargestellt ist, wurde auf den PMMA"=Substraten eine Reihe von Wigner"=Übergängen unter unterschiedlichen Bedingungen gemessen. Für alle diese Messungen wurde dann, wie oben beschrieben, ein $\Gamma$"=Wert für den jeweiligen Phasenübergang berechnet. Einen Überblick über die erhaltenen Werte in Abhängigkeit von der Anfangsfilmdicke ist in Abbildung~\ref{fig:film_overview_G} gezeigt. Die dort eingezeichnete waagrechte Linie entspricht dem theoretisch vorhergesagten Wert nach \cite{Mor79} von $\Gamma=129$.
+
+\begin{figure}[h!tbp]
+    \centerline{%
+        \subfigure[Überblick über die Messparameter Temperatur und Anfangsfilmdicke der Experimente mit erkennbarem \name{Wigner}"=Übergang \label{fig:film_overview_dT}]{\plotlink{film_overview}{\includegraphics[width=\smallwidth]{exp_film/film_overview}}}\hfill%
+        \subfigure[Nach Gleichung~\eqref{eqn:wc_melting_temp} bestimmte Gamma"=Werte der gemessenen \name{Wigner}"=Übergänge -- immer unter der Annahme einer gesättigten Beladung\label{fig:film_overview_G}]{\plotlink{film_overview2}{\includegraphics[width=\smallwidth]{exp_film/film_overview2}}}}
+    \caption[Überblick über verwendete Messparameter auf PMMA]{Überblick über alle gemessenen Wigner-Übergänge auf \unit[200]{nm} PMMA/Silizium Substraten. In {\bfseries (b)} ist der theroretische Wert $\Gamma=129$ aus \cite{Mor79} durch eine horizontale Linie angedeutet.}
+    \label{fig:film_overview}
+\end{figure}
+
+Wie man in Abbildung~\ref{fig:film_overview_G} sieht, liegen die berechneten $\Gamma$"=Werte der Beladekurven auf PMMA auf Silizium"=Substrat meist über 129, jedoch nur selten darunter. Dies ist ein Hinweis darauf, dass die aus der Haltespannung bestimmte Elektronendichte der Beladekurven im Normalfall eher überschätzt wird. Die Geschwindigkeit der Erhöhung der Haltespannung ist also für die Elektronenproduktion des Filaments zu hoch, was dazu führt, dass die wahre Elektronendichte im Verlauf der Messung hinter dem erreichbaren Sättigungswert zurückbleibt. Wegen der in Abschnitt~\ref{ssec:saturation_film} erwähnten Probleme auf Grund der Hysterese in der Beladekurve, die auch eine übersättigte Beladung erlaubt, muss man an dieser Stelle sehr sorgfältig mit verschiedene Raten der Spannungserhöhung messen. Ein unregelmäßiges Stoppen der Erhöhung der Haltespannung wird nur kurzfristig das Gleichgewicht verändern und zu weniger reproduzierbaren Ergebnissen führen, deshalb ist es hier sehr wichtig, den Beladeprozess mit vergleichbaren Parametern durchzuführen.
+
+\section{Experimente bei sehr hohen Elektronendichten}
+\subsection{Hohe Elektronendichten auf PMMA"=Substrat}
+\begin{figure}[h!tb]
+    \plotlink{film_high_n_pmma}{\includegraphics[width=\midwidth]{exp_film/film_high_n_pmma}}\hfill%
+    \begin{minipage}[b]{\textwidth-\midwidth-\tabcolsep}
+        \caption[Hohe Elektronendichten auf PMMA]{Hohe Elektronendichten auf \unit[200]{nm} PMMA/Silizium"=Substrat. Diese Form der Beladekurve konnte reproduzierbar erhalten werden. Leider ist es hier für höhere Elektronendichten nicht klar, ab welcher Haltespannung die Angabe einer korrespondierenden Elektronendichte ungültig wird. (Messung \datalink{2002/mw0204d4/mw0204d4.html}{04/2002 \#4}, Abschnitt 97)}
+        \label{fig:high_n_pmma}
+    \end{minipage}
+\end{figure}
+In Abbildung~\ref{fig:high_n_pmma} sieht man eine typische Beladung eines \unit[200]{nm} PMMA/Silizium"=Substrats bis zu hohen Elektronendichten. Hier kann man den Übergang in den Wigner"=Festkörper gut erkennen, der Verlauf der Messkurven bei höheren Elektronendichten ist dann allerdings meist in ähnlicher Form reproduzierbar, aber nicht gut verstanden.
+
+Der Verlauf der Messkurven konnte so neben der in Abbildung~\ref{fig:high_n_pmma} gezeigten Messung \datalink{2002/mw0204d4/mw0204d4.html}{04/2002 \#4} Abschnitt 97 auch in den Messungen \datalink{2002/mw0204d1/mw0204d1.html}{04/2002 \#1} Abschnitt 28 und \datalink{2002/mw0205d5/mw0205d5.html}{05/2002 \#5} Abschnitt 60 reproduziert werden. Da die Resonanzfrequenz nach dem Phasenübergang in \name{Wigner}"=Bereich bis zu einer Haltespannung von \unit[10]{V} stetig abfällt, liegt die Vermutung nahe, dass die Menge der lokalisierten Elektronen stetig zunimmt. Die so im 2DES angesammelten Elektronen ließen sich nach der Beladung wieder ohne Probleme durch Anlegen eines Gegenfeldes an das Substrat entfernen.  Zumindest erreichen die Werte der  Transmission und der Resonanzfrequenz des Resonators wieder den Ausgangszustand vor der Beladung, allerdings zeigt ein zu höheren Haltespannungen verschobener Beginn der Beladung bei einer darauf folgenden Messung, dass die Substratoberfläche mit lokalisierten Elektronen kontaminiert ist.
+
+Der mehr oder weniger starke Rückgang der Resonanzfrequenz jenseits des Wigner"=Übergangs ist neben den im Rahmen dieser Arbeit durchgeführten Messungen an 2DES auf PMMA"=Substraten auch aus früheren Arbeiten bekannt und hat als Ursache die im Vergleich zu \SiO"=Substrat schlechtere Qualität der Substratoberfläche. Dies erklärt auch die mit höheren Elektronendichten wieder zunehmende Transmission. Obwohl die Elektronendichte zunimmt, sinkt die Beweglichkeit der Elektronen im 2DES mit der sinkenden Dicke des Heliumfilms so stark ab, dass die Dämpfung der Mikrowellen durch das 2DES wieder geringer wird. Auf dem PMMA"=Substrat nimmt die Anzahl der Pinning"=Zentren mit sinkender Dicke des Heliumfilms sehr stark zu.
+
+Als Resultat aller Messungen von 2DES auf PMMA"=Substraten lässt sich zusammenfassend anmerken, dass sich diese einfach herzustellenden und leicht in ihrer Isolatordicke variierbaren Substrate aufgrund ihrer hier nicht ausreichenden Oberflächenqualität nur eingeschränkt für Messungen an 2DES mit Elektronendichten über den \name{Wigner}"=Übergang hinaus eignen.
+
+\subsection{Hohe Elektronendichten auf \SiO"=Substraten}
+\enlargethispage{\baselineskip}
+
+\begin{figure}[h!tb]
+    \plotlink{film_quantum_time}{\includegraphics[width=\midwidth]{exp_film/film_quantum_time}}\hfill%
+    \begin{minipage}[b]{\textwidth-\midwidth-\tabcolsep}
+        \caption[Hohe Elektronendichten auf \SiO, Zeitverlauf]{Zeitverlauf der Messung zu hohen Elektronendichten. Ab {\bfseries 1} beginnt die Beladung des Heliumfilms. Bei {\bfseries 2} findet der Wignerübergang statt. Bei {\bfseries 3} kann man eine Signatur des Quantenschmelzens erkennen. Bei {\bfseries 4} wurde das Pulsen des Filaments beendet, man sieht deutlich ein zurückrelaxieren der Transmission und der Resonanzfrequenz. Am Punkt {\bfseries 5} wurden an das Substrat $\unit[-100]{V}$ angelegt. Die Elektronen lassen sich wieder vollständig entfernen. (Messung \datalink{2002/mw0202d2/mw0202d2.dat}{02/2002 \#2}, Abschnitte 6--8)}
+        \label{fig:quantum_time}
+    \end{minipage}
+\end{figure}
+
+In Abbildung~\ref{fig:quantum_time} sieht man einen Beladevorgang eines Heliumfilms auf einem \unit[200]{nm} \SiO/Sili\-zi\-um"=Substrat. Hier kann man nach dem Einsetzen der Beladung (Punkt 1) den Wigner-Knick (Punkt 2) und einen weiteren Knick (Punkt 3) im Verlauf der Messsignale bei höheren Elektronendichten erkennen. Hierbei kann es sich um die Signatur eines Phasenübergangs vom Wigner"=Festkörper zum entarteten Fermigas von Elektronen handeln, dem so genannten Quanten"=Schmelzen. Die in der Doktorarbeit von \name{T. Günzler} \cite{guenzler} angegebenen Elektronendichten, bei denen dieses Phänomen auftritt, sind mit Werten von über $\unit[8\times10^{15}]{\Em}$ sehr viel höher als hier gemessen. Allerdings findet sich in der Diplomarbeit von \name{B. Bitnar} \cite{bitnar} ein Hinweis, dass die Dicke der \SiO"=Schicht der dort mit {\bfseries Si~1}  bezeichneten Proben, die in \cite{guenzler,bitnar,Gue96} als Substrat verwendet wurden, nach einer ellipsometrischen Messung am Lehrstuhl Bucher nicht wie vorher angenommen \unit[100]{nm}, sondern \unit[262]{nm} beträgt. Diese Anmerkung wird auch durch die Tatsache unterstützt, dass die in \cite{guenzler} angegebenen $\Gamma$"=Werte für den Wignerübergang auf den {\bfseries Si~1} Proben ungewöhnlich hoch sind. In der so korrigierten Version der Beladekurve befindet sich der Wigner"=Knick bei einer Elektronendichte von \unit[$4\times10^{14}$]{\Em} und der mögliche Übergang ins entartete Fermi"=Regime bei \unit[$3.3\times10^{15}$]{\Em}.
+
+\begin{figure}[h!tbp]
+    \plotlink{film_quantum_melting}{\includegraphics[width=\midwidth]{exp_film/film_quantum_melting}}\hfill%
+    \begin{minipage}[b]{\textwidth-\midwidth-\tabcolsep}
+        \caption[Hohe Elektronendichten auf \SiO, Dichteverlauf]{Auftragung der Daten aus Abbildung~\ref{fig:quantum_time} über der aus der Haltespannung berechneten Elektronendichte ($d_0=\unit[33]{nm}$). Hier sieht man neben dem bekannten \name{Wigner}"=Übergang bei \unit[$2\times10^{14}$]{\Em} ($d=\unit[18]{nm}$) einen Knick bei Elektronendichten um \unit[$2.4\times10^{15}$]{\Em} ($d=\unit[4]{nm}$), der eine ähnliche Signatur zeigt wie der mögliche Phasenübergang zum entarteten Fermi"=Gas bei bisherigen Messungen von \name{T. Günzler} \cite{guenzler,Gue96}. (Messung \datalink{2002/mw0202d2/mw0202d2.html}{02/2002 \#2}, Abschnitt 7).}
+        \label{fig:quantum_melting}
+    \end{minipage}
+\end{figure}
+
+Die für die in Abbildung~\ref{fig:quantum_melting} gezeigten Messdaten bestimmte Elektronendichte von \unit[$1.4\times10^{14}$]{\Em} für den \name{Wigner}"=Übergang entspricht einem $\Gamma$"=Wert von 205. Dieser Wert ist höher als der aus der Theorie erwartete und deutet auch hier auf ein System hin, das die durch die angelegte Haltespannung vorgegebene Sättigungsdichte noch nicht ganz erreicht hat.
+
+Bei den Messungen im Bereich von sehr hohen Elektronendichten erhält man allerdings nicht zwangsläufig einen Verlauf, wie er in Abbildung~\ref{fig:quantum_melting} zu sehen ist. Zum Vergleich ist in Abbildung~\ref{fig:high_n_sio2} eine nachfolgende Beladung aus der selben Serie von Messungen gezeigt, aus der auch schon die Daten in Abbildung~\ref{fig:quantum_time} stammen. Hierin sieht man nur den bekannten \name{Wigner}"=Knick, obwohl auch der Bereich zu höheren Elektronendichten bis zu einer Haltespannung von \unit[7]{V} durchfahren wurde, die einer maximalen Elektronendichte von ca. \unit[$8\times10^{15}$]{\Em} entspricht. Man kann im Verlauf von Transmission und Resonanzfrequenz keine entscheidende Änderung der Beweglichkeit des 2DES mehr ausmachen.
+
+\begin{figure}[h!tbp]
+    \plotlink{film_high_n_sio2}{\includegraphics[width=\midwidth]{exp_film/film_high_n_sio2}}\hfill%
+    \begin{minipage}[b]{\textwidth-\midwidth-\tabcolsep}
+        \caption[Hohe Elektronendichten auf \SiO, Dichteverlauf]{Eine Messung die im Anschluss an der in Abbildung~\ref{fig:quantum_melting} dargestellten Messung durchgeführt wurde. Es ist die Frequenz und die Transmission über der aus der Haltespannung berechneten Elektronendichte aufgetragen. Hierbei finden sich in der \name{Wigner}"=Phase keine Hinweise auf einen weiteren Phasenübergang in ein entartetes Fermi"=Gas. Für den Übergang bestimmte Werte: $d=\unit[11]{nm}$, $n_\text{crit}=\unit[4\times10^{14}]{\Em}$, $\Gamma=258, 340$ (Messung \datalink{2002/mw0202d2/mw0202d2.html}{02/2002 \#2}, Abschnitt 20)}
+        \label{fig:high_n_sio2}
+    \end{minipage}
+\end{figure}
+
+Wenn man die relative Änderung der Transmission bei den Übergängen von Abbildungen~\ref{fig:quantum_melting} und \ref{fig:high_n_sio2} vergleicht, sieht man, dass der Wigner"=Übergang aus Abbildung~\ref{fig:quantum_melting} nach einer Verringerung der Transmission von nur \unit[0.4]{dB} erfolgt, wohingegen dieser Übergang in Abbildung~\ref{fig:high_n_sio2} erst nach einer Transmissionsänderung von \unit[2]{dB} auftritt. Es ist hier nun schwer zu argumentieren, wie dieser Unterschied des Verhaltens der Messungen gedeutet werden kann. Möglicherweise ist die Beweglichkeit des Elektronensystems in der ersten Messung deutlich geringer und verbessert sich dann mit zunehmender Messdauer. Da der Verlauf von Abbildung~\ref{fig:quantum_melting} jedoch nicht in einer weiteren Messung reproduziert werden konnte, ist es im Prinzip auch möglich, dass die Erzeugung von Elektronen durch das Filament während der laufenden Messung ausgesetzt hat. Wenn man hier zur Überprüfung die aufgezeichneten Filamentparameter der Messung (siehe Abschnitt~\ref{ssec:filament}) untersucht, lassen sich jedoch keine Unregelmäßigkeiten im Betrieb des Filaments zu den entsprechenden Zeiten feststellen. Generell war es bisher leider noch nicht möglich, systematische Untersuchungen von Signaturen des Phasenübergangs in das entartete Fermi"=Regime durchzuführen, da diese immer nur vereinzelt beobachtet werden konnten.
+
+Um nach den vorgestellten Messungen einen Hinweis darauf zu bekommen, wie stark die Oberfläche des Substrats mit Elektronen kontaminiert ist und wie die Transmission des Hohlraumresonators mit unbeladenem Substrat variiert, ist es hilfreich für verschiedene aufeinanderfolgende Messungen nur das Einsetzen der Beladung in einem Graphen darzustellen, vgl.\ Abbildung~\ref{fig:quantum_reproduce}.
+Der Wert der Transmission zu Beginn der jeweiligen Beladekurve kann einen Hinweis auf den Einfluss von auf dem Substrat festsitzenden Ladungen geben, falls diese Löcher im Halbleiter induzieren. Weiterhin zeigt die Verschiebung des Spannungswertes am Einsetzpunkt der Beladung genau an, um wieviel sich das effektive elektrische Feld oberhalb des Substrats durch diese Ladungen geändert hat. Jegliche Kontaminierung der Substratoberfläche mit negativen Ladungen hat zur Folge, dass das Einsetzen der Beladung zu höheren Haltespannungen hin verschoben ist. Hierzu werden ausgewählte Abschnitte aus der diskutierten Messung \datalink{2002/mw0202d2/mw0202d2.html}{02/2002 \#2} in Abbildung~\ref{fig:quantum_reproduce} gezeigt.
+
+\begin{figure}[h!tb]
+    \plotlink{film_quantum_reproduce}{\includegraphics[width=\smidwidth]{exp_film/film_quantum_reproduce}}\hfill%
+    \begin{minipage}[b]{\textwidth-\smidwidth-\tabcolsep}
+        \caption[Hohe Elektronendichten auf \SiO, Vergleich aufeinanderfolgender Beladeversuche]{Vergleich von aufeinanderfolgenden Beladeversuchen. Nach der ersten Beladung des frisch eingebauten \SiO"=Substrats {\large$\circ$} ist die in diesem Abschnitt genauer untersuchte Messung {\large$\bullet$} (Abb.~\ref{fig:quantum_melting}) dargestellt. Nach dem Auffüllen des Heliumbades und erneutem Herunterkühlen auf die Arbeitstemperatur wurde die Kurve $\bigtriangledown$ als nächste Beladekurve aufgenommen. Die danach aufgenommene Messung von Abbildung~\ref{fig:high_n_sio2} ist durch $\blacktriangledown$ dargestellt. (Messung \datalink{2002/mw0202d2/mw0202d2.html}{02/2002 \#2}, Abschnitte 4,7,11,20)}
+        \label{fig:quantum_reproduce}
+    \end{minipage}
+\end{figure}
+

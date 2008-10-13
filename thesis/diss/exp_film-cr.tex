@@ -1,0 +1,81 @@
+\subsection{Messungen im Magnetfeld -- Zyklotronresonanz}
+\label{ssec:cyclotron_film}
+
+Wie schon in Abschnitt~\ref{ssec:2KM_anwendung} vorgestellt, kann man die Abweichungen vom Verhalten freier Elektronen in der gemessenen Absorption bei einer Messung der Zyklotronresonanz mit Hilfe des Zwei"=Komponenten"=Modells erklären. Hierbei wird das erhaltene Ergebnis aus dem Beitrag freier und lokalisierter Elektronen zusammengesetzt, deren Anteile aus den gemessenen Daten bestimmt werden können. Zur ersten Validierung dieses Modells in Abhängigkeit von der Filmdicke wurden bereits vorhandene experimentelle Daten von \name{G. Mistura} ausgewertet. Es handelt sich um Messungen an 2DES auf dünnen Heliumfilmen auf Silizium"=Substraten mit PMMA"=Filmen als Isolatorschicht. Die Ergebnisse aus der Anwendung des Zwei"=Komponenten"=Modells auf diese Daten sind in \cite{Kli02} veröffentlicht. Um die Gültigkeit des Zwei"=Komponenten"=Modell auch auf \SiO /Silizium"=Substraten überprüfen zu können, wurde eine Messreihe an Silizium"=Substraten mit \unit[200]{nm} \SiO "=Deckschicht durchgeführt. In Abbildung~\ref{fig:filmcr_raw} sieht man eine Auswahl dieser Daten mit Variation des  Magnetfelds an 2DES auf Heliumfilmen verschiedener Dicke. Das gemessene Transmissionsignal wurde dort bereits in die Absorption des Elektronensystems umgerechnet und auf den jeweiligen Wert dieser Absorption ohne Magnetfeld ($B=0$) normiert. Weiterhin sind zusätzlich zu den Messdaten die Ergebnisse der Kurvenanpassung der magnetfeldabhängigen Absorption nach dem Zwei"=Komponenten"=Modell dargestellt.
+\enlargethispage{2\baselineskip}
+\begin{figure}[h!tbp]
+	\begin{center}
+	$%
+		\subfigure[$d_0\approx{\unit[35]{nm}}$]{%
+		\plotlink{cr0202d4_003}{\includegraphics[width=\smallwidth]{exp_film-cr/cr0202d4_003}}}%
+	\atop
+		\addtocounter{subfigure}{1}%
+		\subfigure[$d_0\approx{\unit[11]{nm}}$]{%
+		\plotlink{cr0202d4_001}{\includegraphics[width=\smallwidth]{exp_film-cr/cr0202d4_001}}}%
+	$%
+	\addtocounter{subfigure}{-2}%
+	\subfigure[$d_0\approx{\unit[21]{nm}}$]{%
+	\plotlink{cr0202d4_002}{\includegraphics[width=\smallwidth]{exp_film-cr/cr0202d4_002}}}
+	\addtocounter{subfigure}{1}%
+	\end{center}
+	\vspace{-4ex}
+	\caption[Zyklotronresonanz von 2DES auf dünnen Helium Filmen]{Messungen der Zyklotronresonanz mit 2DES auf Helium"=Filmen verschiedener Dicke. Deutlich ist die Zunahme der Asymmetrie bei Abnahme der Filmdicke und die gute Übereinstimmung der physikalischen Fitfunktion \eqref{eqn:2frac_total_absorp} mit den Messdaten zu sehen.(Messung \datalink{2002/mw0202d4/mw0202d4.html}{02/2002 \#4}, Abschnitte 48, 25, 61)}
+	\label{fig:filmcr_raw}
+\end{figure}
+
+Wie man sieht, ist die Kurvenanpassung nach dem Zwei"=Komponenten"=Modells im Vergleich zur Annahme der alleinigen Existenz von freien Elektronen im 2DES (siehe auch die Qualität der in Abb.~\ref{fig:guenzler_cr_abs} gezeigten Kurvenanpassung) deutlich verbessert. In die Kurvenanpassung des Zwei"=Komponenten"=Modells geht zusätzlich nur ein weiterer \emph{physikalischer} Parameter mit ein, der das Verhältnis der Fraktionen von freien und lokalisierten Elektronen bestimmt.
+
+Wenn man die aus der Messung mit nachfolgender Kurvenanpassung erhaltenen Parameter Anteil freier Elektronen $n_e/n_s$ und Linienbreite $\tau^{-1}$ genauer untersucht und mit den ersten nach dieser Methode ausgewerteten Daten von PMMA Filmen von \name{Mistura} in \cite{Kli02} vergleicht, erhält man die Ergebnisse wie sie in Abbildung~\ref{fig:filmcr_res1} gezeigt sind.
+
+\begin{figure}[h!tbp]
+	\begin{center}
+		\subfigure[Fraktionen freier Elektronen]{\plotlink{cr0202d4_004}{\includegraphics[width=\smallwidth]{exp_film-cr/cr0202d4_004}}}%
+		\subfigure[Linienbreite]{\plotlink{cr0202d4_005}{\includegraphics[width=\smallwidth]{exp_film-cr/cr0202d4_005}}}
+	\end{center}
+	\caption[Kurvenanpassung nach dem Zwei"=Komponenten"=Modell]{Auswertung der Messung der Zyklotronresonanz auf dünnen Filmen nach dem Zwei"=Komponenten"=Modell. In {\bfseries (a)} sieht man den aus der Kurvenanpassung bestimmten Anteil freier Elektronen $n_e$ für ein \SiO /Silizium"= und ein PMMA/Silizium"=Substrat. Der Knick bei geringen Filmdicken könnte eine Signatur des bekannten \"{}Dip problem\"{} \cite{Shi01} von 2DES auf dünnen Heliumfilmen sein. In {\bfseries (b)} ist $\tau^{-1}$, also die Linienbreite der Zyklotronresonanz für diese Messungen dargestellt. (\SiO: Messung \datalink{2002/mw0202d4/mw0202d4.html}{02/2002 \#4}, PMMA: Gemessen von \name{G. Mistura})}
+	\label{fig:filmcr_res1}
+\end{figure}
+
+Mit den aus den Zwei"=Komponenten"=Modell erhaltenen Ergebnissen kann man nun sehr gut die physikalischen Eigenschaften verschiedener Substratoberflächen charakterisieren. Aus Abbildung~\ref{fig:filmcr_res1} wird deutlich, dass das Substrat mit \SiO"=Deckschicht im Vergleich zu dem mit PMMA"=Deckschicht erheblich glatter ist, da es offensichtlich weit weniger Plätze für lokalisierte Elektronen zur Verfügung stellt. Dies stimmt auch mit der direkten Abbildung des Oberflächenprofils der Substrate mit einem AFM überein, deren Resultate in den Abbildungen~\ref{fig:afm_sio2} und \ref{fig:afm_pmma} gezeigt sind. Der relative Anteil der freien Elektronen $\nu_e$ ist auf dem \SiO"=Substrat höher als auf der mit PMMA beschichteten Si"=Oberfläche; auch das Verhalten von $\nu_e$ bei geringeren Filmdicken unterstreicht diese Aussage. Hier wird es mit PMMA"=Substraten aufgrund des deutlichen Einflusses von lokalisierten Elektronen zunehmend schwieriger, gut auswertbare Messkurven der Zyklotronresonanz zu erhalten.
+
+\subsection{Charakterisierung der Oberfläche mit Hilfe des Zwei"=Komponenten"=Modells}
+
+\begin{figure}[h!tbp]
+	\plotlink{cr0202d4_007}{\includegraphics[width=\smidwidth]{exp_film-cr/cr0202d4_007}}\hfill%
+	\begin{minipage}[b]{\textwidth-\tabcolsep-\smidwidth}
+		\caption[Ergebnisse des Zwei"=Komponenten"=Modells]{Auftragung des Anteils freier Elektronen $\nu_e$ über dem vertikalen Abstand zur Bulk"=Helium Oberfläche. Aus der gezeigten Kurvenanpassung lassen sich die Parameter der Modellrauigkeit $\Delta$ und $\eta$ bestimmen.}
+		\label{fig:filmcr_res2}
+	\end{minipage}
+\end{figure}
+
+Das Zwei"=Komponenten"=Modell verwendet ein stark vereinfachtes Modell einer Oberfläche, das die zu modellierende Substratoberfläche, wie in Abbildung~\ref{fig:real_substrate} verdeutlicht, mittels weniger Parameter beschreibt: Diese sind die mittlere Rauigkeitsamplitude $\Delta$ nach Gleichung \eqref{eqn:Ddelta} und die Korrelationslänge der Rauigkeit in lateraler Richtung $\eta$ nach Gleichung \eqref{eqn:deltaAC}. Wenn man eine Serie von Messdaten aus Zyklotronresonanzmessungen des selben zu untersuchenden Substrats bei verschiedenen Heliumfilmdicken zur Verfügung hat, kann man die Parameter der Modelloberfläche aus einer Kurvenanpassung an den theoretischen Verlauf der Messergebnisse in der Auftragung von $\nu_e$ über $h$ bestimmen. Hierzu wird aus den Gleichungen~\eqref{eqn:two_fraction} $\mu_0$ bzw.\ $x$ eliminiert
+
+\begin{equation}
+	\begin{aligned}
+	n_e &= \frac{n_e^0}{x + 1}\\
+	n_l &= \frac{n_a}{x\epsilon + 1}\\
+	&\textt{mit:} n_e^0=\frac{m T e^{\frac{T_e}{T}}}{2\pi\hbar}\ttextt{,}
+		x=e^{-\frac{\mu_0}{T}}\ttextt{und}\epsilon=e^{\frac{V_a}{T}}
+	\end{aligned}
+\end{equation}
+ 
+ und man kann diesen Ausdruck dann nach $n_e$ auflösen:
+ 
+ \begin{equation}
+ 	\label{eqn:neh}
+ 	n_e=\frac{2e^\frac{V_a}{T}n_e^0 n_s}{n_a - n_s + e^\frac{V_a}{T} (n_e^0 + n_s) +
+	\sqrt{\left(n_a + e^\frac{V_a}{T} (n_e^0 - n_s) - n_s\right)^2 +
+	 4e^\frac{V_a}{T}(n_a + n_e^0 - n_s)n_s}}
+ \end{equation}
+ 
+Bei einer Auftragung von $n_e(h)$, kann man nun ausgehend von Gleichung~\eqref{eqn:neh} eine Fitfunktion mit den freien Parametern $\Delta$ und $\eta$ auf die Messergebnisse anwenden. Wie man in Abbildung~\ref{fig:filmcr_res1} sehen kann, wurde diese Kurvenanpassung an den nach dem Zwei"=Komponenten"=Modell erwarteten Verlauf der Punkte durchgeführt. Leider ist für den Fall des \SiO"=Substrats die Krümmung der Anpassungskurve nicht mit dem Modell vereinbar; in diesem Fall erhält man einen negativen Wert. Für die Messung am PMMA"=Substrat ergeben sich hieraus jedoch folgende Werte:
+
+\begin{center}
+	\begin{tabular}{rl}
+	mittlere Rauigkeitsamplitude: &$\Delta\approx\unit[8]{nm}$\\
+	horizontale Korrelationslänge: &$\eta\approx\unit[6]{nm}$\\
+	\end{tabular}
+\end{center}
+
+Diese Werte liegen in der Größenordnung, die auch für ein im Experiment verwendetes Substrat realistisch erscheint.
+

@@ -1,0 +1,149 @@
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+    \pdffalse
+\else
+    \pdfoutput=1
+    \pdftrue
+\fi
+
+\usepackage[english,german,ngerman]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[mtpluscal,mtbold]{mathtime}
+%\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nicefrac}
+\usepackage{units}
+\usepackage{graphicx}
+\usepackage[tight,hang,raggedright]{subfigure}
+\usepackage{float}
+\usepackage{caption2}
+\usepackage{calc}
+  \renewcommand{\captionlabelfont}{\bfseries}
+  \renewcommand{\captionfont}{\small\slshape}
+
+\ifpdf 
+	\pdfcompresslevel9
+	\usepackage{thumbpdf}
+	\usepackage[pdftex,
+        colorlinks=true,
+        urlcolor=rltred,       % \href{...}{...} external (URL)
+        filecolor=rltgreen,     % \href{...} local file
+        linkcolor=rltblue,       % \ref{...} and \pageref{...}
+        citecolor=rltgreen,
+        pdftitle={Hochfrequenzuntersuchung an zweidimensionalen Elektronensystemen auf dünnen Heliumfilmen},
+        pdfauthor={Andreas Würl},
+        pdfsubject={},
+        pdfkeywords={surface electrons, helium films, phase diagram, quantum melting},
+        pagebackref,
+        pdfpagemode=None,
+        bookmarksopen=true]{hyperref}
+	\usepackage{color}
+	\definecolor{rltred}{rgb}{0.4,0,0}
+	\definecolor{rltgreen}{rgb}{0,0.5,0}
+	\definecolor{rltblue}{rgb}{0,0,0.5}
+	\newcommand{\datalink}[2]{\href{http://www.wuerl.net/diss/microwave/#1}{#2}}
+	\newcommand{\plotlink}[2]{\href{http://www.wuerl.net/diss.html/#1.gp}{#2}}
+	\newcommand{\link}[1]{\href{http://#1}{#1}}
+\else
+	\newcommand{\datalink}[2]{#2}
+	\newcommand{\plotlink}[2]{#2}
+	\newcommand{\link}[1]{#1}
+\fi
+  
+\bibliographystyle{leidiss}
+
+%
+% Neudefinitonen von Kommandos/Umgebungen
+%
+
+\renewcommand{\vec}{\bold}
+
+\newcommand{\siehe}{\ensuremath{\nearrow}}
+\newcommand{\hae}{\marginpar{? hae ?}}
+\newcommand{\TODO}{\marginpar{TODO}}
+
+\newcommand{\e}{\ensuremath{e^\text{-}}}
+\newcommand{\SiO}{\ensuremath{\text{SiO}_2}}
+\newcommand{\DC}{\ensuremath{\Delta C_3}}
+\newcommand{\Ecm}{\ensuremath{\text{cm}^{-2}}}
+\newcommand{\Em}{\ensuremath{\text{\upshape m}^{-2}}}
+\newcommand{\kB}{\ensuremath{k_\text{B}}}
+\newcommand{\HR}{Hohlraumresonator}
+\newcommand{\RF}{Resonanzfrequenz}
+\newcommand{\DK}{Dielektrizitätskonstante}
+\newcommand{\ea}{{\itshape et al.}}
+\newcommand{\name}[1]{{\scshape #1}}
+\newcommand{\grmu}{\textgr{m}}
+
+%
+% Hier die Definitionen für einen Befehl, \noref, der zwar die Bezeichnung 
+\makeatletter
+\def\@nosetref#1#2#3{%
+  \ifx#1\relax
+   \protect\G@refundefinedtrue
+   \nfss@text{\reset@font\bfseries ??}%
+   \@latex@warning{Reference `#3' on page \thepage \space
+             undefined}%
+  \else
+   \expandafter#2#1\null
+  \fi}
+\def\noref#1{\expandafter\@nosetref\csname r@#1\endcsname\@firstoffive{#1}}
+\makeatother
+%
+% Hier die Definitionen um einen nicht-kursiven griechischen Buchstaben im Text zu verwenden.
+% Definiert den Befehl \textgr
+\makeatletter
+\DeclareFontEncoding{LmtG}{}{\noaccents@}
+\DeclareFontFamily{LmtG}{mtg}{}
+\DeclareFontShape{LmtG}{mtg}{\mddefault}{\updefault}{<->mtgu}{}
+\DeclareFontShape{LmtG}{mtg}{\bfdefault}{\updefault}{<->mtgub}{}
+\DeclareFontSubstitution{LmtG}{mtg}{\mddefault}{\updefault}
+\def\greekshape{\fontencoding{LmtG}\selectfont}%
+\DeclareTextFontCommand{\textgr}{\greekshape}
+\makeatother
+
+% H"aufig benötigte Worte/Floskeln
+% Bildbreiten:
+\newlength{\ssmallwidth}
+\setlength{\ssmallwidth}{0.4\textwidth}
+\newlength{\smallwidth}
+\setlength{\smallwidth}{0.495\textwidth}
+\newlength{\smidwidth}
+\setlength{\smidwidth}{0.6\textwidth}
+\newlength{\midwidth}
+\setlength{\midwidth}{0.7\textwidth}
+\newlength{\bigwidth}
+\setlength{\bigwidth}{0.9\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% quer: Setzt Strich "uber #1
+\newcommand{\quer}[1]{\overline{#1}}
+% ul: Unterstreicht #1
+\newcommand{\ul}[1]{\ensuremath{\underline{\mathrm{#1}}}}
+
+% Text in Formeln mit Raum vor (\beforetext) und nach (\aftertext) dem Text
+\newcommand{\beforetext}{\quad}
+\newcommand{\aftertext}{\quad}
+\newcommand{\ttext}[1]{\beforetext\text{#1}} % Abstand nur vorher
+\newcommand{\textt}[1]{\text{#1}\aftertext}  % Abstabd nur nachher
+\newcommand{\ttextt}[1]{\beforetext\text{#1}\aftertext} % Abstand vor- und nachher
+
+% "Betrag": schlie"st #1 in angepaßte Striche | ein
+\newcommand{\abs}[1]{\left\lvert \smash[t]{#1} \right\rvert}
+\newcommand{\brak}[1]{\left<#1\right>}
+
+% \log-like
+\DeclareMathOperator{\sgn}{sgn}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setlength{\parindent}{0em} \setlength{\parskip}{1ex}
+
+\newenvironment{explanation}
+    {\footnotesize$$\begin{tabular}{r@{ : }l}}
+    {\end{tabular}$$}
+
+%\setcounter{tocdepth}{3}
+\pagestyle{headings}

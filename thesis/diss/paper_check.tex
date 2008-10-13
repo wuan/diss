@@ -1,0 +1,57 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{typearea}\typearea{15}
+\newcommand{\eqref}[1]{(\ref{#1})}
+
+\begin{document}
+\section{Definitions}
+Relation of the fractions and the total density:
+\begin{equation}
+	\label{eqn:totalDensity}
+	n_e+n_l=n_s
+\end{equation}
+With the following substitutions
+\begin{equation}
+	\label{eqn:substitutions}
+	x=e^{-\frac{\mu_0}{T}}\quad\mathrm{and}\quad\epsilon=e^{\frac{V_a}{T}}
+\end{equation}
+one gets the following form for the density of localized electrons
+\begin{equation}
+	\label{eqn:locDensity}
+	n_l=\frac{n_a}{x\,\epsilon+1}
+\end{equation}
+and for the free electron density
+\begin{equation}
+	\label{eqn:freeDensity}
+	n_e=\frac{n_0^e\,e^{\frac{T_e}{T}}}{x+1}
+\end{equation}
+When inserting \eqref{eqn:freeDensity} and \eqref{eqn:locDensity} into \eqref{eqn:totalDensity}, one gets:
+\begin{equation}
+	\frac{n_0^e\,e^{\frac{T_e}{T}}}{x+1}+\frac{n_a}{x\,\epsilon+1}=n_s
+\end{equation}
+when solving this for $x$ one gets:
+\begin{equation}
+-\frac{-n_a + n_s - n^e_0\,e^{\frac{T_e}{T}}\, \epsilon  + n_s\epsilon  + {\sqrt{4 \left(n_a + n^e_0\,e^{\frac{T_e}{T}} - n_s \right) n_s\epsilon  + {\left(n_a - n_s + n^e_0\,e^{\frac{T_e}{T}}\epsilon  - n_s\epsilon  \right) }^2}}}{2n_s\epsilon }
+\end{equation}
+
+\section{Calculation of the chemical potential}
+
+Solving $n_e+n_l=n_s$ for $e^{\mu_0/T}$ yields:
+
+\begin{equation}
+\frac{n_s -n_a + e^{\frac{V_a}{T}}\left(n_s - n_0^e\,e^{\frac{T_e}{T}}\right) + {\sqrt{4e^{\frac{V_a}{T}}\left(n_a + n_0^e\,e^{\frac{T_e}{T}} - n_s \right) n_s + {\left(n_a - n_s + e^{\frac{V_a}{ T}}\left( n_0^e\,e^{\frac{T_e}{T}} -  n_s\right) \right) }^2}}}{2\left(n_a + n_0^e\,e^{\frac{T_e}{T}} - n_s \right)}
+\end{equation}
+This is nearly the solution given in (28) of the paper (except the terms $n_a$ and $n_0^e$ in the nominator).
+
+\section{Elimination of the chemical potential for the free electron fraction $\nu_e$}
+Solving~\eqref{eqn:locDensity} for $\mu_0$:
+\begin{equation}
+	\mu_0=V_a-T\ln\left(\frac{n_a}{n_e-n_s}-1\right)
+\end{equation}
+Now inserting the calculated value of $\mu_0$ in \eqref{eqn:freeDensity} and solving for $n_e$:
+\begin{equation}
+\frac{\nu_a +1+ e^{\frac{V_a}{T}}\, \left( 
+                1 + \nu^e_0 \right)  - {\sqrt{{\left( \nu_a +1\right) }^2 + e^{\frac{2\, V_a}{T}}\, {\left(\nu^e_0 +1\right) }^2 + 
+                      2\, e^{\frac{V_a}{T}}\, \left(\nu_a + \nu^e_0 + \nu_a\, \nu^e_0 +1\right) }}}{2\, \left( \
+e^{\frac{V_a}{T}}-1 \right) }
+\end{equation}
+ \end{document} 

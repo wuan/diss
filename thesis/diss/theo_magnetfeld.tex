@@ -1,0 +1,87 @@
+\section{Elektronen im Magnetfeld}
+\label{sec:magnetfeld}
+
+\subsection{Elektronen im elektrischen Wechselfeld und im statischen Magnetfeld}
+\label{ssec:eqns_of_motion_B}
+Im Folgenden soll die absorbierte Leistung und die Suszeptibilität von freien Elektronen im hochfrequentem elektrischen Wechselfeld und einem dazu senkrechten statischen Magnetfeld bestimmt werden. Hierzu gehen wir von der folgenden Bewegungsgleichung für diesen Fall aus:
+\begin{equation}
+	e\vec E+e(\vec v\times\vec B)=m\dot{\vec v}+\frac{m}\tau\vec v\quad.
+\end{equation}
+Mit einem harmonischen Lösungsansatz, in dem sich $\vec E$ und $\vec v$ in einer Ebene befinden, die senkrecht zu $\vec B$ ist, kann man eine Lösung für $\vec v$ finden. Hieraus kann, analog zur Vorgehensweise von Abschnitt~\ref{ssec:eqns_of_motion}, die Absorption des Elektronensystems berechnet werden:
+\begin{equation}
+	\label{eqn:of_motion_real}
+	\Re j_x(\omega, \omega_c, \tau)= \frac{n_s e \tau
+		E_{\parallel}}{m_e} \frac{(1+\omega^2\tau^2+\omega_c^2\tau^2)}
+		{(1-\omega^2\tau^2+\omega_c^2\tau^2)^2+4 \omega^2\tau^2}\quad.
+\end{equation}
+Ebenso wird nach der Integration der Lösung für $\vec v$ die korrespondierende Suszeptibilität berechnet:
+\begin{equation}
+	\label{eqn:of_motion_imag}
+	\Im j_x(\omega, \omega_c, \tau)=-(\omega \tau) \frac{n_s e \tau
+		E_{\parallel}}{m_e} \frac{(1+\omega^2\tau^2-\omega_c^2\tau^2)}
+		{(1-\omega^2\tau^2+\omega_c^2\tau^2)^2+4 \omega^2\tau^2}\quad.
+\end{equation}
+
+\subsection{Anwendung des Zwei"=Komponenten"=Modells auf die Messungen der Zyklotronresonanz}
+\label{ssec:2KM_anwendung}
+
+Das Verhalten der Absorption und die Suszeptibilität freier Elektronen im Magnetfeld ergibt sich jeweils aus dem Real- \eqref{eqn:of_motion_real} und Imaginärteil \eqref{eqn:of_motion_imag} der Bewegungsgleichung aus dem vorherigen Abschnitt. Der Anteil der lokalisierten Elektronen wird aus der von der Beschaffenheit des Substrats und der Heliumfilmdicke abhängigen Verteilung der Lokalisierungspotentiale zusammengesetzt.
+
+Ziel der Anwendung des Zwei"=Komponenten"=Modells ist, das Verhältnis von diesen beiden Komponenten direkt aus der Asymmetrie der Resonanzlinie der Zyklotronresonanz zu bestimmen. Als Nutzen daraus erhält man ein besseres Verständnis der Messungen der Zyklotronresonanz auf dünnen Heliumfilmen und hat somit eine Methode zur Hand, die bei Messungen von 2DES auf dünnen Filmen sehr wichtige Substratrauigkeit genauer zu charakterisieren.
+
+\begin{figure}[h!tbp]
+	\plotlink{cr_schema}{\includegraphics[width=\smidwidth]{theo_magnetfeld/cr_schema}}%
+	\hfill%
+	\begin{minipage}[b]{\textwidth-\smidwidth-\tabcolsep}
+		\caption[Zusammensetzung der Fitfunktion des Zwei"=Komponenten"=Modells]{Schema der nach dem Zwei"=Komponenten"=Modell verwendeten Fitfunktion für die Absorption der Zyklotronresonanz. Für $Q_l^{-1}$ ist die Entstehung aus einer Faltungsoperation von Absorptionen lokalisierter Elektronen mit unterschiedlichem $\omega_0$ aus \eqref{eqn:Ql} angedeutet.}
+		\label{fig:twocomp_cr}
+	\end{minipage}
+\end{figure}
+Der Anteil der lokalisierten Elektronen an der Gesamtabsorption kann durch das in Gleichung~\ref{eqn:Ql} gezeigte Integral genähert werden. Wie schon in Abbildung~\ref{fig:twocomp_cr} angedeutet ist, besteht der Anteil der lokalisierten Elektronen aus einer Faltung der Absorption eines einzelnen lokalisierten Elektrons~\eqref{eqn:Ql_single} mit der berechneten Verteilungsfunktion $D(\gamma)$:
+    \begin{equation}
+        \label{eqn:Ql}
+        Q^{-1}_l(\omega, \omega_c)=\frac{e^2\tau
+        E_{\parallel}^2}{m}n_l \int\limits_0^{\Gamma}
+        D(\gamma) f(\omega_0^2\tau^2, \omega_c^2\tau^2, \omega_a^2\tau^2)\,d\gamma
+    \end{equation}
+    \begin{equation}
+    		\label{eqn:Ql_single}
+        \textrm{mit}\quad f(z,x,t)=\frac{(z-t)^2-z-z x-2(z-z)^2}
+            {\left[(z-t)^2-z-z x\right]^2+4 z(z-t)^2}\quad.
+    \end{equation}
+
+Die analytische Lösung dieses Integrals ergibt:
+
+	\begin{equation}
+	Q^{-1}_l(x,z) \propto \frac{\arctan\left(\frac{\sqrt{z}}{1+x+\sqrt{x z}}\right)+
+		\arctan\left(\frac{z}{(1+x)\sqrt{z}-z\sqrt{x}}\right)+c(x,z)}{2\sqrt{z}}\quad.
+	\end{equation}
+Die Funktion $c(x,z)$ dient nur zur Wahl des richtigen Astes der $\arctan$-Funktionen und hat keine weitere physikalische Bedeutung:
+	\begin{equation}
+		c(x,z)=\frac\pi2\left(1-\sgn\left((1+x)\sqrt{z}-z\sqrt{x}\right)\right)
+	\end{equation}
+
+Der gemessene Verlauf der Absorption des Systems setzt sich aus der Absorption der lokalisierten Elektronen $Q^{-1}_l$ und der freien Elektronen $Q^{-1}_e$ zusammen:
+    \begin{equation}
+        \label{eqn:Qgesamt}
+        Q^{-1}\propto \nu_eQ^{-1}_e+\nu_lQ^{-1}_l\quad.
+    \end{equation}
+Hierbei sind $\nu_e=n_e/n_s$ und $\nu_l=1-\nu_e=n_l/n_s$ die relativen Anteile an freien und lokalisierten Elektronen. Da das Verhalten von $Q^{-1}_e$ und $Q^{-1}_l$ in analytischer Form vorliegt, ist es nun möglich, eine Kurvenanpassung an die aufgenommenen Messdaten durchzuführen.
+
+\subsection{Bestimmung des Anteils freier und lokalisierter Elektronen}
+
+Um den Anteil freier und lokalisierter Elektronen für die gemessenen Absorptionskurven der Zyklotronresonanz zu bestimmen, wird nun zuerst von einer Linienanpassung an die Lösung für freie Elektronen ausgegangen. Die freien Parameter $A$, $\omega$, $\tau$ und $c_0$ (in den Gleichungen durch Unterstreichung kenntlich gemacht) werden durch eine Kurvenanpassung nach der Methode der kleinsten Quadrate bestimmt.
+\begin{equation}
+	Q^{-1}=\underline{A}Q^{-1}_e(\underline{\omega},\omega_c,\underline{\tau})+\underline{c_0}
+\end{equation}
+Nachdem dieser erste Schritt der Linienanpassung an die Absorption freier Elektronen durchgeführt wurde, wird im nächsten Schritt die Kurvenanpassung an die gesamte Absorption von lokalisierten und freien Elektronen durchgeführt. Hier kommt nun der Parameter $A_l$ hinzu, der die Amplitude der Absorption lokalisierter Elektronen beschreibt:
+\begin{equation}
+	\label{eqn:2frac_total_absorp}
+	Q^{-1}=\underline{A}Q^{-1}_e(\underline{\omega},\omega_c,\underline{\tau})+\underline{A_l}Q^{-1}_l(\underline{\omega},\omega_c,\underline{\tau})+\underline{c_0}\quad.
+\end{equation}
+Der Bruchteil von freien Elektronen ergibt sich nun direkt aus den Parametern $A$ und $A_l$:
+\begin{equation}
+	n_e/n_s = \frac{A}{A+A_l}\quad.
+\end{equation}
+
+Bei der Anpassung experimenteller Daten ist es nötig, einen konstanten Anteil $c_0$ als zusätzlichen Parameter bei den Linienanpassungen zu verwenden. Dies führt aber zu dem  Problem, dass die zu trennenden Funktionsanteile, vor allem bei sehr breiten Zyklotronresonanzen, nicht ausreichend linear unabhängig davon sind. Deshalb erhält man in diesem Fall für die Amplitudenparameter $A$ und $A_l$ aus der Linienanpassung sehr große Fehler -- man kann beide Anteile dann nicht mehr gut unterscheiden und die vorgestellte Methode ist somit nicht optimal anwendbar.

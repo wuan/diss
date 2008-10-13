@@ -1,0 +1,68 @@
+\documentclass[pointlessnumbers,headsepline,twoside,11pt,DIV14,BCOR15mm,halfparskip,a4paper,appendixprefix]{scrreprt}
+\input{dissdefs.tex}
+
+\begin{document}
+\chapter{Theoretische Grundlagen}
+	\label{chap:theo}
+\section{Leitfähigkeitsmodell nach Drude}
+\subsection{Grundlegende Annahmen}
+Das Modell von \name{Drude} ist die Anwendung der kinetischen Gastheorie auf die Elektronen in einem Leiter, das aus der Vorstellung von einem Elektronen-"`Gas"' herrührt. Mit einigen Vereinfachungen kann man viele bekannte Effekte damit beschreiben:
+\begin{itemize}
+    \item Zwischen Kollisionen ist die Wechselwirkung von Elektronen mit anderen Elektronen und den Atomrümpfen vernachlässigbar. Jedes Elektron bewegt sich geradlinig. Externe Felder wirken direkt, interne werden vernachlässigt.
+
+    \item Kollisionen sind plötzliche Ereignisse, die instantan die Geschwindigkeit und die Bewegungsrichtung eines Elektrons ändern. Hauptsächlich spielt Elektron-Ionen-Streuung eine Rolle.
+
+    \item Die Wahrscheinlichkeit, dass ein Stoß stattfindet, skaliert mit $\frac1\tau$ ($\tau$ ist die Kollisionszeit). Ein Elektron wird sich im Mittel für eine Zeit $\tau$ bewegen, bevor es gestreut wird. $\tau$ ist unabhängig von der Position und der Geschwindigkeit des Elektrons.
+
+    \item Elektronen erreichen das thermische Gleichgewicht mit der Umgebung nur durch Energieaustausch bei Stößen mit Ionenrümpfen.
+\end{itemize}
+
+\subsection{Herleitung für 3D}
+Das Ohmsche Gesetz
+    \begin{equation}
+        V = I R
+    \end{equation}
+kann man für geladene Teilchen folgendermaßen schreiben
+    \begin{equation}
+        \vec E = \rho \vec j\quad.
+    \end{equation}
+Hierbei ist $\vec E$ das elektrische Feld, $\rho$ die Resistivität und
+$\vec j=\frac{Q}{tA}$ die Stromdichte, für die man bei einem gleichförmigen Strom auch $j = \frac{I}{A}$ schreiben kann. Für eine Potentialdifferenz $V$ erhält man dann
+    \begin{equation}
+        V = E l = \rho \frac{I}{A} l\quad\Rightarrow\quad R = \frac{\rho l}{A}\quad.
+    \end{equation}
+Für Elektronen, die sich mit der Geschwindigkeit $\vec v$ bewegen, ist $\vec j\parallel\vec v$. In der Zeit $dt$ bewegen sich die Elektronen um $\vec v dt$ in Richtung von $\vec v$. Die Elektronen durchfließen eine Fläche $A$ senkrecht zu $\vec v$, wobei jedes Elektron die Ladung $-e$ trägt. Die Ladung die $A$ in der Zeit $dt$ durchfließt ist dann $-n e v A\,dt$, daher ergibt sich die Stromdichte zu
+    \begin{equation}
+        \label{eqn:drude_stromdichte}
+        \vec j = - n e \vec v\quad.
+    \end{equation}
+Ohne äußeres elektrisches Feld ist $\vec v$ im Mittel gleich Null. Bei Anwesenheit eines elektrischen Feldes werden die Elektronen beschleunigt. Stellen wir uns ein Elektron zur Zeit $t=0$ vor; $t$ ist dann die Zeit, die seit der letzten Kollision vergangen ist. Ein äußeres Feld ändert die Geschwindigkeit um $-e\vec E\frac{t}{m}$, was sich aus
+    \begin{equation}
+        F=ma\quad\Rightarrow\quad a=\frac{F}{m}\quad\Rightarrow\quad v=at=\frac{Ft}{m}\quad.
+    \end{equation}
+ergibt. Daher ist die durchschnittliche Geschwindigkeit durch
+    \begin{equation}
+        \vec v_\text{avg}=-\frac{e\vec E\tau}{m}
+    \end{equation}
+gegeben. Eingesetzt in Gleichung~\eqref{eqn:drude_stromdichte} ergibt sich das Drude-Gesetz für Leitung von Gleichstrom in einem metallischen Leiter
+	\begin{equation}
+	\vec j = \sigma\vec E\ttextt{mit:}\sigma=\frac{ne^2\tau}{m}\quad.
+	\end{equation}
+Alle Größen bis auf die Stoßzeit $\tau$ sind bekannt; diese kann man nun aus den beobachteten Resistivitäten bestimmen
+	\begin{equation}
+	\tau=\frac{m}{\rho ne^2}=\frac{\sigma m}{ne^2}\quad.
+	\end{equation}
+Bei Metallen und Raumtemperatur liegt $\tau$ typischerweise im Bereich von $10^{-14}$ bis $\unit[10^{-15}]{s}$.
+
+Für die Wechselstromleitfähigkeit setzt man ein zeitlich sinusförmiges elektrisches Feld in die Bewegungsgleichung für den Impuls $\vec p$ der Elektronen ein:
+	\begin{equation}
+		\frac{d\vec p}{dt}=-\frac{\vec p}{\tau}-e\vec E\quad.
+	\end{equation}
+Aus $\vec j=-n\,e\,\vec p/m_e$ und der frequenzabhängigen Stromdichte $\vec j(\omega)=\sigma(\omega)\vec E(\omega)$ folgt dann:
+	\begin{equation}
+		\sigma(\omega)=\frac{\sigma_0}{1-i\omega\tau}=
+			\frac{n\,e^2\tau}{m_e}\left[\frac1{1+\omega^2\tau^2}+
+				i\frac{\omega\,\tau}{1+\omega^2\tau^2}\right]
+		\ttextt{mit}\sigma_0=\frac{n\,e^2\tau}{m_e}
+	\end{equation}
+\end{document}
