@@ -45,7 +45,7 @@ set xtics nomirror
 set xtics ("0.0" 0,"0.05" n10(l,0.05,ds,eps,dC3), "0.1" n10(l,0.1,ds,eps,dC3), "0.15" n10(l,0.15,ds,eps,dC3), "0.2" n10(l,0.2,ds,eps,dC3), "0.25" n10(l,0.25,ds,eps,dC3))
 
 set parametric
-plot "<bzcat ../../data/microwave/2001/mw0109d5/mw0109d5.dat.bz2 |smooth -n 5 -" every 6:::(i):1050:(i) u (n10(h,$10-V1,ds,eps,dC3)):(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) axes x2y1 ti "Transmission" w p 7, \
+plot "<bzcat ../data/mw0109d5.dat.bz2 |smooth -n 5 -" every 6:::(i):1050:(i) u (n10(h,$10-V1,ds,eps,dC3)):(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) axes x2y1 ti "Transmission" w p 7, \
 	 "" every 6:::(i)::(i) u (n10(h,$10-V1,ds,eps,dC3)):($13/1e9) axes x2y2 ti "Resonanzfrequenz" w p 4, \
 	n10(h,dV,ds,eps,dC3),-24.5*t axes x2y1 not w l 3
 

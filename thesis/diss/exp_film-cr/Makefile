@@ -9,7 +9,8 @@ $(graphs): %.pdf: %.gp
 	epstopdf $(addsuffix .eps, $(basename $@))
 
 $(pics): %.pdf: %.fig
-	fig2dev -L pdf $< $@
+	fig2dev -L eps $< $(addsuffix .eps, $(basename $@))
+	epstopdf $(addsuffix .eps, $(basename $@))
 	
 clean:
 	rm -f $(graphs) $(pics) $(pgspics) *.eps fit.log

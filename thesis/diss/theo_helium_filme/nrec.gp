@@ -11,4 +11,4 @@ set log y
 set lmargin 9
 set ytics axis
 set ytics ("10^{-12}" 1e-12, "10^{-9}" 1e-9, "10^{-6}" 1e-6, "10^{-3}" 1e-3, "1" 1)
-plot "../data/nrec.dat" u 1:2 ti "U_{clamp}=1V" w p 7, "" u 1:3 ti "U_{clamp}=2V" w p 6
+plot "<bzcat ../data/nrec.dat.bz2" u 1:2 ti "U_{clamp}=1V" w p 7, "" u 1:3 ti "U_{clamp}=2V" w p 6

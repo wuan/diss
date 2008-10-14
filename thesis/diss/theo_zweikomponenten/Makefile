@@ -1,6 +1,5 @@
-graphs  = spectrum.pdf spectrum_empty.pdf \
-	xy_empty.pdf xy.pdf xy_charges.pdf
-pics    = schema.pdf
+graphs  = twoparts.pdf
+pics    = 
 
 all: $(graphs) $(pics)
 

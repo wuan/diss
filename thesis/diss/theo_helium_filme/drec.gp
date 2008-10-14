@@ -10,4 +10,4 @@ set log y
 
 set key samplen 0.5 spacing 2
 
-plot "../data/drec.dat" u 1:2 ti "U_{clamp}=1V" w p 7, "" u 1:3 ti "U_{clamp}=2V" w p 6
+plot "<bzcat ../data/drec.dat.bz2" u 1:2 ti "U_{clamp}=1V" w p 7, "" u 1:3 ti "U_{clamp}=2V" w p 6

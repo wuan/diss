@@ -1,7 +1,7 @@
 load "../gp/midps.gp"
 set output "film_quantum_time.eps"
 
-FILENAME = "<bzcat ../../data/microwave/2002/mw0202d2/mw0202d2.dat.bz2"
+FILENAME = "<bzcat ../data/mw0202d2.dat.bz2"
 
 set xlabel "Zeit [h]"	
 set ylabel "Transmission [dB]"

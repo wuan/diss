@@ -1,7 +1,7 @@
 load "../gp/smidps.gp"
 set output "film_quantum_reproduce.eps"
 
-FILENAME = "<bzcat ../../data/microwave/2002/mw0202d2/mw0202d2.dat.bz2"
+FILENAME = "<bzcat ../data/mw0202d2.dat.bz2"
 	
 set xlabel "Haltespannung [V]"
 set ylabel "Transmission [dB]"
