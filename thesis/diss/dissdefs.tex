@@ -1,34 +1,28 @@
-\newif\ifpdf
-\ifx\pdfoutput\undefined
-    \pdffalse
-\else
-    \pdfoutput=1
-    \pdftrue
-\fi
 
 \usepackage[english,german,ngerman]{babel}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[mtpluscal,mtbold]{mathtime}
 %\usepackage{bm}
 \usepackage{amsmath}
 \usepackage{amssymb}
+
+%\usepackage{mtpro2}
+
 \usepackage{nicefrac}
 \usepackage{units}
 \usepackage{graphicx}
 \usepackage[tight,hang,raggedright]{subfigure}
 \usepackage{float}
-\usepackage{caption2}
+\usepackage{caption}
 \usepackage{calc}
   \renewcommand{\captionlabelfont}{\bfseries}
   \renewcommand{\captionfont}{\small\slshape}
 
-\ifpdf 
-	\pdfcompresslevel9
-	\usepackage{thumbpdf}
-	\usepackage[pdftex,
-        colorlinks=true,
-        urlcolor=rltred,       % \href{...}{...} external (URL)
+\pdfcompresslevel9
+\usepackage{thumbpdf}
+\usepackage[pdftex,
+	colorlinks=true,
+	urlcolor=rltred,       % \href{...}{...} external (URL)
         filecolor=rltgreen,     % \href{...} local file
         linkcolor=rltblue,       % \ref{...} and \pageref{...}
         citecolor=rltgreen,
@@ -38,19 +32,14 @@
         pdfkeywords={surface electrons, helium films, phase diagram, quantum melting},
         pagebackref,
         pdfpagemode=None,
-        bookmarksopen=true]{hyperref}
-	\usepackage{color}
-	\definecolor{rltred}{rgb}{0.4,0,0}
-	\definecolor{rltgreen}{rgb}{0,0.5,0}
-	\definecolor{rltblue}{rgb}{0,0,0.5}
-	\newcommand{\datalink}[2]{\href{http://www.wuerl.net/diss/microwave/#1}{#2}}
-	\newcommand{\plotlink}[2]{\href{http://www.wuerl.net/diss.html/#1.gp}{#2}}
-	\newcommand{\link}[1]{\href{http://#1}{#1}}
-\else
-	\newcommand{\datalink}[2]{#2}
-	\newcommand{\plotlink}[2]{#2}
-	\newcommand{\link}[1]{#1}
-\fi
+    bookmarksopen=true]{hyperref}
+\usepackage{color}
+\definecolor{rltred}{rgb}{0.4,0,0}
+\definecolor{rltgreen}{rgb}{0,0.5,0}
+\definecolor{rltblue}{rgb}{0,0,0.5}
+\newcommand{\datalink}[2]{\href{http://www.wuerl.net/diss/microwave/#1}{#2}}
+\newcommand{\plotlink}[2]{\href{http://www.wuerl.net/diss.html/#1.gp}{#2}}
+\newcommand{\link}[1]{\href{http://#1}{#1}}
   
 \bibliographystyle{leidiss}
 
@@ -75,7 +64,8 @@
 \newcommand{\DK}{Dielektrizitätskonstante}
 \newcommand{\ea}{{\itshape et al.}}
 \newcommand{\name}[1]{{\scshape #1}}
-\newcommand{\grmu}{\textgr{m}}
+%\newcommand{\grmu}{\textgr{m}}
+\newcommand{\grmu}{\ensuremath{\mu}}
 
 %
 % Hier die Definitionen für einen Befehl, \noref, der zwar die Bezeichnung 

@@ -17,13 +17,10 @@ all: $(graphs) $(pics) $(pgspics)
 $(graphs): %.pdf: %.gp
 	gnuplot $<
 	epstopdf $(addsuffix .eps, $(basename $@))
-	rm $(addsuffix .eps, $(basename $@))
 
 $(pics): %.pdf: %.fig
-	fig2dev -L eps $< $@
-	epstopdf $(addsuffix .eps, $(basename $@))
-	rm $(addsuffix .eps, $(basename $@))
+	fig2dev -L pdf $< $@
 
 	
 clean:
-	rm -f $(graphs) $(pics) *.pdf	
+	rm -f $(graphs) $(pics) *.eps
