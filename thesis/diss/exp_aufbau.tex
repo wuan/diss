@@ -61,7 +61,7 @@ In Abbildung~\ref{fig:filament_puls} sieht man eine Auswertung von Filamentwider
 \label{ssec:electron_production}
 
 Bei Messungen auf Bulk"=Helium ist durch das Auftreten der elektrohydrodynamischen Instabilität bei $\unit[2\times10^{13}]{\Em}$ ein geeigneter Eichpunkt für die Elektronenproduktion des Filaments vorhanden.
-\begin{figure}[h!tbp]
+\begin{figure}[t!]
 	\centerline{\subfigure[Beladung durch verschiedene Pulsstärken bei $U_\text{clamp}={\unit[100]{V}}$\label{fig:fil_eichung:array}]{\plotlink{fil_eichplot}{\includegraphics{exp_aufbau/fil_eichung}}}}
 	\centerline{%
 \subfigure[Bestimmung der Instabilität\label{fig:fil_eichung:instab}]{\plotlink{fil_instability}{\includegraphics[width=\smallwidth]{exp_aufbau/fil_instability}}}%
@@ -73,17 +73,17 @@ Bei Messungen auf Bulk"=Helium ist durch das Auftreten der elektrohydrodynamisch
 Wie in Abbildung~\ref{fig:fil_eichung} zu sehen ist, wurde für eine bestimmte Höhe des Bulk"=Heliums die Spannung ermittelt, bei der die elektrohydrodynamische Instabilität auftritt. Nachfolgend wurden Beladekurven für verschiedene Pulslängen und Pulsamplituden aufgenommen, bei denen eine Spannung an das Substrat angelegt blieb, die geringfügig unter der Spannung bei Instabilität liegt. Dabei kann man in erster Näherung die Transmission als Hinweis auf die Elektronendichte verwenden und die Elektronenproduktion pro Filamentpuls aus der Steigung der abgebildeten Fitgeraden ermitteln.
 
 \subsection{Energieverteilung der emittierten Elektronen}
-\enlargethispage{2\baselineskip}
 
 Die von der Glühwendel emittierten Elektronen besitzen eine gewisse Energieverteilung, die zum einen von ihrer Entstehung durch thermische Emission herrührt und zum anderen durch den linearen Potentialverlauf entlang der Glühwendel bestimmt wird. Die thermische Energie der Elektronen kann man direkt aus ihrer Erzeugung ableiten, wenn man davon ausgeht, dass die thermische Emission bei einer Temperatur von $1500$ bis $\unit[2000]{K}$ stattfindet. Man erhält für diese Temperatur eine korrespondierende thermische Energie von nur ca.\ $\unit[0.2]{eV}$.
 
 Die Energie der emittierten Elektronen, die aus ihrer Beschleunigung durch das elektrische Feld am Filament resultiert, ist einfach abzuschätzen. Da der Betriebswiderstand des Filaments in der Größenordnung von \unit[100]{$\Omega$} liegt und somit viel höher als der Widerstand der Zuleitung ist, fällt fast die gesamte Spannung des Pulses am Filament ab. Wenn man annimmt, dass die Elektronen über die gesamte Länge der Glühwendel emittiert werden, führt dies zu einer Energieverteilung derselben von 0 bis ca.\ \unit[1.2]{eV}.
 
-Die mittlere Stoßzeit von Elektronen in Helium"=Gas bei im Experiment üblichen Temperaturen ist so gering, dass die vom Filament erzeugten Elektronen sehr bald durch Stöße mit den Atomen aus dem Helium"=Gas thermalisieren und daher die Auswirkung ihrer anfänglichen Energie auf den Beladevorgang kaum merkbar ist. Dass die Elektronen sehr gut durch die Stöße mit den Helium"=Atomen im Gasraum abgebremst werden, zeigt sich vor allem bei Messungen mit konstanter, positiver Haltespannung (siehe z.\ B. die Messung der Beladeraten in Abb.~\ref{fig:fil_eichung}). Man findet hierbei kaum Hinweise auf ein verstärktes Durchbrechen der Elektronen. 
+Die mittlere Stoßzeit von Elektronen in Helium"=Gas bei im Experiment üblichen Temperaturen ist so gering, dass die vom Filament erzeugten Elektronen sehr bald durch Stöße mit den Atomen aus dem Helium"=Gas thermalisieren und daher die Auswirkung ihrer anfänglichen Energie auf den Beladevorgang kaum merkbar ist. Dass die Elektronen sehr gut durch die Stöße mit den Helium"=Atomen im Gasraum abgebremst werden, zeigt sich vor allem bei Messungen mit konstanter, positiver Haltespannung (siehe z.\ B. die Messung der Beladeraten in Abb.~\ref{fig:fil_eichung}). \enlargethispage{\baselineskip}Man findet hierbei kaum Hinweise auf ein verstärktes Durchbrechen der Elektronen.
+
 
 \section{Bestimmung des Helium"=Füllstands}
 
-\begin{figure}[h!tbp]
+\begin{figure}[h!]
 	\plotlink{he_level}{\includegraphics[width=\smallwidth]{exp_aufbau/he_level}}
 	\hfill
 	\begin{minipage}[b]{\textwidth-\smallwidth-\tabcolsep}
@@ -134,7 +134,7 @@ Bei Messungen mit Hilfe des Netzwerkanalysators\footnote{Verwendet wurde hier da
 	
 Die Genauigkeit dieser neuen Messmethode ist allerdings nicht ausreichend, wenn man nur das Resonanzmaximum und dessen Frequenzlage aus den erhaltenen Rohdaten bestimmt. Um eine mit der bisher verwendeten LockIn-Methode vergleichbare Genauigkeit zu erzielen, muss man eine Kurvenanpassung der so erhaltenen Daten der Resonanzlinie an eine einer Lorentzlinie ähnlichen Funktion durchführen:
 \begin{equation}
-	4A\,\sigma\sqrt{\frac{49x^2 + 4\sigma_\text{res}^2}
+	4A\,\sigma\SQRT{\frac{49x^2 + 4\sigma_\text{res}^2}
 	{\left(49\left(x-\nu_\text{res}\right)^2+4\sigma_\text{res}^2\right)
 	\,\left(49\left(x+\nu_\text{res}\right)^2+4\sigma_\text{res}^2\right)}}
 	+c_0+c_1\nu\quad.
