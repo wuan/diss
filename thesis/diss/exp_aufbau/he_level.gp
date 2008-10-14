@@ -13,5 +13,5 @@ set xtics nomirror
 set x2tics
 set x2r [5-15.8:25-15.8]
 set parametric
-plot "<bzcat ../../data/microwave/2002/mw0202d3/mw0202d3.dat.bz2 |smooth -n 5 -" every :::40::40 u (levelb($32*1e12)-0.2):($13/1e9) not w l lt 1 lw 4, \
+plot "<bzcat ../data/mw0202d3.dat.bz2 |smooth -n 5 -" every :::40::40 u (levelb($32*1e12)-0.2):($13/1e9) not w l lt 1 lw 4, \
 	15.8,10+t not

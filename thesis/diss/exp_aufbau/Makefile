@@ -12,7 +12,7 @@ pics    = nwa_setup.pdf \
 	TM011.pdf \
 	fil_eichung.pdf
 
-all: $(graphs) $(pics) $(pgspics)
+all: $(graphs) $(pics)
 
 $(graphs): %.pdf: %.gp
 	gnuplot $<
@@ -23,4 +23,4 @@ $(pics): %.pdf: %.fig
 
 	
 clean:
-	rm -f $(graphs) $(pics) *.eps
+	rm -f $(graphs) $(pics) *.eps fit.log
