@@ -49,7 +49,7 @@ set mytics 2
 set y2tics 0.0001
 set my2tics 2
 set y2r [10.9407:10.94125]
-set key graph 0.45,0.9 samplen 0.5 spacing 2
+set key graph 0.50,0.95 samplen 0.5 spacing 2
 
 set parametric
 

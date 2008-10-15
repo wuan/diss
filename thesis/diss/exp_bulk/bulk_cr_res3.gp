@@ -14,7 +14,7 @@ set bmargin 4
 
 fit f1(x) FILENAME every :::2::2 u ($1/384*2.2):(1e3*(sqrt(1/$4)-sqrt(1/0.01196319))) via a1, b1
 fit f2(x) FILENAME every :::1::1 u ($1/81*1.4):(1e3*(sqrt(1/$4)-sqrt(1/0.01154851))) via a2, b2
-set key left top width -5 spacing 2.5
+set key left top spacing 2.5
 plot FILENAME every :::2::2 u ($1/384*2.2):(1e3*(sqrt(1/$4)-sqrt(1/0.01196319))-b1) ti "U_{crit}=384V" w lp 1 7,\
      FILENAME every :::1::1 u ($1/81*1.4):(1e3*(sqrt(1/$4)-sqrt(1/0.01154851))-b2) ti "U_{crit}=81V" w lp 3 9
 

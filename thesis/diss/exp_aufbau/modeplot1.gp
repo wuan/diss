@@ -9,6 +9,6 @@ set xr [1.9:2.1]
 set xlabel "d [cm]"
 set ylabel "f_{Resonanz} [GHz]"
 
-set key graph 0.3,0.7 spacing 2
+set key graph 0.45,0.25 spacing 2
 
 plot TM011(0.95,x) ti "TM011" w l 3,TM010(0.95,x) ti "TM010" w l 1

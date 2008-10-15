@@ -7,7 +7,7 @@ set xlabel "Zeit [h]"
 set ylabel "Transmission [dB]"
 set y2label "Resonanzfrequenz [GHz]"
 
-set key screen 0.52,0.92 samplen 0.5 spacing 2
+set key screen 0.555,0.92 samplen 0.5 spacing 2
 set ytics nomirror
 set yr [-17.5:-16]
 set xtics 3600

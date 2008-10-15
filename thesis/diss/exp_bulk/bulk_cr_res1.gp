@@ -7,7 +7,7 @@ FILENAME = "<bzcat ../data/cr0210d2.dat.bz2"
 
 set xlabel "Elektronendichte [10^{13} 1/m^2]"
 set ylabel "{/Symbol n}_{CR} [GHz]"
-set key left bottom width -5 spacing 2.5
+set key left bottom spacing 2.5
 set xr [0:2.2]
 set xtics 0.5
 
