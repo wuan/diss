@@ -12,4 +12,4 @@ set ytics 1
 
 set key spacing 2
 
-plot TM011(x,2.0) ti "TM011" w l 3, TM010(x,2.0) ti "TM010" w l 1
+plot TM011(x,2.0) ti "TM011" w l lt 3, TM010(x,2.0) ti "TM010" w l lt 1

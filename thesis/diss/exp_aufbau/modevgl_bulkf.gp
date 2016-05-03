@@ -15,6 +15,6 @@ set format x "%M"
 
 set xlabel "Zeit [min]"
 set ylabel "Frequenzänderung [MHz]"
-plot FILENAME every 4::75:8::8 u 1:($13/1e6-9584.70) ti "TM010" w p 5, \
-	FILENAME every 4::75:8::8 u 1:($23/1e6-11929.2) ti "TM011" w p 4
+plot FILENAME every 4::75:8::8 u 1:($13/1e6-9584.70) ti "TM010" w p pt 5, \
+	FILENAME every 4::75:8::8 u 1:($23/1e6-11929.2) ti "TM011" w p pt 4
 	

@@ -15,6 +15,6 @@ set xtics 2
 set key bottom right samplen 0.5 spacing 2
 
 plot "<bzcat ../data/Dfilu0201d4.00100.bz2" \
-	every 35 u ($1*1e3):2 ti "Filamentspannung" w p 7, \
+	every 35 u ($1*1e3):2 ti "Filamentspannung" w p pt 7, \
 	"<bzcat ../data/Dfili0201d4.00100.bz2" \
-	every 35 u ($1*1e3):($2*100) axes x1y2 ti "Filamentstrom" w p 4
+	every 35 u ($1*1e3):($2*100) axes x1y2 ti "Filamentstrom" w p pt 4

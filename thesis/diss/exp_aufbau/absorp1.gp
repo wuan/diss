@@ -16,7 +16,7 @@ set format x "%H:%M"
 set key bottom right samplen 1
 set multiplot
 set origin 0,0.03
-plot "<bzcat ../data/mw0202d2.dat.bz2" every ::(start):(i):(end):(i) u 1:(($15/$13)-1.0/Q0)*1e4 ti "aus Güte" w l 2, \
+plot "<bzcat ../data/mw0202d2.dat.bz2" every ::(start):(i):(end):(i) u 1:(($15/$13)-1.0/Q0)*1e4 ti "aus Güte" w l lt 2, \
 	"" every ::(start):(i):(end):(i) u 1:(((P0/($11+$17+$19/1e9*$13/1e9))-1.0)/Q0)*1e4 ti "aus Transmission" with lines lt 1 lw 2
 set origin 0.40,0.22
 set size 0.55,0.5
