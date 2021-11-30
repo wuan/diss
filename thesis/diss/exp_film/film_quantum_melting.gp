@@ -49,12 +49,12 @@ set mytics 2
 set y2tics 0.0001
 set my2tics 2
 set y2r [10.9407:10.94125]
-set key graph 0.50,0.95 samplen 0.5 spacing 2
+set key at graph 0.50,0.95 samplen 0.5 spacing 2
 
 set parametric
 
-plot FILENAME every 9:::(i):1200:(i) u (n10(l*1e-3,$10-V1,ds,eps,dC3)):(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) axes x2y1 ti "Transmission" w p 7, \
-	FILENAME every 9:::(i):1200:(i) u (n10(l*1e-3,$10-V1,ds,eps,dC3)):($13/1e9) axes x2y2 ti "Frequenz" w p 4, \
+plot FILENAME every 9:::(i):1200:(i) u (n10(l*1e-3,$10-V1,ds,eps,dC3)):(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) axes x2y1 ti "Transmission" w p ps 7, \
+	FILENAME every 9:::(i):1200:(i) u (n10(l*1e-3,$10-V1,ds,eps,dC3)):($13/1e9) axes x2y2 ti "Frequenz" w p ps 4, \
 	n10(l*1e-3,t-V1,ds,eps,dC3),f1(t) axes x2y1 not, \
 	n10(l*1e-3,t-V1,ds,eps,dC3),f2(t) axes x2y1 not, \
 	n10(l*1e-3,t-V1,ds,eps,dC3),f3(t) axes x2y1 not, \

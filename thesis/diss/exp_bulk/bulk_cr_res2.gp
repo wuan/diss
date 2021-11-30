@@ -13,7 +13,7 @@ set xtics 0.5
 
 set bmargin 4
 
-plot FILENAME every :::2::2 u ($1/384*2.2):(w($2)/$3/2/pi/1e9) ti "U_{crit}=384V" w lp 1 7, \
-     FILENAME every :::1::1 u ($1/81*1.4):(w($2)/$3/2/pi/1e9) ti "U_{crit}=81V" w lp 3 9
+plot FILENAME every :::2::2 u ($1/384*2.2):(w($2)/$3/2/pi/1e9) ti "U_{crit}=384V" w lp ls 1 ps 7, \
+     FILENAME every :::1::1 u ($1/81*1.4):(w($2)/$3/2/pi/1e9) ti "U_{crit}=81V" w lp ls 3 ps 9
 
 

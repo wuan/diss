@@ -34,12 +34,12 @@ set xr [0:0.85]
 set xlabel "Magnetfeld [T]"
 set ylabel "{/Symbol d w}_s / 2{/Symbol p} [MHz]"
 set key right top
-plot 1e3*(sqrt(1/(Af1*chiv(x,wf1,tf1)+offsetf1))-sqrt(1/offsetf1)) not w l 0, "<bzcat ../data/mw0210d1.dat.bz2 |smooth -n 5 -" every 3:::(f1)::(f1) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf1))) ti "U_{clamp}=380V" w p 1 4, \
-     1e3*(sqrt(1/(Af2*chiv(x,wf2,tf2)+offsetf2))-sqrt(1/offsetf2)) not w l 0, "" every 2:::(f2)::(f2) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf2))) ti "U_{clamp}=350V" w p 2 5, \
-     1e3*(sqrt(1/(Af3*chiv(x,wf3,tf3)+offsetf3))-sqrt(1/offsetf3)) not w l 0, "" every 2:::(f3)::(f3) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf3))) ti "U_{clamp}=300V" w p 3 6, \
-     1e3*(sqrt(1/(Af4*chiv(x,wf4,tf4)+offsetf4))-sqrt(1/offsetf4)) not w l 0, "" every 2:::(f4)::(f4) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf4))) ti "U_{clamp}=250V" w p 4 7, \
-     1e3*(sqrt(1/(Af5*chiv(x,wf5,tf5)+offsetf5))-sqrt(1/offsetf5)) not w l 0, "" every 2:::(f5)::(f5) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf5))) ti "U_{clamp}=200V" w p 5 8, \
-     1e3*(sqrt(1/(Af6*chiv(x,wf6,tf6)+offsetf6))-sqrt(1/offsetf6)) not w l 0, "" every 2:::(f6)::(f6) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf6))) ti "U_{clamp}=150V" w p 6 9, \
-     1e3*(sqrt(1/(Af7*chiv(x,wf7,tf7)+offsetf7))-sqrt(1/offsetf7)) not w l 0, "" every 2:::(f7)::(f7) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf7))) ti "U_{clamp}=100V" w p 7 12, \
-	 0 not w l 1
+plot 1e3*(sqrt(1/(Af1*chiv(x,wf1,tf1)+offsetf1))-sqrt(1/offsetf1)) not w l ls 0, "<bzcat ../data/mw0210d1.dat.bz2 |smooth -n 5 -" every 3:::(f1)::(f1) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf1))) ti "U_{clamp}=380V" w p ps 1 pt 4, \
+     1e3*(sqrt(1/(Af2*chiv(x,wf2,tf2)+offsetf2))-sqrt(1/offsetf2)) not w l ls 0, "" every 2:::(f2)::(f2) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf2))) ti "U_{clamp}=350V" w p ps 2 pt 5, \
+     1e3*(sqrt(1/(Af3*chiv(x,wf3,tf3)+offsetf3))-sqrt(1/offsetf3)) not w l ls 0, "" every 2:::(f3)::(f3) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf3))) ti "U_{clamp}=300V" w p ps 3 pt 6, \
+     1e3*(sqrt(1/(Af4*chiv(x,wf4,tf4)+offsetf4))-sqrt(1/offsetf4)) not w l ls 0, "" every 2:::(f4)::(f4) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf4))) ti "U_{clamp}=250V" w p ps 4 pt 7, \
+     1e3*(sqrt(1/(Af5*chiv(x,wf5,tf5)+offsetf5))-sqrt(1/offsetf5)) not w l ls 0, "" every 2:::(f5)::(f5) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf5))) ti "U_{clamp}=200V" w p ps 5 pt 8, \
+     1e3*(sqrt(1/(Af6*chiv(x,wf6,tf6)+offsetf6))-sqrt(1/offsetf6)) not w l ls 0, "" every 2:::(f6)::(f6) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf6))) ti "U_{clamp}=150V" w p ps 6 pt 9, \
+     1e3*(sqrt(1/(Af7*chiv(x,wf7,tf7)+offsetf7))-sqrt(1/offsetf7)) not w l ls 0, "" every 2:::(f7)::(f7) u ($41*0.0401):(1e3*($13/1e9-sqrt(1/offsetf7))) ti "U_{clamp}=100V" w p ps 7 pt 12, \
+	 0 not w l ls 1
 

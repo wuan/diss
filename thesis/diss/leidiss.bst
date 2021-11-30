@@ -236,14 +236,14 @@ FUNCTION {field.or.null}
 FUNCTION {emphasize}
 { duplicate$ empty$
     { pop$ "" }
-    { "{\em " swap$ * "}" * }
+    { "textem{" swap$ * "}" * }
   if$
 }
 
 FUNCTION {smallcaps}
 { duplicate$ empty$
     { pop$ "" }
-    { "{\sc " swap$ * "}" * }
+    { "\textsc{" swap$ * "}" * }
   if$
 }
 
@@ -466,7 +466,7 @@ FUNCTION {format.pages}
 }
 
 FUNCTION {format.vol.num.pages}
-{ "{\bf " volume field.or.null * "}" *
+{ "\textbf{" volume field.or.null * "}" *
   number empty$
     'skip$
     { "(" number * ")" * *

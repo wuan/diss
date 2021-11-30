@@ -16,5 +16,5 @@ set y2r [10.90057:10.9007]
 
 set key spacing 2
 
-plot "<bzcat ../data/mw0202d4.dat.bz2" every 2:::10::10 u (0.0401*$40):($11+$17+$19/1e9*$13/1e9) ti "Transmission" w p 3 7, \
-	"" every 2:::10::10 u (0.0401*$40):($13/1e9) axes x1y2 ti "Resonanzfrequenz" w p 1 4
+plot "<bzcat ../data/mw0202d4.dat.bz2" every 2:::10::10 u (0.0401*$40):($11+$17+$19/1e9*$13/1e9) ti "Transmission" w p ps 3 pt 7, \
+	"" every 2:::10::10 u (0.0401*$40):($13/1e9) axes x1y2 ti "Resonanzfrequenz" w p ps 1 pt 4

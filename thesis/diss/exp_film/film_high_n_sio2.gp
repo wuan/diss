@@ -45,8 +45,8 @@ set mytics 2
 set y2r [10.94314:10.94374]
 set key left width 20 samplen 0.5 spacing 2
 
-plot FILENAME every 9:::(i)::(i) u (n10(l,$10-V1,ds,eps,dC3)):(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) axes x2y1 ti "Transmission" w p 7, \
-	FILENAME every 9:::(i)::(i) u (n10(l,$10-V1,ds,eps,dC3)):($13/1e9) axes x2y2 ti "Frequenz" w p 4
+plot FILENAME every 9:::(i)::(i) u (n10(l,$10-V1,ds,eps,dC3)):(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) axes x2y1 ti "Transmission" w p ps 7, \
+	FILENAME every 9:::(i)::(i) u (n10(l,$10-V1,ds,eps,dC3)):($13/1e9) axes x2y2 ti "Frequenz" w p ps 4
 
 print Tsct(n10(l*1e-3,dV,ds,eps,dC3),d10(l*1e-3,dV,ds,eps,dC3),eps,1)/T,T,n10(l*1e-3,dV,ds,eps,dC3)
 load "../gp/analysis_WC.gp"

@@ -9,10 +9,12 @@ set yr [0:2]
 fitstart=61
 fitend=61
 FILENAME = "<bzcat ../data/mw0202d4.dat.bz2"
-A=0.0001
+A=8
 offset=0.000001
 t=5
 w=0.4
+show functions
+
 load "../gp/crfit.gp"
 
 set key samplen 0.4 spacing 2

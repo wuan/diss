@@ -13,6 +13,6 @@ set xr [1:100]
 set xlabel "Zellenthermometer [{/Symbol W}]"
 set ylabel "Transmission [dB]"
 set y2label "Substratwiderstand [k{/Symbol W}]"
-plot "<bzcat ../data/mw0204d4.dat.bz2" every 10:::98 u 4:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "Transmission" w p 7,\
-	"" every ::800:0::0 u 4:($9/1e3) axes x1y2 ti "Substratwiderstand" w p 4
+plot "<bzcat ../data/mw0204d4.dat.bz2" every 10:::98 u 4:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "Transmission" w p pt 7,\
+	"" every ::800:0::0 u 4:($9/1e3) axes x1y2 ti "Substratwiderstand" w p pt 4
 

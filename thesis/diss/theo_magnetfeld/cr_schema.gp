@@ -44,9 +44,9 @@ Ar=A
 plot (A*cr(x)+Al*loc_cr(x))/(Al*loc_cr(0)) ti "freie + lok. e^-: Q_e^{-1} + Q_l^{-1}" w l lt -1 lw 5, \
 	A*cr(x)/(Al*loc_cr(0)) ti "Anteil freier e^-: Q_e^{-1}" w l lt 2 lw 5, \
 	Al*loc_cr(x)/(Al*loc_cr(0)) ti "Anteil lok. e^-: Q_l^{-1}" w l lt 4 lw 5, \
-	1.2*cro(x)/(Al*loc_cr(0)) ti "Einzelne lok. e^-, div. {/Symbol w}_0" w l 0, \
-	1.2*crp(x)/(Al*loc_cr(0)) not w l 0, \
-	1.15*crq(x)/(Al*loc_cr(0)) not w l 0, \
-	0.9*crr(x)/(Al*loc_cr(0)) not w l 0
+	1.2*cro(x)/(Al*loc_cr(0)) ti "Einzelne lok. e^-, div. {/Symbol w}_0" w l lt 0, \
+	1.2*crp(x)/(Al*loc_cr(0)) not w l lt 0, \
+	1.15*crq(x)/(Al*loc_cr(0)) not w l lt 0, \
+	0.9*crr(x)/(Al*loc_cr(0)) not w l lt 0
 
 

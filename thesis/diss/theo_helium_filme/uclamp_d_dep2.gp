@@ -3,7 +3,7 @@ set output "uclamp_d_dep2.eps"
 
 load "../gp/e_density.gp"
 load "../gp/film_thickness.gp"
-set key graph 0.99,0.90 spacing 2
+set key at graph 0.99,0.90 spacing 2
 set yr [0:32]
 set xr [0:2]
 set xlabel "Haltespannung [V]"

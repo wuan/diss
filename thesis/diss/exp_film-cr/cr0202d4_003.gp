@@ -8,7 +8,7 @@ set yr [0:2]
 fitstart=48
 fitend=48
 FILENAME = "<bzcat ../data/mw0202d4.dat.bz2"
-A=0.0001
+A=10
 offset=0.000001
 t=5
 w=0.4

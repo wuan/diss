@@ -19,9 +19,9 @@ V1=(t2-t1)/(m1-m2)
 V2=(t3-t2)/(m2-m3)
 dV=V2-V1
 #set title `printf '"0109_5(7) U_{0}=%.3fV, U_{wc}=%.3fV, {/Symbol D}U=%.3fV"' $V1 $V2 $dV`
-plot "<bzcat ../data/mw0109d5.dat.bz2 |smooth -n 5 -" every 6:::(i):1050:(i) u 10:($13/$15) not w p 6, \
-	f1(x) not w l 1, \
-	f2(x) not w l 2, \
-	f3(x) not w l 3
+plot "<bzcat ../data/mw0109d5.dat.bz2 |smooth -n 5 -" every 6:::(i):1050:(i) u 10:($13/$15) not w p ps 6, \
+	f1(x) not w l ls 1, \
+	f2(x) not w l ls 2, \
+	f3(x) not w l ls 3
 
 

@@ -14,5 +14,5 @@ set yr [9.20797:9.20804]
 set xtics 0.5
 set ytics 0.00002
 set key bottom left samplen 0.5 spacing 1.5
-plot FILENAME every 8::20:(i)::(i) u 10:($13/1e9)+0.000002 ti "-30 dBm" w p 4, \
-	 FILENAME every 8::20:(i)::(i) u 10:($23/1e9) ti "-10 dBm" w p 5
+plot FILENAME every 8::20:(i)::(i) u 10:($13/1e9)+0.000002 ti "-30 dBm" w p ps 4, \
+	 FILENAME every 8::20:(i)::(i) u 10:($23/1e9) ti "-10 dBm" w p ps 5

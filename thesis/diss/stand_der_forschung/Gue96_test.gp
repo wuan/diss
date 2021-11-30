@@ -13,7 +13,7 @@ f4(x)=t4
 t(x)=temp
 
 set xlabel "Haltespannung [V]"
-set ylabel "Absorption {/Symbol a} [10^{-4}]" 1,0
+set ylabel "Absorption {/Symbol a} [10^{-4}]" offset 1
 set ytics nomirror
 set key bottom right
 set bmargin 4
@@ -26,4 +26,4 @@ V2=(t3-t2)/(m2-m3)
 dV=V2-V1
 set yr [0:1.2]
 
-plot "" u 1:2 not w p 7, f1(x) not, f2(x) not, f3(x) not
+plot "" u 1:2 not w p pt 7, f1(x) not, f2(x) not, f3(x) not

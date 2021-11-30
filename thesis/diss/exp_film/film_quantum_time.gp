@@ -7,7 +7,7 @@ set xlabel "Zeit [h]"
 set ylabel "Transmission [dB]"
 set y2label "Resonanzfrequenz [GHz]"
 
-set key screen 0.555,0.92 samplen 0.5 spacing 2
+set key at screen 0.555,0.92 samplen 0.5 spacing 2
 set ytics nomirror
 set yr [-17.5:-16]
 set xtics 3600
@@ -29,11 +29,11 @@ set xdata time
 set timefmt "%d.%m.%y %H:%M:%S"
 set xr ["08.02.02 14:25:00":"08.02.02 19:00:00"]
 set parametric
-plot FILENAME every 8:::6::8 u 1:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "Transmission" w p 7, \
-	FILENAME every 8:::6::8 u 1:($13/1e9) axes x1y2 ti "Frequenz" w p 4, \
-	x1,t-17 not w l 1, \
-	x2,t-17 not w l 1, \
-	x3,t-17 not w l 1, \
-	x4,t-17 not w l 1, \
-	x5,t-17 not w l 1
+plot FILENAME every 8:::6::8 u 1:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "Transmission" w p ps 7, \
+	FILENAME every 8:::6::8 u 1:($13/1e9) axes x1y2 ti "Frequenz" w p ps 4, \
+	x1,t-17 not w l ls 1, \
+	x2,t-17 not w l ls 1, \
+	x3,t-17 not w l ls 1, \
+	x4,t-17 not w l ls 1, \
+	x5,t-17 not w l ls 1
 

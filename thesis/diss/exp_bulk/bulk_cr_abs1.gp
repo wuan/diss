@@ -35,11 +35,11 @@ set yr [0:18]
 set ytics 2.5
 set xlabel "Magnetfeld [T]"
 set ylabel "normalisierte Absorption [bel. Einh.]"
-plot crv(x,w1,t1)/crv(0,w1,t1) not w l 0, FILENAME every 2:::(f1)::(f1) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o1)/A1/crv(0,w1,t1)) ti "U_{clamp}=380V" w p 1 4, \
-     crv(x,w2,t2)/crv(0,w2,t2) not w l 0, FILENAME every 2:::(f2)::(f2) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o2)/A2/crv(0,w2,t2)) ti "U_{clamp}=350V" w p 2 5, \
-     crv(x,w3,t3)/crv(0,w3,t3) not w l 0, FILENAME every 2:::(f3)::(f3) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o3)/A3/crv(0,w3,t3)) ti "U_{clamp}=300V" w p 3 6, \
-     crv(x,w4,t4)/crv(0,w4,t4) not w l 0, FILENAME every :::(f4)::(f4) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o4)/A4/crv(0,w4,t4)) ti "U_{clamp}=250V" w p 4 7, \
-     crv(x,w5,t5)/crv(0,w5,t5) not w l 0, FILENAME every :::(f5)::(f5) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o5)/A5/crv(0,w5,t5)) ti "U_{clamp}=200V" w p 5 8, \
-     crv(x,w6,t6)/crv(0,w6,t6) not w l 0, FILENAME every :::(f6)::(f6) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o6)/A6/crv(0,w6,t6)) ti "U_{clamp}=150V" w p 6 9, \
-     crv(x,w7,t7)/crv(0,w7,t7) not w l 0, FILENAME every :::(f7)::(f7) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o7)/A7/crv(0,w7,t7)) ti "U_{clamp}=100V" w p 7 12 
+plot crv(x,w1,t1)/crv(0,w1,t1) not w l ls 0, FILENAME every 2:::(f1)::(f1) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o1)/A1/crv(0,w1,t1)) ti "U_{clamp}=380V" w p ps 1 pt 4, \
+     crv(x,w2,t2)/crv(0,w2,t2) not w l ls 0, FILENAME every 2:::(f2)::(f2) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o2)/A2/crv(0,w2,t2)) ti "U_{clamp}=350V" w p ps 2 pt 5, \
+     crv(x,w3,t3)/crv(0,w3,t3) not w l ls 0, FILENAME every 2:::(f3)::(f3) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o3)/A3/crv(0,w3,t3)) ti "U_{clamp}=300V" w p ps 3 pt 6, \
+     crv(x,w4,t4)/crv(0,w4,t4) not w l ls 0, FILENAME every :::(f4)::(f4) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o4)/A4/crv(0,w4,t4)) ti "U_{clamp}=250V" w p ps 4 pt 7, \
+     crv(x,w5,t5)/crv(0,w5,t5) not w l ls 0, FILENAME every :::(f5)::(f5) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o5)/A5/crv(0,w5,t5)) ti "U_{clamp}=200V" w p ps 5 pt 8, \
+     crv(x,w6,t6)/crv(0,w6,t6) not w l ls 0, FILENAME every :::(f6)::(f6) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o6)/A6/crv(0,w6,t6)) ti "U_{clamp}=150V" w p ps 6 pt 9, \
+     crv(x,w7,t7)/crv(0,w7,t7) not w l ls 0, FILENAME every :::(f7)::(f7) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o7)/A7/crv(0,w7,t7)) ti "U_{clamp}=100V" w p ps 7 pt 12 
 

@@ -3,7 +3,7 @@ set output "uclamp_n_dep2.eps"
 
 load "../gp/e_density.gp"
 
-set key graph 0.95,0.94 spacing 2
+set key at graph 0.95,0.94 spacing 2
 
 set xr [0:2]
 set yr [0:25]

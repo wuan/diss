@@ -16,5 +16,5 @@ set label "(c)" at (d0(0.011920,26)*1e9),(56.842806+2.5) center
 set yr [40:80]
 set bmargin 4
 
-plot "<bzcat ../data/cr0202d4.dat.bz2" u (d0($1,26)*1e9):7 ti "SiO_2" w lp 1 7, \
-	"<bzcat ../data/crpaper2_fit.dat.bz2" u (d0(h($1)*1e-3,20)*1e9):7 ti "PMMA" w lp 3 6
+plot "<bzcat ../data/cr0202d4.dat.bz2" u (d0($1,26)*1e9):7 ti "SiO_2" w lp ls 1 ps 7, \
+	"<bzcat ../data/crpaper2_fit.dat.bz2" u (d0(h($1)*1e-3,20)*1e9):7 ti "PMMA" w lp ls 3 ps 6

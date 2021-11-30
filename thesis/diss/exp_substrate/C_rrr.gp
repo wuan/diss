@@ -23,7 +23,7 @@ set yrange [-20:20]
 set xr [-100:100]
 set key top left samplen 0.5 spacing 2
 
-plot FILE_RT every 15 u 1:($2*1e6) axes x1y2 ti ">>  RT" w p 4, 1e6*f_RT(x) axes x1y2 not w l 1, \
-	FILE_LN2 every 15 u 1:($2*1e6) ti "<<  LN2" w p 6, 1e6*f_N(x) not w l 2, \
-	FILE_LHe every 15 u 1:($2*1e6) ti "<<  L4He" w p 8, 1e6*f_He(x) not w l 3
+plot FILE_RT every 15 u 1:($2*1e6) axes x1y2 ti ">>  RT" w p pt 4, 1e6*f_RT(x) axes x1y2 not w p ls 1, \
+	FILE_LN2 every 15 u 1:($2*1e6) ti "<<  LN2" w p pt 6, 1e6*f_N(x) not w p ls 2, \
+	FILE_LHe every 15 u 1:($2*1e6) ti "<<  L4He" w p pt 8, 1e6*f_He(x) not w p ls 3
 print 1/m_RT,1/m_N,1/m_He

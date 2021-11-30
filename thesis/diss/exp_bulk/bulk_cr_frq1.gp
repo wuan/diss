@@ -37,11 +37,11 @@ set ytics 0.002
 set xlabel "Magnetfeld [T]"
 set ylabel "Frequenz [GHz]"
 set key right top
-plot "<bzcat ../data/mw0210d1.dat.bz2 |smooth -n 5 -" every 3:::(f1)::(f1) u ($41*0.0401):($13/1e9) ti "U_{clamp}=380V" w p 1 4, \
-    "" every 2:::(f2)::(f2) u ($41*0.0401):($13/1e9) ti "U_{clamp}=350V" w p 2 5, \
-    "" every 2:::(f3)::(f3) u ($41*0.0401):($13/1e9) ti "U_{clamp}=300V" w p 3 6, \
-    "" every 2:::(f4)::(f4) u ($41*0.0401):($13/1e9) ti "U_{clamp}=250V" w p 4 7, \
-    "" every 2:::(f5)::(f5) u ($41*0.0401):($13/1e9) ti "U_{clamp}=200V" w p 5 8, \
-    "" every 2:::(f6)::(f6) u ($41*0.0401):($13/1e9) ti "U_{clamp}=150V" w p 6 9, \
-    "" every 2:::(f7)::(f7) u ($41*0.0401):($13/1e9) ti "U_{clamp}=100V" w p 7 12
+plot "<bzcat ../data/mw0210d1.dat.bz2 |smooth -n 5 -" every 3:::(f1)::(f1) u ($41*0.0401):($13/1e9) ti "U_{clamp}=380V" w p ps 1 pt 4, \
+    "" every 2:::(f2)::(f2) u ($41*0.0401):($13/1e9) ti "U_{clamp}=350V" w p ps 2 pt 5, \
+    "" every 2:::(f3)::(f3) u ($41*0.0401):($13/1e9) ti "U_{clamp}=300V" w p ps 3 pt 6, \
+    "" every 2:::(f4)::(f4) u ($41*0.0401):($13/1e9) ti "U_{clamp}=250V" w p ps 4 pt 7, \
+    "" every 2:::(f5)::(f5) u ($41*0.0401):($13/1e9) ti "U_{clamp}=200V" w p ps 5 pt 8, \
+    "" every 2:::(f6)::(f6) u ($41*0.0401):($13/1e9) ti "U_{clamp}=150V" w p ps 6 pt 9, \
+    "" every 2:::(f7)::(f7) u ($41*0.0401):($13/1e9) ti "U_{clamp}=100V" w p ps 7 pt 12
 

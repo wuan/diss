@@ -21,6 +21,6 @@ es=1.7
 dC3=26
 ds=200e-9
 
-plot "film_overview.dat" u (d((l0-level($4))/1e3,0)*1e9):(Tsct(n10(l0-level($4),($10-$8)/($7-$9)-($8-$6)/($5-$7),ds,es,dC3),d10(l0-level($4),($10-$8)/($7-$9)-($8-$6)/($5-$7),ds,es,dC3),es,1)/cell_temp($2*1e3)) not w p 6, \
-	130 not w l 2
+plot "film_overview.dat" u (d((l0-level($4))/1e3,0)*1e9):(Tsct(n10(l0-level($4),($10-$8)/($7-$9)-($8-$6)/($5-$7),ds,es,dC3),d10(l0-level($4),($10-$8)/($7-$9)-($8-$6)/($5-$7),ds,es,dC3),es,1)/cell_temp($2*1e3)) not w p ps 6, \
+	130 not w l ls 2
 

@@ -37,19 +37,19 @@ set ytics 0.02
 set xlabel "Magnetfeld [T]"
 set ylabel "{/Symbol d w_s}/{/Symbol d w_s(s_0)} [bel. Einh.]"
 set key right top
-#plot 1e3*(sqrt(1/(-Af1*chiv(x,wf1,tf1)/chiv(0,wf1,tf1)+offsetf7))-sqrt(1/offsetf7)) not w l 1, \
-     1e3*(sqrt(1/(-Af1*chiv(x,wf2,tf2)/chiv(0,wf2,tf2)+offsetf7))-sqrt(1/offsetf7)) not w l 1, \
-     1e3*(sqrt(1/(-Af1*chiv(x,wf3,tf3)/chiv(0,wf3,tf3)+offsetf7))-sqrt(1/offsetf7)) not w l 1, \
-     1e3*(sqrt(1/(-Af1*chiv(x,wf4,tf4)/chiv(0,wf4,tf4)+offsetf7))-sqrt(1/offsetf7)) not w l 1, \
-     1e3*(sqrt(1/(-Af1*chiv(x,wf5,tf5)/chiv(0,wf5,tf5)+offsetf7))-sqrt(1/offsetf7)) not w l 1, \
-     1e3*(sqrt(1/(-Af1*chiv(x,wf6,tf6)/chiv(0,wf6,tf6)+offsetf7))-sqrt(1/offsetf7)) not w l 1, \
-     1e3*(sqrt(1/(-Af1*chiv(x,wf7,tf7)/chiv(0,wf7,tf7)+offsetf7))-sqrt(1/offsetf7)) not w l 1, \
-	 0 not w l 1
+#plot 1e3*(sqrt(1/(-Af1*chiv(x,wf1,tf1)/chiv(0,wf1,tf1)+offsetf7))-sqrt(1/offsetf7)) not w l ls 1, \
+     1e3*(sqrt(1/(-Af1*chiv(x,wf2,tf2)/chiv(0,wf2,tf2)+offsetf7))-sqrt(1/offsetf7)) not w l ls 1, \
+     1e3*(sqrt(1/(-Af1*chiv(x,wf3,tf3)/chiv(0,wf3,tf3)+offsetf7))-sqrt(1/offsetf7)) not w l ls 1, \
+     1e3*(sqrt(1/(-Af1*chiv(x,wf4,tf4)/chiv(0,wf4,tf4)+offsetf7))-sqrt(1/offsetf7)) not w l ls 1, \
+     1e3*(sqrt(1/(-Af1*chiv(x,wf5,tf5)/chiv(0,wf5,tf5)+offsetf7))-sqrt(1/offsetf7)) not w l ls 1, \
+     1e3*(sqrt(1/(-Af1*chiv(x,wf6,tf6)/chiv(0,wf6,tf6)+offsetf7))-sqrt(1/offsetf7)) not w l ls 1, \
+     1e3*(sqrt(1/(-Af1*chiv(x,wf7,tf7)/chiv(0,wf7,tf7)+offsetf7))-sqrt(1/offsetf7)) not w l ls 1, \
+	 0 not w l ls 1
 	 
 plot (sqrt(1/(-Af7*chiv(x,wf1,tf1)/chiv(0,wf1,tf1)+offsetf7))-sqrt(1/offsetf7)) not w l lt 1 lw 2, \
-     (sqrt(1/(-Af7*chiv(x,wf2,tf2)/chiv(0,wf2,tf2)+offsetf7))-sqrt(1/offsetf7)) not w l 2, \
-     (sqrt(1/(-Af7*chiv(x,wf3,tf3)/chiv(0,wf3,tf3)+offsetf7))-sqrt(1/offsetf7)) not w l 3, \
-     (sqrt(1/(-Af7*chiv(x,wf4,tf4)/chiv(0,wf4,tf4)+offsetf7))-sqrt(1/offsetf7)) not w l 4, \
-     (sqrt(1/(-Af7*chiv(x,wf5,tf5)/chiv(0,wf5,tf5)+offsetf7))-sqrt(1/offsetf7)) not w l 5, \
-     (sqrt(1/(-Af7*chiv(x,wf6,tf6)/chiv(0,wf6,tf6)+offsetf7))-sqrt(1/offsetf7)) not w l 6, \
-     (sqrt(1/(-Af7*chiv(x,wf7,tf7)/chiv(0,wf7,tf7)+offsetf7))-sqrt(1/offsetf7)) not w l 1
+     (sqrt(1/(-Af7*chiv(x,wf2,tf2)/chiv(0,wf2,tf2)+offsetf7))-sqrt(1/offsetf7)) not w l ls 2, \
+     (sqrt(1/(-Af7*chiv(x,wf3,tf3)/chiv(0,wf3,tf3)+offsetf7))-sqrt(1/offsetf7)) not w l ls 3, \
+     (sqrt(1/(-Af7*chiv(x,wf4,tf4)/chiv(0,wf4,tf4)+offsetf7))-sqrt(1/offsetf7)) not w l ls 4, \
+     (sqrt(1/(-Af7*chiv(x,wf5,tf5)/chiv(0,wf5,tf5)+offsetf7))-sqrt(1/offsetf7)) not w l ls 5, \
+     (sqrt(1/(-Af7*chiv(x,wf6,tf6)/chiv(0,wf6,tf6)+offsetf7))-sqrt(1/offsetf7)) not w l ls 6, \
+     (sqrt(1/(-Af7*chiv(x,wf7,tf7)/chiv(0,wf7,tf7)+offsetf7))-sqrt(1/offsetf7)) not w l ls 1

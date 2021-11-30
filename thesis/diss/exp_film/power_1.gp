@@ -20,5 +20,5 @@ set label 2 "Position 1" at first 0.50,-17.32
 set arrow 3 from first 1.53,-17.35 to first 1.53,-16.7 nohead lw 5
 set label 3 "Position 2" at first 1.5,-17.32 right
 
-plot FILENAME every 3::280:20:570:20  u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "Transmission" w p 7, \
-	 FILENAME every 3::280:20:570:20  u 10:($13/1e9) axes x1y2 ti "Frequenz" w p 4
+plot FILENAME every 3::280:20:570:20  u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "Transmission" w p ps 7, \
+	 FILENAME every 3::280:20:570:20  u 10:($13/1e9) axes x1y2 ti "Frequenz" w p ps 4

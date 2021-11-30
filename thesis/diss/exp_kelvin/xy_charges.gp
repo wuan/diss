@@ -7,5 +7,5 @@ set yl "Y [bel. Einh.]"
 set yr [-48:35]
 set xr [-20:32]
 set zeroaxis
-plot "<bzcat ../data/ke0205d2.026.bz2" every :2 u ($3*cos($4/180*pi)):($3*sin($4/180*pi)) not w p 0
+plot "<bzcat ../data/ke0205d2.026.bz2" every :2 u ($3*cos($4/180*pi)):($3*sin($4/180*pi)) not w p pt 0
 

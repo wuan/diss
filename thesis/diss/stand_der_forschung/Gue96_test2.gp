@@ -14,7 +14,7 @@ t(x)=temp
 
 set xlabel "relative Haltespannung [V]"
 set x2label "Elektronendichte [10^{14} m^{-2}]"
-set ylabel "Absorption {/Symbol a} [10^{-4}]" 1,0
+set ylabel "Absorption {/Symbol a} [10^{-4}]" offset 1
 set key bottom right
 
 set bmargin 4
@@ -43,5 +43,5 @@ set xtics nomirror
 set xtics ("0.0" 0, "0.2" 1e-14*n10(l*1e-3,0.2,ds,eps,dC3), "0.4" 1e-14*n10(l*1e-3,0.4,ds,eps,dC3), "0.6" 1e-14*n10(l*1e-3,0.6,ds,eps,dC3), "0.8" 1e-14*n10(l*1e-3,0.8,ds,eps,dC3),"1.0" 1e-14*n10(l*1e-3,1.0,ds,eps,dC3))
 
 set parametric
-plot "" u (1e-14*n10(l*1e-3,$1-V1,ds,eps,dC3)):2 axes x2y1 not w p 7,(1e-14*n10(l*1e-3,dV,ds,eps,dC3)),(t+5)/10 axes x2y1 not
+plot "" u (1e-14*n10(l*1e-3,$1-V1,ds,eps,dC3)):2 axes x2y1 not w p pt 7,(1e-14*n10(l*1e-3,dV,ds,eps,dC3)),(t+5)/10 axes x2y1 not
 load "../gp/analysis_WC.gp"

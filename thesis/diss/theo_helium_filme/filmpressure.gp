@@ -10,7 +10,7 @@ set log x
 set bmargin 4
 
 set xlabel "Elektronendichte {/Times-Italic n_s} [m^{-2}]"
-set ylabel "Helium-Filmdicke {/Times-Italic d} [nm]" 1,0
+set ylabel "Helium-Filmdicke {/Times-Italic d} [nm]" offset 1
 plot d(0.005,x)*1e9 ti "{/Times-Italic h} = 5 mm", \
 	 d(0.01,x)*1e9 ti "{/Times-Italic h} = 10 mm", \
 	 d(0.02,x)*1e9 ti "{/Times-Italic h} = 20 mm"

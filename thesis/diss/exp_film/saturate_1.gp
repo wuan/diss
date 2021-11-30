@@ -30,7 +30,7 @@ set xr [0:100]
 set yr [0.4:0.55]
 set ytics 0.05
 
-plot FILENAME every 10::(int(6*(ta1-tb1)/mb1)):34::34 u ($0/6*10):10 ti "Messung 1" w p 4, \
-	 FILENAME every 5::(int(6*(ta2-tb2)/mb2)):40::40 u ($0/6*5):10 ti "Messung 2" w p 6, \
-	 FILENAME every 10::(int(6*(ta4-tb4)/mb4)):52::52 u ($0/6*10):10 ti "Messung 3" w p 8, \
-	 FILENAME every 10::(int(6*(ta5-tb5)/mb5)):57::57 u ($0/6*10):10 ti "Messung 4" w p 12
+plot FILENAME every 10::(int(6*(ta1-tb1)/mb1)):34::34 u ($0/6*10):10 ti "Messung 1" w p ps 4, \
+	 FILENAME every 5::(int(6*(ta2-tb2)/mb2)):40::40 u ($0/6*5):10 ti "Messung 2" w p ps 6, \
+	 FILENAME every 10::(int(6*(ta4-tb4)/mb4)):52::52 u ($0/6*10):10 ti "Messung 3" w p ps 8, \
+	 FILENAME every 10::(int(6*(ta5-tb5)/mb5)):57::57 u ($0/6*10):10 ti "Messung 4" w p ps 12
