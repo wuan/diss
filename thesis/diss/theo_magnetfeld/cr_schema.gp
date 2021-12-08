@@ -7,7 +7,7 @@ set pointsize 2
 
 set output "cr_schema.eps"
 
-set key samplen 2 spacing 2
+set key samplen 2 spacing 1.5
 
 fitstart=61
 fitend=61

@@ -18,7 +18,7 @@ fit [0.85:1.0] f3(x) "" every :::6::6 u 10:($13/1e9) via m3,t3
 V1=(t2-t1)/(m1-m2)
 V2=(t3-t2)/(m2-m3)
 dV=V2-V1
-plot "<bzcat ../data/mw0109d5.dat.bz2 |smooth -n 5 -" every 6:::6:1050:6 u 10:($13/1e9) not w p ps 6, \
+plot "<bzcat ../data/mw0109d5.dat.bz2 |smooth -n 5 -" every 6:::6:1050:6 u 10:($13/1e9) not w p pt 6, \
 	f1(x) not w l ls 1, \
 	f2(x) not w l ls 2, \
 	f3(x) not w l ls 3

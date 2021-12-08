@@ -8,7 +8,7 @@ set y2tics
 set log y2
 set log x
 set y2r [100:5e7]
-set key top left samplen 0.5 width -4 spacing 2
+set key top left samplen 0.5 width -4 spacing 1.5
 set xr [1:100]
 set xlabel "Zellenthermometer [{/Symbol W}]"
 set ylabel "Transmission [dB]"

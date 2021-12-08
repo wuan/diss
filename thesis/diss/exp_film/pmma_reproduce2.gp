@@ -16,7 +16,7 @@ j=55
 FILENAME = "<bzcat ../data/mw0204d4.dat.bz2 |smooth -n 20 -"
 #FILENAME = "../../data/microwave/2002/mw0204d4/mw0204d4.dat"
 
-plot FILENAME every 5:::(i):550:(i) u 10:(($11+$17+$19/1e9*$13/1e9)/($21+$27+$29/1e9*$23/1e9)) ti "frühe Beladung" w p ps 7, \
-	FILENAME every :::(i):180:(i) u 10:(($11+$17+$19/1e9*$13/1e9)/($21+$27+$29/1e9*$23/1e9)) not w p ps 7, \
-	FILENAME every 5:::(j):400:(j) u 10:(($11+$17+$19/1e9*$13/1e9)/($21+$27+$29/1e9*$23/1e9)) ti "später" w p ps 6, \
-	FILENAME every :::(j):180:(j) u 10:(($11+$17+$19/1e9*$13/1e9)/($21+$27+$29/1e9*$23/1e9)) not w p ps 6
+plot FILENAME every 5:::(i):550:(i) u 10:(($11+$17+$19/1e9*$13/1e9)/($21+$27+$29/1e9*$23/1e9)) ti "frühe Beladung" w p pt 7, \
+	FILENAME every :::(i):180:(i) u 10:(($11+$17+$19/1e9*$13/1e9)/($21+$27+$29/1e9*$23/1e9)) not w p pt 7, \
+	FILENAME every 5:::(j):400:(j) u 10:(($11+$17+$19/1e9*$13/1e9)/($21+$27+$29/1e9*$23/1e9)) ti "später" w p pt 6, \
+	FILENAME every :::(j):180:(j) u 10:(($11+$17+$19/1e9*$13/1e9)/($21+$27+$29/1e9*$23/1e9)) not w p pt 6

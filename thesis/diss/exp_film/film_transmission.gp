@@ -27,7 +27,7 @@ Ue=1.05
 set xr [Us:Ue]
 set yr [-25.3:-23]
 #set title `printf '"0109_5(7) U_{0}=%.3fV, U_{wc}=%.3fV, {/Symbol D}U=%.3fV"' $V1 $V2 $dV`
-plot "" every 6:::(i):1050:(i) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) not w p ps 6, \
+plot "" every 6:::(i):1050:(i) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) not w p pt 6, \
 	f1(x) not w l ls 1, \
 	f2(x) not w l ls 2, \
 	f3(x) not w l ls 3

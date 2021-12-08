@@ -18,4 +18,4 @@ set bmargin 4
 
 l0=15.8
 
-plot "film_overview.dat" u (cell_temp($2*1e3)):(d((l0-level($4))/1e3,0)*1e9) not w p ps 6
+plot "film_overview.dat" u (cell_temp($2*1e3)):(d((l0-level($4))/1e3,0)*1e9) not w p pt 6

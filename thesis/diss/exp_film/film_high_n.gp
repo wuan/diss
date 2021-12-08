@@ -9,7 +9,7 @@ set xlabel "Haltespannung [V]"
 set ylabel "Transmission [dB]"
 set y2label "Resonanzfrequenz [GHz]"
 
-set key samplen 0.5 spacing 2
+set key samplen 0.5 spacing 1.5
 
 set xr [0:*]
 #set yr [-25.3:-23]
@@ -24,8 +24,8 @@ FILENAME = "<bzcat ../data/mw0202d4.dat.bz2"
 #dV=V2-V1
 set ytics nomirror
 set y2tics 0.0001
-plot FILENAME every 15:::(i)::(i) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "Transmission" w p ps 7, \
-	FILENAME every 15:::(i)::(i) u 10:($13/1e9) axes x1y2 ti "Frequenz" w p ps 4
+plot FILENAME every 15:::(i)::(i) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "Transmission" w p pt 7, \
+	FILENAME every 15:::(i)::(i) u 10:($13/1e9) axes x1y2 ti "Frequenz" w p pt 4
 #	f1(x) not w l 1, \
 #	f2(x) not w l 2, \
 #	f3(x) not w l 3

@@ -21,9 +21,9 @@ fit [-0.7:-0.5] f1(x) FILENAME every :::(i)::(i) u 10:(log($11+$17+$19/1e9*$13/1
 fit [-0.7:-0.5] f2(x) FILENAME every :::(j)::(j) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) via t2,m2
 
 FILENAME = "<bzcat ../data/mw0204d4.dat.bz2 |smooth -n 5 -"
-plot FILENAME every 5:::(i):550:(i) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "frühe Beladung" w p ps 7, \
-	FILENAME every :::(i):180:(i) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) not w p ps 7, \
+plot FILENAME every 5:::(i):550:(i) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "frühe Beladung" w p pt 7, \
+	FILENAME every :::(i):180:(i) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) not w p pt 7, \
 	f1(x) not, \
-	FILENAME every 5:::(j):400:(j) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "später" w p ps 6, \
-	FILENAME every :::(j):180:(j) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) not w p ps 6, \
+	FILENAME every 5:::(j):400:(j) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) ti "später" w p pt 6, \
+	FILENAME every :::(j):180:(j) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) not w p pt 6, \
 	f2(x) not

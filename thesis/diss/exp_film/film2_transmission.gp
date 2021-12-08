@@ -18,7 +18,7 @@ set xtics 0.1
 V1=(t2-t1)/(m1-m2)
 V2=(t3-t2)/(m2-m3)
 dV=V2-V1
-plot "<bzcat ../data/mw0204d3.dat.bz2 |smooth -n 5 -" every 2::10:(i):490:(i) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) not w p ps 6, \
+plot "<bzcat ../data/mw0204d3.dat.bz2 |smooth -n 5 -" every 2::10:(i):490:(i) u 10:(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) not w p pt 6, \
 	f1(x) not w l ls 1, \
 	f2(x) not w l ls 2, \
 	f3(x) not w l ls 3

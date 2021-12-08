@@ -23,14 +23,14 @@ fb5(x)=mb5*x+tb5
 fit [20:40] fa5(x) FILENAME every :::57::57 u ($0/6):($11+$17+$19/1e9*$13/1e9) via ta5
 fit [90:110] fb5(x) FILENAME every :::57::57 u ($0/6):($11+$17+$19/1e9*$13/1e9) via mb5,tb5
 
-set key bottom left samplen 0.5 spacing 2
+set key bottom left samplen 0.5 spacing 1.5
 set xr [0:100]
 set yr [0.74:1]
 set ytics 0.05
 
 set xlabel "Zeit [min]"
 set ylabel "normalisierte lin. Transmission"
-plot FILENAME every 10::(int(6*(ta1-tb1)/mb1)):34::34 u ($0/6*10):(($11+$17+$19/1e9*$13/1e9)/ta1) ti "Messung 1" w p ps 4, fb1(x+(ta1-tb1)/mb1)/ta1 not w l ls 1, \
-	 FILENAME every 10::(int(6*(ta2-tb2)/mb2)):40::40 u ($0/6*10):(($11+$17+$19/1e9*$13/1e9)/ta2) ti "Messung 2" w p ps 6, fb2(x+(ta2-tb2)/mb2)/ta2 not w l ls 2, \
-	 FILENAME every 10::(int(6*(ta4-tb4)/mb4)):52::52 u ($0/6*10):(($11+$17+$19/1e9*$13/1e9)/ta4) ti "Messung 3" w p ps 8, fb4(x+(ta4-tb4)/mb4)/ta4 not w l ls 4, \
-	 FILENAME every 10::(int(6*(ta5-tb5)/mb5)):57::57 u ($0/6*10):(($11+$17+$19/1e9*$13/1e9)/ta5) ti "Messung 4" w p ps 12, fb5(x+(ta5-tb5)/mb5)/ta5 not w l ls 5
+plot FILENAME every 10::(int(6*(ta1-tb1)/mb1)):34::34 u ($0/6*10):(($11+$17+$19/1e9*$13/1e9)/ta1) ti "Messung 1" w p pt 4, fb1(x+(ta1-tb1)/mb1)/ta1 not w l ls 1, \
+	 FILENAME every 10::(int(6*(ta2-tb2)/mb2)):40::40 u ($0/6*10):(($11+$17+$19/1e9*$13/1e9)/ta2) ti "Messung 2" w p pt 6, fb2(x+(ta2-tb2)/mb2)/ta2 not w l ls 2, \
+	 FILENAME every 10::(int(6*(ta4-tb4)/mb4)):52::52 u ($0/6*10):(($11+$17+$19/1e9*$13/1e9)/ta4) ti "Messung 3" w p pt 8, fb4(x+(ta4-tb4)/mb4)/ta4 not w l ls 4, \
+	 FILENAME every 10::(int(6*(ta5-tb5)/mb5)):57::57 u ($0/6*10):(($11+$17+$19/1e9*$13/1e9)/ta5) ti "Messung 4" w p pt 12, fb5(x+(ta5-tb5)/mb5)/ta5 not w l ls 5

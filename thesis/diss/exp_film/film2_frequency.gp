@@ -22,7 +22,7 @@ V1=(t2-t1)/(m1-m2)
 V2=(t3-t2)/(m2-m3)
 dV=V2-V1
 #set title `printf '"0109_5(7) U_{0}=%.3fV, U_{wc}=%.3fV, {/Symbol D}U=%.3fV"' $V1 $V2 $dV`
-plot "<bzcat ../data/mw0204d3.dat.bz2 |smooth -n 5 -" every 2::20:(i):490:(i) u 10:($13/1e9) not w p ps 6, \
+plot "<bzcat ../data/mw0204d3.dat.bz2 |smooth -n 5 -" every 2::20:(i):490:(i) u 10:($13/1e9) not w p pt 6, \
 	f1(x) not w l ls 1, \
 	f2(x) not w l ls 2, \
 	f3(x) not w l ls 3

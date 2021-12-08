@@ -13,5 +13,5 @@ offset=0.000001
 t=5
 w=0.4
 load "../gp/crfit.gp"
-set key samplen 0.4 spacing 2
+set key samplen 0.4 spacing 1.5
 load "../gp/plot_absorption_DE.gp"

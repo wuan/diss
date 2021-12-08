@@ -16,7 +16,7 @@ set ylabel "Transmission [dB]"
 set ytics nomirror
 set y2tics 
 set y2label "Resonanzfrequenz [GHz]"
-set key samplen 0.5 spacing 2
+set key samplen 0.5 spacing 1.5
 
 set x2r [0:9e13]
 set x2tics 2e13
@@ -41,8 +41,8 @@ l=l0-level(t4)
 set xtics nomirror
 set xtics ("0.0" 0,"0.05" n10(l,0.05,ds,eps,dC3), "0.1" n10(l,0.1,ds,eps,dC3), "0.15" n10(l,0.15,ds,eps,dC3), "0.2" n10(l,0.2,ds,eps,dC3), "0.25" n10(l,0.25,ds,eps,dC3))
 set parametric
-plot "<bzcat ../data/mw0204d3.dat.bz2 | smooth -n 5 -" every 2::10:(i):490:(i) u (n10(h,$10-V1,ds,eps,dC3)):(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) axes x2y1 ti "Transmission" w p ps 7, \
-	"" every 2::10:(i):490:(i) u (n10(h,$10-V1,ds,eps,dC3)):($13/1e9) axes x2y2 ti "Resonanzfrequenz" w p ps 4, \
+plot "<bzcat ../data/mw0204d3.dat.bz2 | smooth -n 5 -" every 2::10:(i):490:(i) u (n10(h,$10-V1,ds,eps,dC3)):(log($11+$17+$19/1e9*$13/1e9)/log(10)*20) axes x2y1 ti "Transmission" w p pt 7, \
+	"" every 2::10:(i):490:(i) u (n10(h,$10-V1,ds,eps,dC3)):($13/1e9) axes x2y2 ti "Resonanzfrequenz" w p pt 4, \
 	n10(h,dV,ds,eps,dC3),-16.2+t/3 axes x2y1 not w l ls 3
 
 load "../gp/analysis_WC.gp"

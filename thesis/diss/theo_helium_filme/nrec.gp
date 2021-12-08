@@ -5,7 +5,7 @@ set output "nrec.eps"
 set xlabel "Anzahl der Iterationen"
 set ylabel "{/Symbol D}{/Times-Italic n_s} [10^{14} m^{-2}]"
 
-set key samplen 0.5 spacing 2
+set key samplen 0.5 spacing 1.5
 
 set log y
 set lmargin 8

@@ -25,12 +25,12 @@ fit [90:110] fb5(x) FILENAME every :::57::57 u ($0/6):($11+$17+$19/1e9*$13/1e9) 
 
 set xlabel "Haltespannung [V]"
 set ylabel "normalisierte lin. Transmission"
-set key bottom left samplen 0.5 spacing 2
+set key bottom left samplen 0.5 spacing 1.5
 set auto y
 set xr [0.3:0.55]
 set yr [0.83:1.01]
 set ytics 0.05
-plot FILENAME every 5:::34::34 u 10:(($11+$17+$19/1e9*$13/1e9)/ta1) ti "Messung 1" w p ps 4, \
-	 FILENAME every 5:::40::40 u 10:(($11+$17+$19/1e9*$13/1e9)/ta2) ti "Messung 2" w p ps 6, \
-	 FILENAME every 5:::52::52 u 10:(($11+$17+$19/1e9*$13/1e9)/ta4) ti "Messung 3" w p ps 8, \
-	 FILENAME every 5:::57::57 u 10:(($11+$17+$19/1e9*$13/1e9)/ta5) ti "Messung 4" w p ps 12
+plot FILENAME every 5:::34::34 u 10:(($11+$17+$19/1e9*$13/1e9)/ta1) ti "Messung 1" w p pt 4, \
+	 FILENAME every 5:::40::40 u 10:(($11+$17+$19/1e9*$13/1e9)/ta2) ti "Messung 2" w p pt 6, \
+	 FILENAME every 5:::52::52 u 10:(($11+$17+$19/1e9*$13/1e9)/ta4) ti "Messung 3" w p pt 8, \
+	 FILENAME every 5:::57::57 u 10:(($11+$17+$19/1e9*$13/1e9)/ta5) ti "Messung 4" w p pt 12
