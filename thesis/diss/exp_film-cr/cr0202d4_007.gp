@@ -27,8 +27,8 @@ set label "(3)" at (11.920),(56.842806+5) center
 set yr [0:100]
 set xr [1.5:12.5]
 set key spacing 2
-plot FILENAME u ($1*1e3):7 not w p pt 1 pt 7,  \
-    100*nul(x*0.1,a,t0)-dd ti "SiO_2" w l lt 1 lw 3, \
-	"<bzcat ../data/cr_giampaolo.dat.bz2" u (h($1)):7 not w p pt 3 pt 6,  \
-    100*nul(x*0.1,oa,ot0)-odd ti "PMMA" w l lt 3 lw 3
+plot FILENAME u ($1*1e3):7 not w p pt 7,  \
+    100*nul(x*0.1,a,t0)-dd ti "SiO_2" w l ls 1 lw 3, \
+	"<bzcat ../data/cr_giampaolo.dat.bz2" u (h($1)):7 not w p pt 6,  \
+    100*nul(x*0.1,oa,ot0)-odd ti "PMMA" w l ls 3 lw 3
 	
