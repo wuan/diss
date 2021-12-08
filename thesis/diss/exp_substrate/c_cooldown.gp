@@ -5,7 +5,7 @@ set output "c_cooldown.eps"
 #set xdata time
 #set timefmt "%d.%m.%y %H:%M:%S"
 
-set key bottom right samplen 0.5 spacing 2
+set key bottom right samplen 0.5 spacing 1.5
 
 set ytics nomirror
 set y2tics

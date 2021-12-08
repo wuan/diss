@@ -27,7 +27,7 @@ set ytics 0.2
 set xlabel "Frequenz [GHz]"
 set ylabel "normierte Transmission"
 
-set key samplen 1 spacing 2
+set key samplen 1 spacing 1.5
 
 plot FILENAME every 4 u ($1/1e9):(($2-off-lin*$1/1e9)/amp) ti "Messdaten", \
 	lorex(x)/amp ti "Fit" with line lt 1 lw 2

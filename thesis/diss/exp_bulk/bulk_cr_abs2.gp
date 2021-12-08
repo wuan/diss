@@ -29,8 +29,8 @@ set yr [0:18]
 set ytics 2.5
 set xlabel "Magnetfeld [T]"
 set ylabel "normalisierte Absorption [bel. Einh.]"
-plot crv(x,w1,t1)/crv(0,w1,t1) not w l ls 0, FILENAME every 2:::(f1)::(f1) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o1)/A1/crv(0,w1,t1)) ti "U_{clamp}=80V" w p ps 1 pt 4, \
-     crv(x,w2,t2)/crv(0,w2,t2) not w l ls 0, FILENAME every 2:::(f2)::(f2) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o2)/A2/crv(0,w2,t2)) ti "U_{clamp}=60V" w p ps 2 pt 5, \
-     crv(x,w3,t3)/crv(0,w3,t3) not w l ls 0, FILENAME every 2:::(f3)::(f3) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o3)/A3/crv(0,w3,t3)) ti "U_{clamp}=40V" w p ps 3 pt 6, \
-     crv(x,w4,t4)/crv(0,w4,t4) not w l ls 0, FILENAME every 2:::(f4)::(f4) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o4)/A4/crv(0,w4,t4)) ti "U_{clamp}=20V" w p ps 4 pt 7
+plot crv(x,w1,t1)/crv(0,w1,t1) not w l ls 0, FILENAME every 2:::(f1)::(f1) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o1)/A1/crv(0,w1,t1)) ti "U_{clamp}=80V" w p pt 4, \
+     crv(x,w2,t2)/crv(0,w2,t2) not w l ls 0, FILENAME every 2:::(f2)::(f2) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o2)/A2/crv(0,w2,t2)) ti "U_{clamp}=60V" w p pt 5, \
+     crv(x,w3,t3)/crv(0,w3,t3) not w l ls 0, FILENAME every 2:::(f3)::(f3) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o3)/A3/crv(0,w3,t3)) ti "U_{clamp}=40V" w p pt 6, \
+     crv(x,w4,t4)/crv(0,w4,t4) not w l ls 0, FILENAME every 2:::(f4)::(f4) u ($41*0.0401):((1/($11+$17+$19/1e9* $13/1e9)-o4)/A4/crv(0,w4,t4)) ti "U_{clamp}=20V" w p pt 7
 

@@ -3,7 +3,7 @@ set output "filmpressure.eps"
 load "../gp/e_density.gp"	
 
 
-set key spacing 2
+set key spacing 1.5 samplen 2
 set xr [5e12:1e15]
 set log x
 

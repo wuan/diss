@@ -6,7 +6,7 @@ FILENAME = "<bzcat ../data/mw0009d2.dat.bz2"
 
 load "../gp/timedata.gp"
 
-set key top left samplen 0.5 spacing 2
+set key top left samplen 0.5 spacing 1.5
 set ytics 0.5
 set xtics 600
 #set yr [-0.2:4]

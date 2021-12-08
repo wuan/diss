@@ -8,7 +8,7 @@ FILENAME = "fil_eichung.dat"
 set xlabel "Pulsamplitude [V]"
 set ylabel "Elektronen pro Puls" offset -3.5
 set xr [0.55:1.25]
-set key left top samplen 1 spacing 2
+set key left top samplen 1 spacing 1.5
 set yr [-2e7:*]
 set ytics axis
 set lmargin 8

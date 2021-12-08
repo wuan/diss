@@ -10,6 +10,6 @@ set xlabel "a [cm]"
 set ylabel "f_{Resonanz} [GHz]"
 set ytics 1
 
-set key spacing 2
+set key spacing 1.5
 
 plot TM011(x,2.0) ti "TM011" w l lt 3, TM010(x,2.0) ti "TM010" w l lt 1

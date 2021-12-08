@@ -7,13 +7,13 @@ FILENAME = "<bzcat ../data/cr0210d2.dat.bz2"
 
 set xlabel "Elektronendichte [10^{13} 1/m^2]"
 set ylabel "{/Symbol t}^{-1} / 2{/Symbol p} [GHz]"
-set key left top  spacing 2.5
+set key left top  spacing 1.5
 set xr [0:2.2]
 set xtics 0.5
 
 set bmargin 4
 
-plot FILENAME every :::2::2 u ($1/384*2.2):(w($2)/$3/2/pi/1e9) ti "U_{crit}=384V" w lp ls 1 ps 7, \
-     FILENAME every :::1::1 u ($1/81*1.4):(w($2)/$3/2/pi/1e9) ti "U_{crit}=81V" w lp ls 3 ps 9
+plot FILENAME every :::2::2 u ($1/384*2.2):(w($2)/$3/2/pi/1e9) ti "U_{crit}=384V" w lp ls 1 pt 7, \
+     FILENAME every :::1::1 u ($1/81*1.4):(w($2)/$3/2/pi/1e9) ti "U_{crit}=81V" w lp ls 3 pt 9
 
 

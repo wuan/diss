@@ -23,7 +23,7 @@ set xr [9.6:9.61]
 set xtics 0.002
 #set yr [0.17:1.05]
 set ytics 0.025
-set key top left samplen 1 spacing 2
+set key top left samplen 1 spacing 1.5
 
 set xlabel "Frequenz [GHz]"
 set ylabel "auf Fit normiert"
