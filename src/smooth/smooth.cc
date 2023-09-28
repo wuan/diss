@@ -142,7 +142,6 @@ int main(int argc, char *argv[])
 
 				// cout << number_of_values << ": "<< endl;
 				if (number_of_values>0 && coltext[column]!="?") {
-					cerr <<number_of_values;
 					cout << " " << setprecision(9) << sum/double(number_of_values);
 				} else { 
 					cout << " ?";
