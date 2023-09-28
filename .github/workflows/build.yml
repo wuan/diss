@@ -1,0 +1,90 @@
+name: Build document
+
+on:
+  push:
+    tags: ["*"]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: LaTeX iterations
+        id: latex-final
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+      - name: Collect Warnings
+        id: warnings
+        run: |
+          echo "WARNINGS<<EOF" >> $GITHUB_ENV
+          grep "^LaTeX Warning" main.log | cut -d" " -f3- | tee -a $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+        continue-on-error: true
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: Dissertation
+          path: main.pdf
+      - name: Update PR with warnings found
+        uses: actions/github-script@v6
+        continue-on-error: true
+        if: github.event_name == 'pull_request'
+        env:
+          WARNINGS: "${{ env.WARNINGS }}"
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            // 1. Retrieve existing bot comments for the PR
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            })
+            const botComment = comments.find(comment => {
+              return comment.user.type === 'Bot' && comment.body.includes('Dissertation build')
+            })
+            // 2. Prepare format of the comment
+            const output = `#### Dissertation build
+            <details><summary>WARNINGS</summary>\n\n
+
+            \`\`\`
+            ${process.env.WARNINGS}
+            \`\`\`
+
+            </details>
+
+            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`, Workflow: \`${{ github.workflow }}\`*`;
+            // 3. If we have a comment, update it, otherwise create a new one
+            const comment_data = {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: output
+            }
+            if (botComment) {
+              comment_data.comment_id = botComment.id
+              github.rest.issues.updateComment(comment_data)
+            } else {
+              comment_data.issue_number = context.issue.number
+              github.rest.issues.createComment(comment_data)
+            }
+      - name: Create Release
+        id: create_release
+        uses: ncipollo/release-action@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          name: Release ${{ github.ref_name }}
+          artifacts: main.pdf
+          artifactContentType: application/pdf

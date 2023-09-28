@@ -236,7 +236,7 @@ FUNCTION {field.or.null}
 FUNCTION {emphasize}
 { duplicate$ empty$
     { pop$ "" }
-    { "textem{" swap$ * "}" * }
+    { "\textit{" swap$ * "}" * }
   if$
 }
 
