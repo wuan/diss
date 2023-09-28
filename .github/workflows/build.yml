@@ -21,6 +21,14 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: "Build & install smooth"
+        working-directory: ./src/smooth
+        run: make install
+      - name: "Build & install hpna"
+        working-directory: ./src/smooth
+        run: make install
+      - name: "Install Gnuplot"
+        run: apt install gnuplot
       - name: LaTeX iterations
         id: latex-final
         uses: xu-cheng/latex-action@v3
