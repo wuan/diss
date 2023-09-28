@@ -1,15 +1,13 @@
-graphs  = C_rrr.pdf c_cooldown.pdf si_cooldown.pdf
-pics    = substrate68.pdf
+graphs  = C_rrr.eps c_cooldown.eps si_cooldown.eps
+pics    = substrate68.eps
 
 all: $(graphs) $(pics)
 
-$(graphs): %.pdf: %.gp
+$(graphs): %.eps: %.gp
 	gnuplot $<
-	epstopdf $(addsuffix .eps, $(basename $@))
 
-$(pics): %.pdf: %.fig
+$(pics): %.eps: %.fig
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@))
-	epstopdf $(addsuffix .eps, $(basename $@))
 	
 clean:
-	rm -f $(graphs) $(pics) *.eps fit.log
+	rm -f $(graphs) $(pics) fit.log *-eps-converted-to.pdf

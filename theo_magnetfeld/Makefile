@@ -1,15 +1,13 @@
-GRAPHS  = zyklotronresonanz.pdf cr_schema.pdf
+GRAPHS  = zyklotronresonanz.eps cr_schema.eps
 PICS    =
 
 all: $(GRAPHS) $(PICS)
 
-$(GRAPHS): %.pdf: %.gp
+$(GRAPHS): %.eps: %.gp
 	gnuplot $<
-	epstopdf $(addsuffix .eps, $(basename $@))
 
-$(PICS): %.pdf: %.fig
+$(PICS): %.eps: %.fig
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@)) 
-	epstopdf $(addsuffix .eps, $(basename $@))
 	
 clean:
-	rm -f $(GRAPHS) $(PICS) *.eps fit.log
+	rm -f $(GRAPHS) $(PICS) fit.log *-eps-converted-to.pdf

@@ -1,21 +1,19 @@
-graphs  = bulk_charge.pdf bulk_cr.pdf \
-	bulk_cr_abs1.pdf bulk_cr_abs2.pdf \
-	bulk_cr_frq1.pdf bulk_cr_frq2.pdf \
-	bulk_cr_res1.pdf bulk_cr_res2.pdf \
-	bulk_cr_res3.pdf bulk_cr_res4.pdf \
-	bulk_cr_nonlinear.pdf
-pics    = cyclotron_resonance.pdf bulkcharge.pdf
+graphs  = bulk_charge.eps bulk_cr.eps \
+	bulk_cr_abs1.eps bulk_cr_abs2.eps \
+	bulk_cr_frq1.eps bulk_cr_frq2.eps \
+	bulk_cr_res1.eps bulk_cr_res2.eps \
+	bulk_cr_res3.eps bulk_cr_res4.eps \
+	bulk_cr_nonlinear.eps
+pics    = cyclotron_resonance.eps bulkcharge.eps
 
 all: $(graphs) $(pics)
 
-$(graphs): %.pdf: %.gp
+$(graphs): %.eps: %.gp
 	gnuplot $<
-	epstopdf $(addsuffix .eps, $(basename $@))
 
-$(pics): %.pdf: %.fig
+$(pics): %.eps: %.fig
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@))
-	epstopdf $(addsuffix .eps, $(basename $@))
 
 
 clean:
-	rm -f $(graphs) $(pics) *.eps fit.log
+	rm -f $(graphs) $(pics) fit.log *-eps-converted-to.pdf

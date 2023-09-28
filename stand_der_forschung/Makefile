@@ -1,15 +1,13 @@
-graphs = Gue96_test.pdf Gue96_test2.pdf
+graphs = Gue96_test.eps Gue96_test2.eps
 pics = 
 
 all: $(graphs) $(pics)
 
-$(graphs): %.pdf: %.gp
+$(graphs): %.eps: %.gp
 	gnuplot $<
-	epstopdf $(addsuffix .eps, $(basename $@))
 
-$(pics): %.pdf: %.fig
+$(pics): %.eps: %.fig
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@)) 
-	epstopdf $(addsuffix .eps, $(basename $@))
 	
 clean:
-	rm -f $(graphs) *.eps fit.log
+	rm -f $(graphs) fit.log *-eps-converted-to.pdf

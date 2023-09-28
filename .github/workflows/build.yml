@@ -28,7 +28,7 @@ jobs:
         working-directory: ./src/hpna
         run: make install
       - name: "Install Dependecies"
-        run: sudo apt install gnuplot texlive-font-utils fig2dev
+        run: sudo apt install gnuplot fig2dev
       - name: "Create plots"
         run: make
       - name: LaTeX iterations

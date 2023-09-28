@@ -1,27 +1,24 @@
-graphs  = filui.pdf filr.pdf filp.pdf \
-	fil_eichplot.pdf fil_instability.pdf fil_eichung2.pdf\
-	he_level.pdf \
-	vergleich1.pdf vergleich2.pdf \
-	fitvergleich1.pdf fitvergleich2.pdf \
-	modeplot1.pdf modeplot2.pdf \
-	temp_eichung.pdf \
-	modevgl_bulkt.pdf modevgl_bulkf.pdf \
-	absorp1.pdf absorp2.pdf
-pics    = nwa_setup.pdf \
-	TM010.pdf \
-	TM011.pdf \
-	fil_eichung.pdf
+graphs  = filui.eps filr.eps filp.eps \
+	fil_eichplot.eps fil_instability.eps fil_eichung2.eps\
+	he_level.eps \
+	vergleich1.eps vergleich2.eps \
+	fitvergleich1.eps fitvergleich2.eps \
+	modeplot1.eps modeplot2.eps \
+	temp_eichung.eps \
+	modevgl_bulkt.eps modevgl_bulkf.eps \
+	absorp1.eps absorp2.eps
+pics    = nwa_setup.eps \
+	TM010.eps \
+	TM011.eps \
+	fil_eichung.eps
 
 all: $(graphs) $(pics)
 
-$(graphs): %.pdf: %.gp
+$(graphs): %.eps: %.gp
 	gnuplot $<
-	epstopdf $(addsuffix .eps, $(basename $@))
 
-$(pics): %.pdf: %.fig
+$(pics): %.eps: %.fig
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@))
-	epstopdf $(addsuffix .eps, $(basename $@))
 
-	
 clean:
-	rm -f $(graphs) $(pics) *.eps fit.log
+	rm -f $(graphs) $(pics) fit.log *-eps-converted-to.pdf

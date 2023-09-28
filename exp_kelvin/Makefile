@@ -1,16 +1,14 @@
-graphs  = spectrum.pdf spectrum_empty.pdf \
-	xy_empty.pdf xy.pdf xy_charges.pdf
-pics    = schema.pdf
+graphs  = spectrum.eps spectrum_empty.eps \
+	xy_empty.eps xy.eps xy_charges.eps
+pics    = schema.eps
 
 all: $(graphs) $(pics)
 
-$(graphs): %.pdf: %.gp
+$(graphs): %.eps: %.gp
 	gnuplot $<
-	epstopdf $(addsuffix .eps, $(basename $@))
 
-$(pics): %.pdf: %.fig
+$(pics): %.eps: %.fig
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@))
-	epstopdf $(addsuffix .eps, $(basename $@))
 	
 clean:
-	rm -f $(graphs) $(pics) *.eps fit.log
+	rm -f $(graphs) $(pics) fit.log *-eps-converted-to.pdf

@@ -1,15 +1,13 @@
-graphs = phasendiagramm.pdf
+graphs = phasendiagramm.eps
 pics = 
 
 all: $(pics) $(graphs)
 
-$(graphs): %.pdf: %.gp
+$(graphs): %.eps: %.gp
 	gnuplot $<
-	epstopdf $(addsuffix .eps, $(basename $@))
 
-$(pics): %.pdf: %.fig
+$(pics): %.eps: %.fig
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@))
-	epstopdf $(addsuffix .eps, $(basename $@))
 
 clean:
-	rm -f $(pics) $(graphs) *.eps
+	rm -f $(pics) $(graphs) *-eps-converted-to.pdf
