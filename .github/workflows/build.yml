@@ -25,10 +25,10 @@ jobs:
         working-directory: ./src/smooth
         run: make install
       - name: "Build & install hpna"
-        working-directory: ./src/smooth
+        working-directory: ./src/hpna
         run: make install
       - name: "Install Gnuplot"
-        run: apt install gnuplot
+        run: sudo apt install gnuplot
       - name: LaTeX iterations
         id: latex-final
         uses: xu-cheng/latex-action@v3
