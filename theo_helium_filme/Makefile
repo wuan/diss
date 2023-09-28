@@ -1,18 +1,16 @@
-graphs  = nrec.pdf drec.pdf filmdicke.pdf filmpressure.pdf \
-	uclamp_d_dep.pdf uclamp_n_dep.pdf \
-	uclamp_d_dep2.pdf uclamp_n_dep2.pdf
+graphs  = nrec.eps drec.eps filmdicke.eps filmpressure.eps \
+	uclamp_d_dep.eps uclamp_n_dep.eps \
+	uclamp_d_dep2.eps uclamp_n_dep2.eps
 
 pics    =
 
 all: $(graphs) $(pics)
 
-$(graphs): %.pdf: %.gp
+$(graphs): %.eps: %.gp
 	gnuplot $<
-	epstopdf $(addsuffix .eps, $(basename $@))
 
-$(pics): %.pdf: %.fig
+$(pics): %.eps: %.fig
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@))
-	epstopdf $(addsuffix .eps, $(basename $@))
 	
 clean:
-	rm -f $(graphs) $(pics) *.eps
+	rm -f $(graphs) $(pics) *-eps-converted-to.pdf

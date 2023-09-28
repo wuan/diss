@@ -1,15 +1,13 @@
-graphs  = twoparts.pdf
+graphs  = twoparts.eps
 pics    = 
 
 all: $(graphs) $(pics)
 
-$(graphs): %.pdf: %.gp
+$(graphs): %.eps: %.gp
 	gnuplot $<
-	epstopdf $(addsuffix .eps, $(basename $@))
 
-$(pics): %.pdf: %.fig
+$(pics): %.eps: %.fig
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@))
-	epstopdf $(addsuffix .eps, $(basename $@))
 	
 clean:
-	rm -f $(graphs) $(pics) *.eps fit.log
+	rm -f $(graphs) $(pics) fit.log *-eps-converted-to.pdf
