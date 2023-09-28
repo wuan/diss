@@ -19,7 +19,7 @@ BIB_FILES = bib/Paper.bib\
 INPUTFILES= $(CONF_FILES) $(EXP_FILES) $(THEO_FILES) $(APP_FILES) $(BIB_FILES) \
 	main.bbl
 
-all: subdirs main.pdf
+all: subdirs
 
 subdirs: 
 	make -C exp_aufbau

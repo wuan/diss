@@ -29,6 +29,8 @@ jobs:
         run: make install
       - name: "Install Gnuplot"
         run: sudo apt install gnuplot
+      - name: "Create plots"
+        run: make
       - name: LaTeX iterations
         id: latex-final
         uses: xu-cheng/latex-action@v3
