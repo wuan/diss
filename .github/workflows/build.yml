@@ -27,8 +27,8 @@ jobs:
       - name: "Build & install hpna"
         working-directory: ./src/hpna
         run: make install
-      - name: "Install Gnuplot"
-        run: sudo apt install gnuplot
+      - name: "Install Dependecies"
+        run: sudo apt install gnuplot texlive-font-tools
       - name: "Create plots"
         run: make
       - name: LaTeX iterations
