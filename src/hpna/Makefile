@@ -3,7 +3,7 @@ C++ = c++
 CFLAGS =  -O4 -g -Wall -ansi
 CXXFLAGS = -O4 -g -Wall
 LD     =$(CC) $(CFLAGS)	 # default loading command
-LIBS   = -lstdc++ -lgcc
+LIBS   = -lstdc++ -lgcc -lm
 
 
 MODULE=../../module
