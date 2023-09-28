@@ -8,3 +8,5 @@
 *.out
 *.eps
 *.pdf
+*.fls
+*.fdb_latexmk
