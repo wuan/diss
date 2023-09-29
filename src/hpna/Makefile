@@ -3,14 +3,14 @@ C++ = c++
 CFLAGS =  -O4 -g -Wall -ansi
 CXXFLAGS = -O4 -g -Wall
 LD     =$(CC) $(CFLAGS)	 # default loading command
-LIBS   = -lstdc++ -lgcc -lm
+LIBS   = -lstdc++ -lm
 
 
 MODULE=../../module
 INSTALL_DIR=/usr/local/bin
 
 # List of object files except version.o
-OBJS = ludcmp.o lubksb.o covsrt.o mrqcof.o mrqmin.o util.o gaussj.o lorex.o lorex_fit.o hpna.o
+OBJS = covsrt.o mrqcof.o mrqmin.o util.o gaussj.o lorex.o lorex_fit.o hpna.o
 
 hpna: $(OBJS) 
 	$(LD) $(COPTS) $(OBJS) $(LIBS) -o hpna
