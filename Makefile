@@ -47,7 +47,7 @@ main.aux: main.tex
 	pdflatex main
 	
 clean: subdirs_clean
-	rm -f *.log *.pdf *.aux *.lof *.toc *.ps *.dvi *.bbl *.blg *.brf
+	rm -f *.log *.pdf *.aux *.lof *.toc *.ps *.dvi *.bbl *.blg *.brf *.fls *.fdb_latexmk
 
 subdirs_clean:
 	make -C exp_aufbau clean
