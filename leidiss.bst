@@ -135,7 +135,7 @@ FUNCTION {output.bibitem}
     'skip$
     { language.state language =
         'skip$
-        { "\selectlanguage{\" language * "}" * write$
+        { "\selectlanguage{" language * "}" * write$
           newline$
         }
       if$
