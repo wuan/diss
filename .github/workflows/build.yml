@@ -18,7 +18,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: "Build & install smooth"
@@ -44,12 +44,12 @@ jobs:
           echo "EOF" >> $GITHUB_ENV
         continue-on-error: true
       - name: Upload PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Dissertation
           path: main.pdf
       - name: Update PR with warnings found
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         continue-on-error: true
         if: github.event_name == 'pull_request'
         env:
