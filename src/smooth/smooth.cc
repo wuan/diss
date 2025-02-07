@@ -142,7 +142,7 @@ int main(int argc, char *argv[])
 				}
 
 				// cout << number_of_values << ": "<< endl;
-				if (number_of_values>0 && !no_value.compare(coltext[column])) {
+				if (number_of_values > 0 && no_value.compare(coltext[column])) {
 					cout << " " << setprecision(9) << sum/double(number_of_values);
 				} else { 
 					cout << " ?";
