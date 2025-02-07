@@ -14,6 +14,7 @@ using namespace std;
 
 int avg_num=5;
 int read_from_stdin=0;
+std::string no_value = "?";
 
 int main(int argc, char *argv[])
 {
@@ -77,7 +78,7 @@ int main(int argc, char *argv[])
 //		cout << "opening file ...\n";
 		infile.open(infilename);
 		if (!infile) {
-			cerr << "FEHLER: Datei '" << infilename << "' konnte nicht geöffnet werden\n";
+			cerr << "FEHLER: Datei '" << infilename << "' konnte nicht geoeffnet werden\n";
 			return 10;
 		}
 	}
@@ -114,7 +115,7 @@ int main(int argc, char *argv[])
 				}
 
 				if (value[0] != '?') {
-					val[line % avg_num][column] =strtod(value, NULL);
+					val[line % avg_num][column] = strtod(value, NULL);
 				} else {
 					val[line % avg_num][column] = 0;
 				}
@@ -141,7 +142,7 @@ int main(int argc, char *argv[])
 				}
 
 				// cout << number_of_values << ": "<< endl;
-				if (number_of_values>0 && coltext[column]!="?") {
+				if (number_of_values>0 && !no_value.compare(coltext[column])) {
 					cout << " " << setprecision(9) << sum/double(number_of_values);
 				} else { 
 					cout << " ?";
