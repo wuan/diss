@@ -11,7 +11,7 @@ all: $(graphs) $(pics)
 $(graphs): %.eps: %.gp
 	gnuplot $<
 
-$(pics): %.eps: %.fig
+$(pics): %.eps: %.fig bulk_charge.eps
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@))
 
 

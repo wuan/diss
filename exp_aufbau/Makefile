@@ -17,7 +17,7 @@ all: $(graphs) $(pics)
 $(graphs): %.eps: %.gp
 	gnuplot $<
 
-$(pics): %.eps: %.fig
+$(pics): %.eps: %.fig fil_eichplot.eps
 	fig2dev -L eps $< $(addsuffix .eps, $(basename $@))
 
 clean:

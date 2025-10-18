@@ -1,57 +1,49 @@
-\newif\ifpdf
-\ifx\pdfoutput\undefined
-    \pdffalse
-\else
-    \pdfoutput=1
-    \pdftrue
-\fi
-
 \usepackage[english,german,ngerman]{babel}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[mtpluscal]{mtpro2}
-%\usepackage{bm}
 \usepackage{amsmath}
 \usepackage{amssymb}
+
+\let\Bbbk\relax
+\usepackage{times}
+\usepackage[subscriptcorrection]{mtpro2}
 \usepackage{nicefrac}
 \usepackage{units}
 \usepackage{graphicx}
 \usepackage[tight,hang,raggedright]{subfigure}
 \usepackage{float}
-\usepackage{caption2}
+\usepackage[normal]{caption}
 \usepackage{calc}
   \renewcommand{\captionlabelfont}{\bfseries}
   \renewcommand{\captionfont}{\small\slshape}
+\usepackage{gensymb}
+\usepackage{babelbib}
 
-\ifpdf 
-	\pdfcompresslevel9
-	\usepackage{thumbpdf}
-	\usepackage[pdftex,
-        colorlinks=true,
-        urlcolor=rltred,       % \href{...}{...} external (URL)
-        filecolor=rltgreen,     % \href{...} local file
-        linkcolor=rltblue,       % \ref{...} and \pageref{...}
-        citecolor=rltgreen,
-        pdftitle={Dissertation: Surface Electrons on thin helium films},
-        pdfauthor={Andreas Würl},
-        pdfsubject={2DES on thin liquid helium films, exploration of the phase diagram},
-        pdfkeywords={2DES, helium, films, electrons, Andreas Wuerl, Andreas Würl, Andi Würl},
-        pagebackref,
-        pdfpagemode=None,
-        bookmarksopen=true]{hyperref}
-	\usepackage{color}
-	\definecolor{rltred}{rgb}{0.4,0,0}
-	\definecolor{rltgreen}{rgb}{0,0.5,0}
-	\definecolor{rltblue}{rgb}{0,0,0.5}
-	\newcommand{\datalink}[2]{\href{https://wuerl.net/diss/microwave/#1}{#2}}
-	\newcommand{\plotlink}[2]{\href{https://wuerl.net/diss.html/#1.gp}{#2}}
-	\newcommand{\link}[1]{\href{https://#1}{#1}}
-\else
-	\newcommand{\datalink}[2]{#2}
-	\newcommand{\plotlink}[2]{#2}
-	\newcommand{\link}[1]{#1}
-\fi
-  
+\pdfcompresslevel9
+\usepackage{thumbpdf}
+\usepackage{microtype}
+
+\usepackage[pdftex,
+    colorlinks=true,
+    urlcolor=rltred,       % \href{...}{...} external (URL)
+    filecolor=rltgreen,     % \href{...} local file
+    linkcolor=rltblue,       % \ref{...} and \pageref{...}
+    citecolor=rltgreen,
+    pdftitle={Dissertation: Surface Electrons on thin helium films},
+    pdfauthor={Andreas Würl},
+    pdfsubject={2DES on thin liquid helium films, exploration of the phase diagram},
+    pdfkeywords={2DES, helium, films, electrons, Andreas Wuerl, Andreas Würl, Andi Würl},
+    pagebackref,
+    pdfpagemode=None,
+    bookmarksopen=true]{hyperref}
+\usepackage{color}
+\definecolor{rltred}{rgb}{0.4,0,0}
+\definecolor{rltgreen}{rgb}{0,0.5,0}
+\definecolor{rltblue}{rgb}{0,0,0.5}
+\newcommand{\datalink}[2]{\href{https://wuerl.net/diss/microwave/#1}{#2}}
+\newcommand{\plotlink}[2]{\href{https://wuerl.net/diss/gp/#1.gp}{#2}}
+\newcommand{\link}[1]{\href{https://#1}{#1}}
+
 \bibliographystyle{leidiss}
 
 %
@@ -75,7 +67,8 @@
 \newcommand{\DK}{Dielektrizitätskonstante}
 \newcommand{\ea}{{\itshape et al.}}
 \newcommand{\name}[1]{{\scshape #1}}
-\newcommand{\grmu}{\textgr{m}}
+%\newcommand{\grmu}{\textgr{m}}
+\newcommand{\grmu}{\ensuremath{\mu}}
 
 %
 % Hier die Definitionen für einen Befehl, \noref, der zwar die Bezeichnung 
