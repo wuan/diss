@@ -29,9 +29,9 @@ jobs:
       - name: "Build & install hpna"
         working-directory: ./src/hpna
         run: make install
-      - name: "Install Dependecies"
+      - name: Install Dependencies
         run: sudo apt install gnuplot fig2dev
-      - name: "Create plots"
+      - name: Create plots
         run: make
       - name: LaTeX iterations
         id: latex-final
